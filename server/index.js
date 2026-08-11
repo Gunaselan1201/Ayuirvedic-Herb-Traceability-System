@@ -347,7 +347,7 @@ app.post('/api/support/tickets', uploadSupport.single('attachment'), (req, res) 
     // Save to support_tickets.json
     const savedTicket = appendTicket(ticket);
     
-    console.log(`✅ Support ticket created: ${ticketId} for Lab ${labId}`);
+    console.log(`Support ticket created: ${ticketId} for Lab ${labId}`);
     
     // Return success response
     res.status(201).json(savedTicket);
@@ -457,7 +457,7 @@ app.put('/api/support/tickets/:ticketId', (req, res) => {
     // Save back to file
     fs.writeFileSync(ticketsPath, JSON.stringify(tickets, null, 2), 'utf8');
     
-    console.log(`✅ Support ticket updated: ${ticketId} - Status: ${status}`);
+    console.log(`Support ticket updated: ${ticketId} - Status: ${status}`);
     
     res.json(tickets[ticketIndex]);
     
@@ -487,7 +487,7 @@ app.use((error, req, res, next) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`✅ Farmer Portal Server running on http://localhost:${PORT}`);
-  console.log(`📁 Uploads directory: ${path.join(__dirname, 'uploads', 'issues')}`);
-  console.log(`📋 Issues database: ${path.join(__dirname, 'issues.json')}`);
+  console.log(`Farmer Portal Server running on http://localhost:${PORT}`);
+  console.log(`Uploads directory: ${path.join(__dirname, 'uploads', 'issues')}`);
+  console.log(`Issues database: ${path.join(__dirname, 'issues.json')}`);
 });

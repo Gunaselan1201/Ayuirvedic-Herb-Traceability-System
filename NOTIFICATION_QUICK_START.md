@@ -1,6 +1,6 @@
 # Notification System - Quick Start Guide
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Start the Backend Server
 ```powershell
@@ -25,27 +25,27 @@ Portal will run on `http://localhost:3002`
 
 ---
 
-## 🧪 Testing the Notification Flow
+## Testing the Notification Flow
 
-### Test Scenario 1: Farmer Submits Batch → Lab Receives Notification
+### Test Scenario 1: Farmer Submits Batch Lab Receives Notification
 
 1. **Open Farmer Portal** (`http://localhost:5173`)
 2. Login with any credentials (auto-authenticated)
 3. Click "Add Product" from sidebar
 4. Fill out the batch form:
-   - Product Name: Ashwagandha
-   - Quantity: 100
-   - Unit: kg
-   - State: Tamil Nadu (TN)
-   - Fill other required fields
+ - Product Name: Ashwagandha
+ - Quantity: 100
+ - Unit: kg
+ - State: Tamil Nadu (TN)
+ - Fill other required fields
 5. Click "Submit"
 6. **Switch to Lab Portal** (`http://localhost:3002`)
-7. Click the menu icon (☰) → Notifications
+7. Click the menu icon () Notifications
 8. **You should see**: "New Batch Received" notification with batch details
 9. **Verify**:
-   - Red badge shows unread count (e.g., "1")
-   - Notification has blue left border
-   - Click notification to see full details in modal
+ - Red badge shows unread count (e.g., "1")
+ - Notification has blue left border
+ - Click notification to see full details in modal
 
 ### Test Scenario 2: Login Notification Popup
 
@@ -56,10 +56,10 @@ Portal will run on `http://localhost:3002`
 5. **Wait 1 second**
 6. **You should see**: Popup modal with unread notifications
 7. **Verify**:
-   - Modal appears automatically
-   - Shows all unread notifications
-   - Can click notification to see details
-   - Close button dismisses popup
+ - Modal appears automatically
+ - Shows all unread notifications
+ - Can click notification to see details
+ - Close button dismisses popup
 
 ### Test Scenario 3: Auto-Refresh (Real-time Updates)
 
@@ -77,13 +77,13 @@ Portal will run on `http://localhost:3002`
 4. **Modal opens** with full details
 5. **Close modal**
 6. **Verify**:
-   - Blue dot disappears
-   - Notification no longer bold
-   - Unread count decreases
+ - Blue dot disappears
+ - Notification no longer bold
+ - Unread count decreases
 
 ---
 
-## 🔍 Verification Points
+## Verification Points
 
 ### Backend Verification
 ```powershell
@@ -107,7 +107,7 @@ curl http://localhost:3001/notifications
 
 ---
 
-## 🎨 Visual Indicators Guide
+## Visual Indicators Guide
 
 ### Notification States
 - **Unread**: Blue dot, bold text, thick border
@@ -126,7 +126,7 @@ curl http://localhost:3001/notifications
 
 ---
 
-## 🐛 Common Issues
+## Common Issues
 
 ### Issue: No notifications appearing
 **Solution**: 
@@ -154,31 +154,31 @@ curl http://localhost:3001/notifications
 
 ---
 
-## 📋 Expected Notification Flow
+## Expected Notification Flow
 
 ```
 Farmer Submits Batch
-        ↓
+ 
 Backend Creates Notification (portalType: 'lab')
-        ↓
+ 
 Lab Portal Auto-Fetches (within 30 seconds)
-        ↓
+ 
 Notification Appears in Lab Sidebar
-        ↓
+ 
 Lab User Clicks Notification
-        ↓
+ 
 Modal Opens with Details
-        ↓
+ 
 User Closes Modal
-        ↓
+ 
 Notification Marked as Read
-        ↓
+ 
 Unread Count Decreases
 ```
 
 ---
 
-## 🔗 API Endpoints Reference
+## API Endpoints Reference
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -193,7 +193,7 @@ Unread Count Decreases
 
 ---
 
-## ✅ Success Checklist
+## Success Checklist
 
 - [ ] Backend server starts without errors
 - [ ] Farmer Portal loads successfully
@@ -210,7 +210,7 @@ Unread Count Decreases
 
 ---
 
-## 📞 Need Help?
+## Need Help?
 
 1. Check the full implementation guide: `NOTIFICATION_SYSTEM_IMPLEMENTATION.md`
 2. Review browser console for error messages
@@ -219,6 +219,6 @@ Unread Count Decreases
 
 ---
 
-**Quick Start Complete!** 🎉
+**Quick Start Complete!** 
 
 You now have a fully functional cross-portal notification system with real-time updates, persistent storage, and interactive UI.

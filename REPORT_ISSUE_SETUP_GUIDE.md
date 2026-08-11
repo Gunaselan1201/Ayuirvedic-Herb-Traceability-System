@@ -1,17 +1,17 @@
 # Report Issue Feature - Setup & Testing Guide
 
-## 📋 Overview
+## Overview
 
 Complete **Report Issue** feature for Farmer Portal with:
-- ✅ Frontend: React + Tailwind + Framer Motion + Lucide icons
-- ✅ Backend: Node.js + Express + Multer
-- ✅ File uploads with validation
-- ✅ JSON-based issue tracking
-- ✅ Step-by-step form wizard (4 steps)
+- Frontend: React + Tailwind + Framer Motion + Lucide icons
+- Backend: Node.js + Express + Multer
+- File uploads with validation
+- JSON-based issue tracking
+- Step-by-step form wizard (4 steps)
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Start Backend Server
 
@@ -22,9 +22,9 @@ node index.js
 
 **Expected output:**
 ```
-✅ Farmer Portal Server running on http://localhost:5174
-📁 Uploads directory: D:\herb2\server\uploads\issues
-📋 Issues database: D:\herb2\server\issues.json
+ Farmer Portal Server running on http://localhost:5174
+ Uploads directory: D:\herb2\server\uploads\issues
+ Issues database: D:\herb2\server\issues.json
 ```
 
 ### 2. Start Frontend (in separate terminal)
@@ -36,45 +36,45 @@ npm run dev
 
 **Expected output:**
 ```
-VITE v4.5.14  ready in 548 ms
-➜  Local:   http://localhost:5173/
+VITE v4.5.14 ready in 548 ms
+ Local: http://localhost:5173/
 ```
 
 ### 3. Access Report Issue Feature
 
 1. Open browser: `http://localhost:5173`
 2. Login to Farmer Portal
-3. Click on profile picture → **Report Issue** (in Settings section)
+3. Click on profile picture **Report Issue** (in Settings section)
 
 ---
 
-## 📂 Files Created
+## Files Created
 
 ### Backend Files
 ```
 d:\herb2\server\
-├── index.js              # Express server with API endpoints
-├── package.json          # Backend dependencies
-├── issues.json           # Issue database (auto-created)
-└── uploads\issues\       # File storage directory
+├── index.js # Express server with API endpoints
+├── package.json # Backend dependencies
+├── issues.json # Issue database (auto-created)
+└── uploads\issues\ # File storage directory
 ```
 
 ### Frontend Files
 ```
 d:\herb2\src\farmerportal\src\
 └── pages\
-    └── ReportIssue.jsx   # Main Report Issue page with 4-step wizard
+ └── ReportIssue.jsx # Main Report Issue page with 4-step wizard
 ```
 
 ### Modified Files
 ```
 d:\herb2\src\farmerportal\src\
-└── App.jsx               # Added ReportIssue routing and navigation
+└── App.jsx # Added ReportIssue routing and navigation
 ```
 
 ---
 
-## 🎯 Feature Functionality
+## Feature Functionality
 
 ### 4-Step Form Wizard
 
@@ -95,10 +95,10 @@ d:\herb2\src\farmerportal\src\
 **Step 3: Additional Info**
 - Batch ID (optional)
 - File Upload (optional)
-  - Accepted: PNG, JPG, JPEG, PDF
-  - Max size: 5MB
-  - Client-side validation
-  - Image preview for photos
+ - Accepted: PNG, JPG, JPEG, PDF
+ - Max size: 5MB
+ - Client-side validation
+ - Image preview for photos
 
 **Step 4: Review & Submit**
 - Review all entered data
@@ -108,12 +108,12 @@ d:\herb2\src\farmerportal\src\
 ### Success Response
 After successful submission:
 ```
-✅ Issue reported successfully. Ticket ID: ISS20251103-001
+ Issue reported successfully. Ticket ID: ISS20251103-001
 ```
 
 ---
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### 1. POST /api/issues
 **Create new issue**
@@ -135,15 +135,15 @@ Fields:
 **Response (201):**
 ```json
 {
-  "issueId": "ISS20251103-001",
-  "category": "QR Code Problem",
-  "batchId": "SURTN1201NE",
-  "issueTitle": "QR not scanning properly",
-  "description": "When scanning the QR, it shows blank page instead of product info.",
-  "filePath": "/uploads/issues/1730678400000_qr_issue.png",
-  "addedBy": "Ravi Kumar",
-  "timestamp": "2025-11-03T16:30:00.000Z",
-  "status": "Pending"
+ "issueId": "ISS20251103-001",
+ "category": "QR Code Problem",
+ "batchId": "SURTN1201NE",
+ "issueTitle": "QR not scanning properly",
+ "description": "When scanning the QR, it shows blank page instead of product info.",
+ "filePath": "/uploads/issues/1730678400000_qr_issue.png",
+ "addedBy": "Ravi Kumar",
+ "timestamp": "2025-11-03T16:30:00.000Z",
+ "status": "Pending"
 }
 ```
 
@@ -163,12 +163,12 @@ GET http://localhost:5174/api/issues
 **Response (200):**
 ```json
 [
-  {
-    "issueId": "ISS20251103-001",
-    "category": "QR Code Problem",
-    ...
-  },
-  ...
+ {
+ "issueId": "ISS20251103-001",
+ "category": "QR Code Problem",
+ ...
+ },
+ ...
 ]
 ```
 
@@ -183,43 +183,43 @@ GET http://localhost:5174/api/issues/ISS20251103-001
 **Response (200):**
 ```json
 {
-  "issueId": "ISS20251103-001",
-  "category": "QR Code Problem",
-  ...
+ "issueId": "ISS20251103-001",
+ "category": "QR Code Problem",
+ ...
 }
 ```
 
 ---
 
-## 🧪 Testing Guide
+## Testing Guide
 
 ### Test 1: Submit without file
 ```powershell
 curl -X POST http://localhost:5174/api/issues `
-  -F "category=Portal Bug" `
-  -F "issueTitle=Test Issue Title" `
-  -F "description=This is a test description with more than thirty characters to meet the minimum requirement." `
-  -F "addedBy=Test User"
+ -F "category=Portal Bug" `
+ -F "issueTitle=Test Issue Title" `
+ -F "description=This is a test description with more than thirty characters to meet the minimum requirement." `
+ -F "addedBy=Test User"
 ```
 
 ### Test 2: Submit with batch ID
 ```powershell
 curl -X POST http://localhost:5174/api/issues `
-  -F "category=QR Code Problem" `
-  -F "batchId=SURTN1201NE" `
-  -F "issueTitle=QR Scanner Not Working" `
-  -F "description=The QR code scanner is not responding when I try to scan the batch QR code on mobile device." `
-  -F "addedBy=Ravi Kumar"
+ -F "category=QR Code Problem" `
+ -F "batchId=SURTN1201NE" `
+ -F "issueTitle=QR Scanner Not Working" `
+ -F "description=The QR code scanner is not responding when I try to scan the batch QR code on mobile device." `
+ -F "addedBy=Ravi Kumar"
 ```
 
 ### Test 3: Submit with file attachment
 ```powershell
 curl -X POST http://localhost:5174/api/issues `
-  -F "category=Data Missing" `
-  -F "issueTitle=Missing Product Information" `
-  -F "description=Some product details are not visible in the dashboard after submitting the batch for testing." `
-  -F "addedBy=Suresh" `
-  -F "attachment=@C:\path\to\screenshot.png"
+ -F "category=Data Missing" `
+ -F "issueTitle=Missing Product Information" `
+ -F "description=Some product details are not visible in the dashboard after submitting the batch for testing." `
+ -F "addedBy=Suresh" `
+ -F "attachment=@C:\path\to\screenshot.png"
 ```
 
 ### Test 4: Get all issues
@@ -234,7 +234,7 @@ curl http://localhost:5174/api/issues/ISS20251103-001
 
 ---
 
-## ✅ QA Checklist
+## QA Checklist
 
 ### Frontend Validation
 - [ ] Category selection required
@@ -277,7 +277,7 @@ curl http://localhost:5174/api/issues/ISS20251103-001
 
 ---
 
-## 📁 Issue ID Format
+## Issue ID Format
 
 **Format:** `ISS + YYYYMMDD + sequential number`
 
@@ -295,7 +295,7 @@ curl http://localhost:5174/api/issues/ISS20251103-001
 
 ---
 
-## 🔒 Security Features
+## Security Features
 
 ### Input Sanitization
 - Remove HTML tags (`<>`)
@@ -316,7 +316,7 @@ curl http://localhost:5174/api/issues/ISS20251103-001
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Issue: "Connection refused" when submitting
 **Solution:** Ensure backend server is running on port 5174
@@ -345,21 +345,21 @@ Stop-Process -Id <PID> -Force
 
 ---
 
-## 📊 Database Structure (issues.json)
+## Database Structure (issues.json)
 
 ```json
 [
-  {
-    "issueId": "ISS20251103-001",
-    "category": "QR Code Problem",
-    "batchId": "SURTN1201NE",
-    "issueTitle": "QR not scanning properly",
-    "description": "When scanning the QR, it shows blank page instead of product info.",
-    "filePath": "/uploads/issues/1730678400000_qr_issue.png",
-    "addedBy": "Ravi Kumar",
-    "timestamp": "2025-11-03T16:30:00.000Z",
-    "status": "Pending"
-  }
+ {
+ "issueId": "ISS20251103-001",
+ "category": "QR Code Problem",
+ "batchId": "SURTN1201NE",
+ "issueTitle": "QR not scanning properly",
+ "description": "When scanning the QR, it shows blank page instead of product info.",
+ "filePath": "/uploads/issues/1730678400000_qr_issue.png",
+ "addedBy": "Ravi Kumar",
+ "timestamp": "2025-11-03T16:30:00.000Z",
+ "status": "Pending"
+ }
 ]
 ```
 
@@ -376,7 +376,7 @@ Stop-Process -Id <PID> -Force
 
 ---
 
-## 🎨 UI Design Features
+## UI Design Features
 
 ### Colors
 - Primary: Green (#16a34a)
@@ -407,7 +407,7 @@ Stop-Process -Id <PID> -Force
 
 ---
 
-## 🚀 Production Deployment
+## Production Deployment
 
 ### Environment Variables
 Create `.env` file in `/server`:
@@ -441,7 +441,7 @@ pm2 startup
 
 ---
 
-## 📝 Future Enhancements
+## Future Enhancements
 
 1. **Admin Dashboard** - View and manage all issues
 2. **Status Updates** - Allow admins to update issue status
@@ -456,7 +456,7 @@ pm2 startup
 
 ---
 
-## 📞 Support
+## Support
 
 For issues or questions:
 - Check troubleshooting section above
@@ -466,17 +466,17 @@ For issues or questions:
 
 ---
 
-## ✨ Success Criteria
+## Success Criteria
 
 Feature is working correctly when:
-- ✅ Both frontend and backend servers start without errors
-- ✅ Can navigate to Report Issue page from sidebar
-- ✅ All 4 steps work smoothly with validation
-- ✅ Files upload and preview correctly
-- ✅ Success toast displays with ticket ID
-- ✅ Issue saved to issues.json with all fields
-- ✅ GET /api/issues returns all issues
-- ✅ No console errors in browser or terminal
+- Both frontend and backend servers start without errors
+- Can navigate to Report Issue page from sidebar
+- All 4 steps work smoothly with validation
+- Files upload and preview correctly
+- Success toast displays with ticket ID
+- Issue saved to issues.json with all fields
+- GET /api/issues returns all issues
+- No console errors in browser or terminal
 
 ---
 

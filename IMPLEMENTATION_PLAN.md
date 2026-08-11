@@ -19,7 +19,7 @@ Phase 2 — UI/UX & accessibility
 - Visual polish: standardize spacing, typography, and Framer Motion transitions.
 
 Phase 3 — Polish & QA
-- Full end-to-end blockchain flow testing: create batch → lab → manufacturing → consumer.
+- Full end-to-end blockchain flow testing: create batch lab manufacturing consumer.
 - Remove all mock flags and make production-ready builds.
 - Run `npm run lint` and `npm run build` for both portals; ensure zero warnings/errors.
 - Create `AUDIT_REPORT.md` and deployment notes (already added).

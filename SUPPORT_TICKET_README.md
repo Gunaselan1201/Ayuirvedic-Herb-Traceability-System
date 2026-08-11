@@ -4,29 +4,29 @@
 Production-ready support ticket system for the Lab Portal of the Blockchain-Based Ayurvedic Herb Traceability System. Allows lab technicians to report technical issues with structured, traceable tickets.
 
 ## Features
-- ✅ **Report Issue Page**: Structured form with validation and file upload
-- ✅ **View Tickets Page**: List, search, filter, and view all support tickets
-- ✅ **Backend API**: Express.js server with REST endpoints
-- ✅ **File Upload**: Support for screenshots (.png, .jpg, .jpeg, .pdf up to 5MB)
-- ✅ **Authentication Integration**: Auto-fills lab ID and user name from session
-- ✅ **Responsive Design**: Mobile and desktop friendly
-- ✅ **Real-time Updates**: Dynamic ticket status and severity filtering
+- **Report Issue Page**: Structured form with validation and file upload
+- **View Tickets Page**: List, search, filter, and view all support tickets
+- **Backend API**: Express.js server with REST endpoints
+- **File Upload**: Support for screenshots (.png, .jpg, .jpeg, .pdf up to 5MB)
+- **Authentication Integration**: Auto-fills lab ID and user name from session
+- **Responsive Design**: Mobile and desktop friendly
+- **Real-time Updates**: Dynamic ticket status and severity filtering
 
 ## Project Structure
 
 ```
 herb2/
-├── server/                          # Backend server
-│   ├── index.js                     # Express server with API endpoints
-│   ├── package.json                 # Server dependencies
-│   ├── support_tickets.json         # Ticket database (JSON)
-│   └── support_uploads/             # Uploaded attachments
+├── server/ # Backend server
+│ ├── index.js # Express server with API endpoints
+│ ├── package.json # Server dependencies
+│ ├── support_tickets.json # Ticket database (JSON)
+│ └── support_uploads/ # Uploaded attachments
 │
 └── src/labportal/src/lab/
-    ├── LabApp.tsx                   # Main app with routing
-    └── pages/Support/
-        ├── ReportIssue.tsx          # Report issue form
-        └── ViewTickets.tsx          # View all tickets
+ ├── LabApp.tsx # Main app with routing
+ └── pages/Support/
+ ├── ReportIssue.tsx # Report issue form
+ └── ViewTickets.tsx # View all tickets
 ```
 
 ## Installation & Setup
@@ -95,16 +95,16 @@ Content-Type: multipart/form-data
 **Response (201 Created):**
 ```json
 {
-  "ticketId": "SUPLAB-00001",
-  "labId": "LAB45",
-  "userName": "Dr. Rajesh Kumar",
-  "issueType": "Blockchain Sync Failure",
-  "description": "Unable to record test results for batch SURTN1201NE...",
-  "severity": "High",
-  "attachment": "/support_uploads/SUPLAB-00001.png",
-  "status": "Pending",
-  "timestamp": "2025-11-06T11:45:00Z",
-  "createdAt": "2025-11-06T11:45:00Z"
+ "ticketId": "SUPLAB-00001",
+ "labId": "LAB45",
+ "userName": "Dr. Rajesh Kumar",
+ "issueType": "Blockchain Sync Failure",
+ "description": "Unable to record test results for batch SURTN1201NE...",
+ "severity": "High",
+ "attachment": "/support_uploads/SUPLAB-00001.png",
+ "status": "Pending",
+ "timestamp": "2025-11-06T11:45:00Z",
+ "createdAt": "2025-11-06T11:45:00Z"
 }
 ```
 
@@ -121,18 +121,18 @@ GET /api/support/tickets?labId=LAB45&status=Pending&severity=High
 **Response (200 OK):**
 ```json
 [
-  {
-    "ticketId": "SUPLAB-00001",
-    "labId": "LAB45",
-    "userName": "Dr. Rajesh Kumar",
-    "issueType": "Blockchain Sync Failure",
-    "description": "Unable to record test results...",
-    "severity": "High",
-    "attachment": "/support_uploads/SUPLAB-00001.png",
-    "status": "Pending",
-    "timestamp": "2025-11-06T11:45:00Z",
-    "createdAt": "2025-11-06T11:45:00Z"
-  }
+ {
+ "ticketId": "SUPLAB-00001",
+ "labId": "LAB45",
+ "userName": "Dr. Rajesh Kumar",
+ "issueType": "Blockchain Sync Failure",
+ "description": "Unable to record test results...",
+ "severity": "High",
+ "attachment": "/support_uploads/SUPLAB-00001.png",
+ "status": "Pending",
+ "timestamp": "2025-11-06T11:45:00Z",
+ "createdAt": "2025-11-06T11:45:00Z"
+ }
 ]
 ```
 
@@ -144,9 +144,9 @@ GET /api/support/tickets/:ticketId
 **Response (200 OK):**
 ```json
 {
-  "ticketId": "SUPLAB-00001",
-  "labId": "LAB45",
-  ...
+ "ticketId": "SUPLAB-00001",
+ "labId": "LAB45",
+ ...
 }
 ```
 
@@ -159,19 +159,19 @@ Content-Type: application/json
 **Body:**
 ```json
 {
-  "status": "Resolved",
-  "adminNotes": "Issue fixed in latest update"
+ "status": "Resolved",
+ "adminNotes": "Issue fixed in latest update"
 }
 ```
 
 **Response (200 OK):**
 ```json
 {
-  "ticketId": "SUPLAB-00001",
-  "status": "Resolved",
-  "adminNotes": "Issue fixed in latest update",
-  "updatedAt": "2025-11-06T12:30:00Z",
-  ...
+ "ticketId": "SUPLAB-00001",
+ "status": "Resolved",
+ "adminNotes": "Issue fixed in latest update",
+ "updatedAt": "2025-11-06T12:30:00Z",
+ ...
 }
 ```
 
@@ -180,23 +180,23 @@ Content-Type: application/json
 ### Create Ticket (Without File)
 ```bash
 curl -X POST http://localhost:5174/api/support/tickets \
-  -F "userName=Dr. Rajesh Kumar" \
-  -F "labId=LAB45" \
-  -F "issueType=Blockchain Sync Failure" \
-  -F "severity=High" \
-  -F "description=Unable to record test results for batch SURTN1201NE. The blockchain sync has been failing for the past 2 hours." \
-  -F "timestamp=2025-11-06T11:45:00Z"
+ -F "userName=Dr. Rajesh Kumar" \
+ -F "labId=LAB45" \
+ -F "issueType=Blockchain Sync Failure" \
+ -F "severity=High" \
+ -F "description=Unable to record test results for batch SURTN1201NE. The blockchain sync has been failing for the past 2 hours." \
+ -F "timestamp=2025-11-06T11:45:00Z"
 ```
 
 ### Create Ticket (With File)
 ```bash
 curl -X POST http://localhost:5174/api/support/tickets \
-  -F "userName=Dr. Rajesh Kumar" \
-  -F "labId=LAB45" \
-  -F "issueType=Portal Error" \
-  -F "severity=Medium" \
-  -F "description=Portal showing error message when trying to submit test results. Screenshot attached showing the exact error." \
-  -F "attachment=@screenshot.png"
+ -F "userName=Dr. Rajesh Kumar" \
+ -F "labId=LAB45" \
+ -F "issueType=Portal Error" \
+ -F "severity=Medium" \
+ -F "description=Portal showing error message when trying to submit test results. Screenshot attached showing the exact error." \
+ -F "attachment=@screenshot.png"
 ```
 
 ### Get All Tickets for Lab
@@ -217,8 +217,8 @@ curl http://localhost:5174/api/support/tickets/SUPLAB-00001
 ### Update Ticket Status
 ```bash
 curl -X PUT http://localhost:5174/api/support/tickets/SUPLAB-00001 \
-  -H "Content-Type: application/json" \
-  -d '{"status":"Resolved","adminNotes":"Issue fixed in version 2.1.0"}'
+ -H "Content-Type: application/json" \
+ -d '{"status":"Resolved","adminNotes":"Issue fixed in version 2.1.0"}'
 ```
 
 ## Frontend Usage

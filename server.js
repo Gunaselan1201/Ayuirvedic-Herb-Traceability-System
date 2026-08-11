@@ -171,9 +171,9 @@ servePortal('/consumer', 'consumerportal');
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 HERB Ledger Server running on http://localhost:${PORT}`);
-  console.log(`📱 Farmer Portal: http://localhost:${PORT}/farmer`);
-  console.log(`🧪 Lab Portal: http://localhost:${PORT}/lab`);
-  console.log(`🏭 Manufacturer Portal: http://localhost:${PORT}/manufacturer`);
-  console.log(`👥 Consumer Portal: http://localhost:${PORT}/consumer`);
+  console.log(`HERB Ledger Server running on http://localhost:${PORT}`);
+  console.log(`Farmer Portal: http://localhost:${PORT}/farmer`);
+  console.log(`Lab Portal: http://localhost:${PORT}/lab`);
+  console.log(`Manufacturer Portal: http://localhost:${PORT}/manufacturer`);
+  console.log(`Consumer Portal: http://localhost:${PORT}/consumer`);
 });

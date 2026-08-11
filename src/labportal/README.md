@@ -12,8 +12,8 @@ Minimal React + Tailwind manufacturer portal with mock state.
 
 Use Manufacturer IDs from `src/data/mock.ts`, e.g.:
 
-- MFG001 → Dabur
-- MFG002 → Patanjali
+- MFG001 Dabur
+- MFG002 Patanjali
 
 ## Notes
 

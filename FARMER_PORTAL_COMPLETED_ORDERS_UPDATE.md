@@ -6,71 +6,71 @@ Consolidated "Completed Orders" functionality into "Sent to Manufacturing" page 
 ## Changes Implemented
 
 ### 1. **Removed CompletedOrders.jsx Import** (`src/farmerportal/src/App.jsx`)
-   - **Removed**: `import CompletedOrders from './orders/CompletedOrders.jsx';`
-   - **Reason**: Functionality now handled by `SentToManufacturingList.jsx` which already existed and has better farmer-specific filtering
+ - **Removed**: `import CompletedOrders from './orders/CompletedOrders.jsx';`
+ - **Reason**: Functionality now handled by `SentToManufacturingList.jsx` which already existed and has better farmer-specific filtering
 
 ### 2. **Updated Sidebar Menu Item** (`src/farmerportal/src/App.jsx`)
-   **Before:**
-   ```jsx
-   onClick={() => { setCurrentView('completedOrders'); setSidebarOpen(false); }}
-   currentView === 'completedOrders'
-   {t('completedOrders')}
-   ```
-   
-   **After:**
-   ```jsx
-   onClick={() => { setCurrentView('sentToManufacturing'); setSidebarOpen(false); }}
-   currentView === 'sentToManufacturing'
-   {t('sentToManufacturing')}
-   ```
-   - Menu item now navigates to "Sent to Manufacturing" page
-   - Uses existing translation key `sentToManufacturing`
+ **Before:**
+ ```jsx
+ onClick={() => { setCurrentView('completedOrders'); setSidebarOpen(false); }}
+ currentView === 'completedOrders'
+ {t('completedOrders')}
+ ```
+ 
+ **After:**
+ ```jsx
+ onClick={() => { setCurrentView('sentToManufacturing'); setSidebarOpen(false); }}
+ currentView === 'sentToManufacturing'
+ {t('sentToManufacturing')}
+ ```
+ - Menu item now navigates to "Sent to Manufacturing" page
+ - Uses existing translation key `sentToManufacturing`
 
 ### 3. **Updated Component Rendering** (`src/farmerportal/src/App.jsx`)
-   **Before:**
-   ```jsx
-   ) : currentView === 'completedOrders' ? (
-     <motion.div key="completedOrders" ...>
-       <CompletedOrders 
-         currentLanguage={currentLanguage} 
-         farmerData={farmerData}
-         onBack={() => setCurrentView('newDashboard')}
-       />
-     </motion.div>
-   ```
-   
-   **After:**
-   ```jsx
-   ) : currentView === 'sentToManufacturing' ? (
-     <motion.div key="sentToManufacturing" ...>
-       <SentToManufacturingList 
-         onBack={() => setCurrentView('newDashboard')}
-         onViewDetails={(batchId) => {
-           setSelectedBatchId(batchId);
-           setCurrentView('sentToManufacturingDetail');
-         }}
-         t={t}
-         farmerId={farmerData.farmerId}
-       />
-     </motion.div>
-   ```
-   - Now renders `SentToManufacturingList` component instead of `CompletedOrders`
-   - Passes proper props including `farmerId` for farmer-specific filtering
-   - Includes `onViewDetails` handler for navigation to detail page
+ **Before:**
+ ```jsx
+ ) : currentView === 'completedOrders' ? (
+ <motion.div key="completedOrders" ...>
+ <CompletedOrders 
+ currentLanguage={currentLanguage} 
+ farmerData={farmerData}
+ onBack={() => setCurrentView('newDashboard')}
+ />
+ </motion.div>
+ ```
+ 
+ **After:**
+ ```jsx
+ ) : currentView === 'sentToManufacturing' ? (
+ <motion.div key="sentToManufacturing" ...>
+ <SentToManufacturingList 
+ onBack={() => setCurrentView('newDashboard')}
+ onViewDetails={(batchId) => {
+ setSelectedBatchId(batchId);
+ setCurrentView('sentToManufacturingDetail');
+ }}
+ t={t}
+ farmerId={farmerData.farmerId}
+ />
+ </motion.div>
+ ```
+ - Now renders `SentToManufacturingList` component instead of `CompletedOrders`
+ - Passes proper props including `farmerId` for farmer-specific filtering
+ - Includes `onViewDetails` handler for navigation to detail page
 
 ### 4. **Updated Help & Support FAQs** (`src/farmerportal/src/orders/HelpSupport.jsx`)
-   **Before:**
-   ```jsx
-   faq1Ans: 'You can track your order status in the Active Orders or Completed Orders section.',
-   faq2Ans: 'Go to Completed Orders and click the Download Receipt button next to your order.',
-   ```
-   
-   **After:**
-   ```jsx
-   faq1Ans: 'You can track your order status in the Active Orders or Sent to Manufacturing section.',
-   faq2Ans: 'Go to Sent to Manufacturing and click the Download Receipt button next to your order.',
-   ```
-   - Updated FAQ answers to reference "Sent to Manufacturing" instead of "Completed Orders"
+ **Before:**
+ ```jsx
+ faq1Ans: 'You can track your order status in the Active Orders or Completed Orders section.',
+ faq2Ans: 'Go to Completed Orders and click the Download Receipt button next to your order.',
+ ```
+ 
+ **After:**
+ ```jsx
+ faq1Ans: 'You can track your order status in the Active Orders or Sent to Manufacturing section.',
+ faq2Ans: 'Go to Sent to Manufacturing and click the Download Receipt button next to your order.',
+ ```
+ - Updated FAQ answers to reference "Sent to Manufacturing" instead of "Completed Orders"
 
 ## Key Differences Between Old and New Components
 
@@ -82,7 +82,7 @@ Consolidated "Completed Orders" functionality into "Sent to Manufacturing" page 
 
 ### SentToManufacturingList.jsx (NEW - Now used):
 - **Farmer-specific filtering**: Only shows batches belonging to logged-in farmer
-- **Better batch tracking**: Builds complete batch map across all stages (farmer → lab → manufacturer)
+- **Better batch tracking**: Builds complete batch map across all stages (farmer lab manufacturer)
 - **Approval verification**: Only shows approved batches (excludes rejected)
 - **Enhanced UI**: Statistics cards, proper color coding, better visual hierarchy
 - **Navigation**: Supports detail page view with `onViewDetails` handler
@@ -112,14 +112,14 @@ The existing translation key `sentToManufacturing` is already defined in all lan
 
 ## Files Modified
 
-1. ✅ `d:\herb2\src\farmerportal\src\App.jsx`
-   - Removed CompletedOrders import
-   - Changed sidebar menu item from 'completedOrders' to 'sentToManufacturing'
-   - Changed component rendering to use SentToManufacturingList
-   - Updated view state checks
+1. `d:\herb2\src\farmerportal\src\App.jsx`
+ - Removed CompletedOrders import
+ - Changed sidebar menu item from 'completedOrders' to 'sentToManufacturing'
+ - Changed component rendering to use SentToManufacturingList
+ - Updated view state checks
 
-2. ✅ `d:\herb2\src\farmerportal\src\orders\HelpSupport.jsx`
-   - Updated FAQ answers to reference "Sent to Manufacturing"
+2. `d:\herb2\src\farmerportal\src\orders\HelpSupport.jsx`
+ - Updated FAQ answers to reference "Sent to Manufacturing"
 
 ## Files No Longer Used
 
@@ -137,11 +137,11 @@ The existing translation key `sentToManufacturing` is already defined in all lan
 ## Next Steps
 
 1. Test the Farmer Portal to verify:
-   - Sidebar navigation works correctly
-   - "Sent to Manufacturing" page displays farmer's batches only
-   - Detail page navigation works (click on batch card)
-   - Auto-refresh updates data every 30 seconds
-   
+ - Sidebar navigation works correctly
+ - "Sent to Manufacturing" page displays farmer's batches only
+ - Detail page navigation works (click on batch card)
+ - Auto-refresh updates data every 30 seconds
+ 
 2. Optional: Delete `CompletedOrders.jsx` file as it's no longer referenced
 
 ## Summary

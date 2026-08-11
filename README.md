@@ -2,7 +2,7 @@
 
 A unified blockchain-like ledger system for tracking herbal products from farm to consumer across three portals: Farmer, Lab, and Manufacturer, with a Consumer portal for product traceability.
 
-## 🏗️ System Architecture
+## System Architecture
 
 - **Shared Ledger**: Single `ledger.json` file acting as a blockchain-like append-only database
 - **Farmer Portal**: Records product details and generates batch IDs
@@ -10,7 +10,7 @@ A unified blockchain-like ledger system for tracking herbal products from farm t
 - **Manufacturer Portal**: Processes tested batches and generates QR codes
 - **Consumer Portal**: Scans QR codes or enters batch IDs to view complete product timeline
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Install Dependencies
 
@@ -20,7 +20,7 @@ npm install
 
 # Install portal dependencies
 cd farmerportal && npm install
-cd ../labportal && npm install  
+cd ../labportal && npm install 
 cd ../manufportal && npm install
 cd ../consumerportal && npm install
 ```
@@ -35,7 +35,7 @@ npm start
 The server will start on `http://localhost:3001` and serve all portals:
 
 - **Farmer Portal**: http://localhost:3001/farmer
-- **Lab Portal**: http://localhost:3001/lab  
+- **Lab Portal**: http://localhost:3001/lab 
 - **Manufacturer Portal**: http://localhost:3001/manufacturer
 - **Consumer Portal**: http://localhost:3001/consumer
 
@@ -50,7 +50,7 @@ npm start
 # Terminal 2 - Farmer Portal
 cd farmerportal && npm run dev
 
-# Terminal 3 - Lab Portal  
+# Terminal 3 - Lab Portal 
 cd labportal && npm run dev
 
 # Terminal 4 - Manufacturer Portal
@@ -60,7 +60,7 @@ cd manufportal && npm run dev
 cd consumerportal && npm run dev
 ```
 
-## 🔑 Demo Login Credentials
+## Demo Login Credentials
 
 Login is verified server-side via `POST /auth/login` against hashed passwords in `users.json` (not hardcoded in the frontend):
 
@@ -71,7 +71,7 @@ Login is verified server-side via `POST /auth/login` against hashed passwords in
 | Manufacturer | `MFR001` | `mfr789` |
 | Consumer | — no login required — |
 
-## 📋 Usage Workflow
+## Usage Workflow
 
 ### 1. Farmer Portal
 - Enter product details (name, quantity, location, etc.)
@@ -94,20 +94,20 @@ Login is verified server-side via `POST /auth/login` against hashed passwords in
 ### 4. Consumer Portal
 - Scan QR code or enter batch ID manually
 - View complete timeline:
-  - 🌱 Farm stage (product, location, farmer)
-  - 🧪 Lab stage (test results, quality grade)
-  - 🏭 Manufacturing stage (product type, ingredients, company)
+ - Farm stage (product, location, farmer)
+ - Lab stage (test results, quality grade)
+ - Manufacturing stage (product type, ingredients, company)
 
-## 🔧 Technical Details
+## Technical Details
 
 ### Ledger Structure
 ```json
 {
-  "batchId": "SURTN1201NE",
-  "stage": "farmer|lab|manufacturer", 
-  "data": { /* stage-specific data */ },
-  "addedBy": "User Name",
-  "timestamp": "2025-09-28T12:30:00Z"
+ "batchId": "SURTN1201NE",
+ "stage": "farmer|lab|manufacturer", 
+ "data": { /* stage-specific data */ },
+ "addedBy": "User Name",
+ "timestamp": "2025-09-28T12:30:00Z"
 }
 ```
 
@@ -125,7 +125,7 @@ Examples:
 - `RAMKL1502TU` - Ram, Kerala, 15th Feb, Tulsi
 - `KIRKA2003AV` - Kiran, Karnataka, 20th Mar, Aloe Vera
 
-## 🎯 Key Features
+## Key Features
 
 - **Append-Only Ledger**: Immutable blockchain-like data storage
 - **Real-time Updates**: All portals read/write to shared ledger
@@ -134,21 +134,21 @@ Examples:
 - **Clean UI**: Modern, responsive design with Tailwind CSS
 - **Type Safety**: Full TypeScript implementation
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 herb/
-├── ledger.json              # Shared blockchain-like ledger
-├── ledgerService.ts         # Ledger service for Node.js
-├── server.js               # Main Express server
-├── package.json            # Server dependencies
-├── farmerportal/           # Farmer portal (React + Vite)
-├── labportal/             # Lab portal (React + Vite)  
-├── manufportal/           # Manufacturer portal (React + Vite)
-└── consumerportal/        # Consumer portal (React + Vite)
+├── ledger.json # Shared blockchain-like ledger
+├── ledgerService.ts # Ledger service for Node.js
+├── server.js # Main Express server
+├── package.json # Server dependencies
+├── farmerportal/ # Farmer portal (React + Vite)
+├── labportal/ # Lab portal (React + Vite) 
+├── manufportal/ # Manufacturer portal (React + Vite)
+└── consumerportal/ # Consumer portal (React + Vite)
 ```
 
-## 🔍 Testing the System
+## Testing the System
 
 1. **Start the server**: `npm start`
 2. **Open Farmer Portal**: Add a new product entry
@@ -156,7 +156,7 @@ herb/
 4. **Open Manufacturer Portal**: Manufacture the tested batch
 5. **Open Consumer Portal**: Enter the batch ID to see complete timeline
 
-## 🛠️ Development Notes
+## Development Notes
 
 - All portals use React + Vite + TypeScript
 - Shared ledger service handles all data operations
@@ -165,11 +165,11 @@ herb/
 - Error handling and loading states included
 - Responsive design for mobile and desktop
 
-## 📱 Mobile Support
+## Mobile Support
 
 All portals are fully responsive and work on mobile devices. The Consumer Portal is optimized for mobile QR scanning (camera integration can be added).
 
-## 🔒 Security Considerations
+## Security Considerations
 
 Login is now backend-verified with bcrypt-hashed passwords (`POST /auth/login`), but this remains a simple credential check, not a production auth system. For production use, consider:
 - Session/token-based authentication (JWT, refresh tokens)

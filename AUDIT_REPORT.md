@@ -12,7 +12,7 @@ Top-level findings (high-level)
 - Back buttons are present in the source files but some navigation flows (rendering via App state) made them invisible in practice — routing uses an internal `currentView` state instead of URL routes in the Farmer Portal.
 - UI inconsistencies: Farmer Portal uses earthy/green theme; Lab Portal uses white/blue but spacing, spacing and empty states are inconsistent.
 - Accessibility: Missing ARIA attributes, keyboard focus gaps, and no high-contrast mode.
-- Build/run: Dev servers start with Vite; ports sometimes shift (5173→5174) when in-use; backend server occasionally fails to start.
+- Build/run: Dev servers start with Vite; ports sometimes shift (51735174) when in-use; backend server occasionally fails to start.
 
 Most urgent problems (prioritized)
 1. Mock data present in many pages — blocks live integration and creates duplicated UX.
@@ -30,11 +30,11 @@ Files/areas with mock data (examples)
 - ... (44+ occurrences discovered during grep)
 
 Quick wins implemented in Phase 1 (completed)
-- ✅ Created shared blockchain wrapper modules (`blockchainService.js` for Farmer, `.ts` for Lab) to centralize API calls
-- ✅ Replaced direct fetch calls in 5 critical files: SentForTestingList, AllBatches, App.jsx (Farmer), LabDashboard
-- ✅ Added back buttons to order pages (LastOrders, CompletedOrders, RejectedOrders) in Farmer Portal
-- ✅ Fixed batch submission to use shared service (postBatch)
-- ✅ All servers running successfully (Backend: 3001, Farmer: 5173, Lab: 3000)
+- Created shared blockchain wrapper modules (`blockchainService.js` for Farmer, `.ts` for Lab) to centralize API calls
+- Replaced direct fetch calls in 5 critical files: SentForTestingList, AllBatches, App.jsx (Farmer), LabDashboard
+- Added back buttons to order pages (LastOrders, CompletedOrders, RejectedOrders) in Farmer Portal
+- Fixed batch submission to use shared service (postBatch)
+- All servers running successfully (Backend: 3001, Farmer: 5173, Lab: 3000)
 
 Remaining work (Phase 2+)
 - Remove every mock array and replace it with live blockchain data calls via the shared service.

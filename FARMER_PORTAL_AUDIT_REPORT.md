@@ -1,17 +1,17 @@
-# 🔍 FARMER PORTAL - COMPREHENSIVE AUDIT REPORT
-**Date:** November 3, 2025  
+# FARMER PORTAL - COMPREHENSIVE AUDIT REPORT
+**Date:** November 3, 2025 
 **Status:** In Progress - Mock Data Cleanup Required
 
 ---
 
-## 📊 EXECUTIVE SUMMARY
+## EXECUTIVE SUMMARY
 
 ### Current State
-- ✅ **UI/UX**: Professional, responsive design with 10-language support
-- ✅ **Features**: All 8 major features implemented
-- ⚠️ **Data Layer**: **CRITICAL** - Extensive mock data throughout codebase
-- ⚠️ **Blockchain Integration**: Partial - needs complete connection
-- ✅ **File Structure**: Organized but needs optimization
+- **UI/UX**: Professional, responsive design with 10-language support
+- **Features**: All 8 major features implemented
+-  **Data Layer**: **CRITICAL** - Extensive mock data throughout codebase
+-  **Blockchain Integration**: Partial - needs complete connection
+- **File Structure**: Organized but needs optimization
 
 ### Priority Actions Required
 1. **HIGH**: Remove all mock data and connect to blockchain
@@ -22,15 +22,15 @@
 
 ---
 
-## 🔬 DETAILED FINDINGS
+## DETAILED FINDINGS
 
-### 1️⃣ MOCK DATA LOCATIONS (CRITICAL - MUST FIX)
+### 1⃣ MOCK DATA LOCATIONS (CRITICAL - MUST FIX)
 
 #### Active Orders (`orders/ActiveOrders.jsx`)
 ```javascript
 // Line 94-124: MOCK DATA
 const mockOrders = [
-  { id: 'ORD-001', productName: 'Turmeric', status: 'Processing', ... }
+ { id: 'ORD-001', productName: 'Turmeric', status: 'Processing', ... }
 ];
 setOrders(mockOrders);
 ```
@@ -40,16 +40,16 @@ setOrders(mockOrders);
 ```javascript
 // Line 63-86: MOCK DATA
 const mockOrders = [
-  { orderId: 'ORD-101', productName: 'Ashwagandha', ... }
+ { orderId: 'ORD-101', productName: 'Ashwagandha', ... }
 ];
 ```
 **Action**: Fetch from blockchain completed orders
 
 #### Rejected Orders (`orders/RejectedOrders.jsx`)
 ```javascript
-// Line 68-89: MOCK DATA  
+// Line 68-89: MOCK DATA 
 const mockOrders = [
-  { orderId: 'ORD-401', productName: 'Brahmi', ... }
+ { orderId: 'ORD-401', productName: 'Brahmi', ... }
 ];
 ```
 **Action**: Query blockchain for rejected/failed batches
@@ -65,8 +65,8 @@ const mockOrders = [/* ... */];
 ```javascript
 // Line 7-77: HARDCODED BATCHES
 const batches = [
-  { batchId: 'SURTN1201NE', herb: 'Sura Tunai', status: 'Testing in Progress', ... },
-  // ... 5 more hardcoded batches
+ { batchId: 'SURTN1201NE', herb: 'Sura Tunai', status: 'Testing in Progress', ... },
+ // ... 5 more hardcoded batches
 ];
 ```
 **Action**: Query blockchain for batches with status "SENT_TO_LAB"
@@ -75,9 +75,9 @@ const batches = [
 ```javascript
 // Line 6-84: MOCK DATA
 const batchData = {
-  batchId: batchId || 'SURTN1201NE',
-  productName: 'Sura Tunai (Turmeric)',
-  // ... all static data
+ batchId: batchId || 'SURTN1201NE',
+ productName: 'Sura Tunai (Turmeric)',
+ // ... all static data
 };
 ```
 **Action**: Fetch single batch details from blockchain by ID
@@ -86,8 +86,8 @@ const batchData = {
 ```javascript
 // Line 7-136: 12 HARDCODED BATCHES
 const batches = [
-  { batchId: 'SURTN1201', herb: 'Sura Tunai', qualityGrade: 'A+', purity: 98, testStatus: 'Completed', ... },
-  // ... 11 more
+ { batchId: 'SURTN1201', herb: 'Sura Tunai', qualityGrade: 'A+', purity: 98, testStatus: 'Completed', ... },
+ // ... 11 more
 ];
 ```
 **Action**: Query blockchain for lab-approved batches (status === "TESTED" && grade exists)
@@ -96,12 +96,12 @@ const batches = [
 ```javascript
 // Line 7-40: STATIC TEST RESULTS
 const batchData = {
-  testResults: {
-    purity: 98.5,
-    moisture: 8.2,
-    // ... all hardcoded
-  },
-  testCertificate: { /* ... */ }
+ testResults: {
+ purity: 98.5,
+ moisture: 8.2,
+ // ... all hardcoded
+ },
+ testCertificate: { /* ... */ }
 };
 ```
 **Action**: Fetch test results from blockchain labTest object
@@ -109,27 +109,27 @@ const batchData = {
 #### Manufacturing List & Detail
 Similar mock data patterns in `manufacturing/` folder
 
-#### Rejected/Failed List & Detail  
+#### Rejected/Failed List & Detail 
 Similar mock data patterns in `rejected/` folder
 
 ---
 
-### 2️⃣ FILE STRUCTURE ANALYSIS
+### 2⃣ FILE STRUCTURE ANALYSIS
 
-#### ✅ Good Organization
+#### Good Organization
 ```
 src/
-├── components/          # Shared components (HelpSupport)
-├── pages/              # Page components (ReportIssue)
-├── testing/            # Testing feature modules
-├── approved/           # Approved batches modules
-├── manufacturing/      # Manufacturing modules
-├── rejected/           # Rejected batches modules
-├── orders/             # Orders modules
-└── data/               # Data utilities
+├── components/ # Shared components (HelpSupport)
+├── pages/ # Page components (ReportIssue)
+├── testing/ # Testing feature modules
+├── approved/ # Approved batches modules
+├── manufacturing/ # Manufacturing modules
+├── rejected/ # Rejected batches modules
+├── orders/ # Orders modules
+└── data/ # Data utilities
 ```
 
-#### ⚠️ Issues Found
+#### Issues Found
 
 **Duplicate Files:**
 - `App.jsx` AND `App.tsx` (TypeScript version not used)
@@ -154,15 +154,15 @@ src/
 
 ---
 
-### 3️⃣ BLOCKCHAIN INTEGRATION STATUS
+### 3⃣ BLOCKCHAIN INTEGRATION STATUS
 
-#### ✅ Currently Connected
+#### Currently Connected
 - **Farmer Dashboard** (`NewDashboard.jsx` & `FarmerDashboard.jsx`)
-  - Line 103-200: Fetches blockchain data
-  - Uses `http://localhost:3001/blockchain`
-  - Processes farmer batches, counts, status updates
+ - Line 103-200: Fetches blockchain data
+ - Uses `http://localhost:3001/blockchain`
+ - Processes farmer batches, counts, status updates
 
-#### ❌ NOT Connected (Mock Data)
+#### NOT Connected (Mock Data)
 1. Active Orders
 2. Completed Orders
 3. Rejected Orders
@@ -172,7 +172,7 @@ src/
 7. Sent To Manufacturing (List & Detail)
 8. Rejected/Failed (List & Detail)
 
-#### 🔧 Required API Endpoints
+#### Required API Endpoints
 
 **Farmer Portal needs:**
 ```javascript
@@ -198,24 +198,24 @@ GET /api/issues/{issueId}
 ```
 
 **Blockchain Status Mapping:**
-- `FARMER_SUBMITTED` → New batches
-- `SENT_TO_LAB` → Sent for Testing
-- `TESTED` → Approved by Lab (with labTest data)
-- `SENT_TO_MANUFACTURER` → Sent to Manufacturing
-- `REJECTED` / `FAILED` → Rejected/Failed
+- `FARMER_SUBMITTED` New batches
+- `SENT_TO_LAB` Sent for Testing
+- `TESTED` Approved by Lab (with labTest data)
+- `SENT_TO_MANUFACTURER` Sent to Manufacturing
+- `REJECTED` / `FAILED` Rejected/Failed
 
 ---
 
-### 4️⃣ FEATURE TESTING CHECKLIST
+### 4⃣ FEATURE TESTING CHECKLIST
 
-#### ✅ Login Page
+#### Login Page
 - [x] Form validation working
 - [x] Error messages display
 - [x] Session persistence
 - [ ] **TODO:** Connect to actual auth backend
 - [ ] **TODO:** Token-based authentication
 
-#### ✅ Dashboard (NewDashboard.jsx)
+#### Dashboard (NewDashboard.jsx)
 - [x] Blockchain data fetch working
 - [x] Summary cards display counts
 - [x] Cards navigate to correct pages
@@ -223,14 +223,14 @@ GET /api/issues/{issueId}
 - [x] Recent activity timeline
 - [ ] **TODO:** Real-time updates
 
-#### ⚠️ Sent For Testing
+#### Sent For Testing
 - [x] UI/UX complete
 - [x] List view with cards
 - [x] Detail view with timeline
 - [ ] **CRITICAL:** Replace mock data with blockchain
 - [ ] **TODO:** Add real transport tracking
 
-#### ⚠️ Approved By Lab
+#### Approved By Lab
 - [x] UI/UX complete
 - [x] Grade badges and colors
 - [x] Test results display
@@ -238,25 +238,25 @@ GET /api/issues/{issueId}
 - [ ] **CRITICAL:** Fetch from blockchain labTest data
 - [ ] **TODO:** Download PDF certificate
 
-#### ⚠️ Sent To Manufacturing
+#### Sent To Manufacturing
 - [x] UI/UX complete
 - [x] Manufacturer details display
 - [ ] **CRITICAL:** Replace mock data
 - [ ] **TODO:** Track manufacturing process
 
-#### ⚠️ Rejected/Failed
+#### Rejected/Failed
 - [x] UI/UX complete
 - [x] Reason display
 - [x] Appeal option
 - [ ] **CRITICAL:** Fetch rejected batches
 - [ ] **TODO:** Implement appeal system
 
-#### ⚠️ Orders Pages
+#### Orders Pages
 - [x] Active, Completed, Rejected, Last orders UI
 - [ ] **CRITICAL:** All use mock data - need blockchain
 - [ ] **TODO:** Define order schema
 
-#### ✅ Add Product Form
+#### Add Product Form
 - [x] Form validation
 - [x] Multi-language support
 - [x] Image upload
@@ -265,7 +265,7 @@ GET /api/issues/{issueId}
 - [ ] **TODO:** Connect to blockchain POST endpoint
 - [ ] **TODO:** Generate batch ID from blockchain
 
-#### ✅ Report Issue
+#### Report Issue
 - [x] 4-step wizard complete
 - [x] Category selection
 - [x] File upload (5MB limit)
@@ -275,7 +275,7 @@ GET /api/issues/{issueId}
 - [ ] **TODO:** Add admin dashboard to view issues
 - [ ] **TODO:** Status update system
 
-#### ✅ Help & Support
+#### Help & Support
 - [x] 7 sections complete
 - [x] Appeal form
 - [x] Contact form
@@ -287,7 +287,7 @@ GET /api/issues/{issueId}
 
 ---
 
-### 5️⃣ CONSOLE ERRORS CHECK
+### 5⃣ CONSOLE ERRORS CHECK
 
 **Run Development Server and Check Browser Console:**
 
@@ -297,14 +297,14 @@ npm run dev
 ```
 
 **Expected Issues:**
-1. ⚠️ Warnings about unused variables
-2. ⚠️ Missing prop validations
-3. ⚠️ Key warnings in lists
-4. ⚠️ Fetch errors when clicking mock data pages
+1.  Warnings about unused variables
+2.  Missing prop validations
+3.  Key warnings in lists
+4.  Fetch errors when clicking mock data pages
 
 ---
 
-### 6️⃣ CODE QUALITY ISSUES
+### 6⃣ CODE QUALITY ISSUES
 
 #### Duplicate Code
 - Translation keys repeated across 10 languages
@@ -320,14 +320,14 @@ setData(data);
 
 // Should be:
 try {
-  const response = await fetch(url);
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  const data = await response.json();
-  setData(data);
+ const response = await fetch(url);
+ if (!response.ok) throw new Error(`HTTP ${response.status}`);
+ const data = await response.json();
+ setData(data);
 } catch (error) {
-  console.error('Failed to fetch data:', error);
-  setError(error.message);
-  // Show user-friendly error message
+ console.error('Failed to fetch data:', error);
+ setError(error.message);
+ // Show user-friendly error message
 }
 ```
 
@@ -339,7 +339,7 @@ Components don't handle empty data arrays gracefully
 
 ---
 
-## 🛠️ RECOMMENDED ACTION PLAN
+## RECOMMENDED ACTION PLAN
 
 ### Phase 1: Critical Fixes (Week 1)
 
@@ -347,39 +347,39 @@ Components don't handle empty data arrays gracefully
 ```javascript
 // Create: src/api/blockchain.js
 export const blockchainAPI = {
-  // Base URL
-  BASE_URL: 'http://localhost:3001',
-  
-  // Get all farmer batches
-  async getFarmerBatches(farmerId) {
-    const response = await fetch(`${this.BASE_URL}/blockchain?farmerId=${farmerId}`);
-    if (!response.ok) throw new Error('Failed to fetch batches');
-    return response.json();
-  },
-  
-  // Get batch by ID
-  async getBatchById(batchId) {
-    const response = await fetch(`${this.BASE_URL}/blockchain/${batchId}`);
-    if (!response.ok) throw new Error('Batch not found');
-    return response.json();
-  },
-  
-  // Get batches by status
-  async getBatchesByStatus(farmerId, status) {
-    const batches = await this.getFarmerBatches(farmerId);
-    return batches.filter(b => b.data.status === status);
-  },
-  
-  // Submit new batch
-  async submitBatch(batchData) {
-    const response = await fetch(`${this.BASE_URL}/blockchain/farmer`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(batchData)
-    });
-    if (!response.ok) throw new Error('Failed to submit batch');
-    return response.json();
-  }
+ // Base URL
+ BASE_URL: 'http://localhost:3001',
+ 
+ // Get all farmer batches
+ async getFarmerBatches(farmerId) {
+ const response = await fetch(`${this.BASE_URL}/blockchain?farmerId=${farmerId}`);
+ if (!response.ok) throw new Error('Failed to fetch batches');
+ return response.json();
+ },
+ 
+ // Get batch by ID
+ async getBatchById(batchId) {
+ const response = await fetch(`${this.BASE_URL}/blockchain/${batchId}`);
+ if (!response.ok) throw new Error('Batch not found');
+ return response.json();
+ },
+ 
+ // Get batches by status
+ async getBatchesByStatus(farmerId, status) {
+ const batches = await this.getFarmerBatches(farmerId);
+ return batches.filter(b => b.data.status === status);
+ },
+ 
+ // Submit new batch
+ async submitBatch(batchData) {
+ const response = await fetch(`${this.BASE_URL}/blockchain/farmer`, {
+ method: 'POST',
+ headers: { 'Content-Type': 'application/json' },
+ body: JSON.stringify(batchData)
+ });
+ if (!response.ok) throw new Error('Failed to submit batch');
+ return response.json();
+ }
 };
 ```
 
@@ -389,33 +389,33 @@ export const blockchainAPI = {
 import { blockchainAPI } from '../api/blockchain';
 
 const SentForTestingList = ({ onBack, onViewDetails, farmerData, t }) => {
-  const [batches, setBatches] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+ const [batches, setBatches] = useState([]);
+ const [loading, setLoading] = useState(true);
+ const [error, setError] = useState(null);
 
-  useEffect(() => {
-    async function fetchBatches() {
-      try {
-        setLoading(true);
-        const data = await blockchainAPI.getBatchesByStatus(
-          farmerData.farmerId, 
-          'SENT_TO_LAB'
-        );
-        setBatches(data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchBatches();
-  }, [farmerData.farmerId]);
+ useEffect(() => {
+ async function fetchBatches() {
+ try {
+ setLoading(true);
+ const data = await blockchainAPI.getBatchesByStatus(
+ farmerData.farmerId, 
+ 'SENT_TO_LAB'
+ );
+ setBatches(data);
+ } catch (err) {
+ setError(err.message);
+ } finally {
+ setLoading(false);
+ }
+ }
+ fetchBatches();
+ }, [farmerData.farmerId]);
 
-  if (loading) return <LoadingSpinner />;
-  if (error) return <ErrorMessage message={error} />;
-  if (batches.length === 0) return <EmptyState message="No batches sent for testing" />;
+ if (loading) return <LoadingSpinner />;
+ if (error) return <ErrorMessage message={error} />;
+ if (batches.length === 0) return <EmptyState message="No batches sent for testing" />;
 
-  // ... render batches
+ // ... render batches
 };
 ```
 
@@ -423,8 +423,8 @@ const SentForTestingList = ({ onBack, onViewDetails, farmerData, t }) => {
 **File:** `approved/ApprovedByLabList.jsx`
 ```javascript
 const data = await blockchainAPI.getBatchesByStatus(
-  farmerData.farmerId,
-  'TESTED'
+ farmerData.farmerId,
+ 'TESTED'
 );
 // Filter only approved (has labTest data)
 const approvedBatches = data.filter(b => b.data.labTest && b.data.labTest.grade);
@@ -476,13 +476,13 @@ Remove-Item FarmerDashboard.jsx
 import PropTypes from 'prop-types';
 
 SentForTestingList.propTypes = {
-  onBack: PropTypes.func.isRequired,
-  onViewDetails: PropTypes.func.isRequired,
-  farmerData: PropTypes.shape({
-    farmerId: PropTypes.string.isRequired,
-    farmerName: PropTypes.string.isRequired
-  }).isRequired,
-  t: PropTypes.func.isRequired
+ onBack: PropTypes.func.isRequired,
+ onViewDetails: PropTypes.func.isRequired,
+ farmerData: PropTypes.shape({
+ farmerId: PropTypes.string.isRequired,
+ farmerName: PropTypes.string.isRequired
+ }).isRequired,
+ t: PropTypes.func.isRequired
 };
 ```
 
@@ -498,7 +498,7 @@ Add try-catch, loading, and error states to all data-fetching components
 
 #### Day 2-3: Issue Tracking
 - Create admin dashboard for issues
-- Add status updates (Pending → In Progress → Resolved)
+- Add status updates (Pending In Progress Resolved)
 - Email notifications
 
 #### Day 4-5: Real-time Updates
@@ -533,7 +533,7 @@ Add try-catch, loading, and error states to all data-fetching components
 
 ---
 
-## 📋 CLEANUP CHECKLIST
+## CLEANUP CHECKLIST
 
 ### Immediate Actions
 - [ ] Create `src/api/blockchain.js` with API functions
@@ -572,27 +572,27 @@ Add try-catch, loading, and error states to all data-fetching components
 
 ---
 
-## 🚀 DEPLOYMENT READINESS
+## DEPLOYMENT READINESS
 
-### Current Status: ❌ NOT READY
+### Current Status: NOT READY
 
 **Blockers:**
-1. 🔴 Mock data throughout codebase
-2. 🔴 No error handling
-3. 🔴 Missing API layer
-4. 🔴 Duplicate files
-5. 🟡 No loading states
-6. 🟡 No empty states
-7. 🟡 Console warnings
+1. Mock data throughout codebase
+2. No error handling
+3. Missing API layer
+4. Duplicate files
+5. No loading states
+6. No empty states
+7. Console warnings
 
-**After Phase 1 Completion:** 🟡 PARTIAL
-**After Phase 2 Completion:** 🟢 DEVELOPMENT READY
-**After Phase 3 Completion:** 🟢 STAGING READY
-**After Phase 4 Completion:** 🟢 PRODUCTION READY
+**After Phase 1 Completion:** PARTIAL
+**After Phase 2 Completion:** DEVELOPMENT READY
+**After Phase 3 Completion:** STAGING READY
+**After Phase 4 Completion:** PRODUCTION READY
 
 ---
 
-## 📞 SUPPORT & QUESTIONS
+## SUPPORT & QUESTIONS
 
 **Priority Issues:**
 1. Define "orders" schema - are they separate from batches?
@@ -608,6 +608,6 @@ Add try-catch, loading, and error states to all data-fetching components
 
 ---
 
-**Report Generated:** November 3, 2025  
-**Last Updated:** November 3, 2025  
+**Report Generated:** November 3, 2025 
+**Last Updated:** November 3, 2025 
 **Version:** 1.0.0

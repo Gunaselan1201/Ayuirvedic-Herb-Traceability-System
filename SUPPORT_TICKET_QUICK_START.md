@@ -1,4 +1,4 @@
-# 🚀 Support Ticket System - Quick Start Guide
+# Support Ticket System - Quick Start Guide
 
 ## Ready to Use!
 
@@ -6,7 +6,7 @@ The Lab Portal Support Ticket System is **fully implemented and ready for testin
 
 ---
 
-## ⚡ Quick Start (3 Steps)
+## Quick Start (3 Steps)
 
 ### Step 1: Ensure Services are Running
 
@@ -18,7 +18,7 @@ Check if services are already running in your terminals:
 cd d:\herb2\server
 npm start
 ```
-Look for: `✅ Farmer Portal Server running on http://localhost:5174`
+Look for: ` Farmer Portal Server running on http://localhost:5174`
 
 **Lab Portal (Port 3002)**
 ```powershell
@@ -26,7 +26,7 @@ Look for: `✅ Farmer Portal Server running on http://localhost:5174`
 cd d:\herb2\src\labportal
 npm run dev
 ```
-Look for: `➜ Local: http://localhost:3002/lab/`
+Look for: ` Local: http://localhost:3002/lab/`
 
 ### Step 2: Access the Support System
 
@@ -43,18 +43,18 @@ Open your browser and navigate to:
 
 ---
 
-## 📍 Navigation
+## Navigation
 
 From Lab Portal main page:
 1. Go to **Help & Support** section
 2. Click **"Report Issue"** button
 3. Or use direct URLs:
-   - Report: `/lab/support/report`
-   - View Tickets: `/lab/support/tickets`
+ - Report: `/lab/support/report`
+ - View Tickets: `/lab/support/tickets`
 
 ---
 
-## 🎯 What You Can Do Now
+## What You Can Do Now
 
 ### As a Lab Technician:
 
@@ -85,8 +85,8 @@ Invoke-WebRequest -Uri http://localhost:5174/api/support/tickets | ConvertFrom-J
 **Update Ticket Status**
 ```powershell
 $body = @{
-    status = "Resolved"
-    adminNotes = "Fixed in update v2.1.0"
+ status = "Resolved"
+ adminNotes = "Fixed in update v2.1.0"
 } | ConvertTo-Json
 
 Invoke-WebRequest -Uri http://localhost:5174/api/support/tickets/SUPLAB-00001 -Method PUT -Body $body -ContentType "application/json"
@@ -94,56 +94,56 @@ Invoke-WebRequest -Uri http://localhost:5174/api/support/tickets/SUPLAB-00001 -M
 
 ---
 
-## 🧪 Quick Test
+## Quick Test
 
 **5-Minute Test**
 
 1. **Create Ticket**
-   - Go to: http://localhost:3002/lab/support/report
-   - Fill form with any values
-   - Submit
-   - Note the ticket ID from success message
+ - Go to: http://localhost:3002/lab/support/report
+ - Fill form with any values
+ - Submit
+ - Note the ticket ID from success message
 
 2. **View Ticket**
-   - Go to: http://localhost:3002/lab/support/tickets
-   - See your ticket in the list
-   - Click to expand details
-   - Verify all information is correct
+ - Go to: http://localhost:3002/lab/support/tickets
+ - See your ticket in the list
+ - Click to expand details
+ - Verify all information is correct
 
 3. **Test Search**
-   - Type your ticket ID in search box
-   - Only your ticket should appear
+ - Type your ticket ID in search box
+ - Only your ticket should appear
 
 4. **Test Filters**
-   - Try Status filter: "Pending"
-   - Try Severity filter based on what you selected
-   - Verify filtering works
+ - Try Status filter: "Pending"
+ - Try Severity filter based on what you selected
+ - Verify filtering works
 
-✅ **If all 4 steps work, the system is fully functional!**
+ **If all 4 steps work, the system is fully functional!**
 
 ---
 
-## 📊 System Status
+## System Status
 
 **Current State**
-- ✅ Backend API running on port 5174
-- ✅ Lab Portal running on port 3002
-- ✅ Database initialized (support_tickets.json)
-- ✅ Upload directory created (support_uploads/)
-- ✅ Zero TypeScript errors
-- ✅ All routes registered
-- ✅ Ready for production use
+- Backend API running on port 5174
+- Lab Portal running on port 3002
+- Database initialized (support_tickets.json)
+- Upload directory created (support_uploads/)
+- Zero TypeScript errors
+- All routes registered
+- Ready for production use
 
 **Verified**
-- ✅ API endpoint responds correctly
-- ✅ Components compile successfully
-- ✅ Routing works properly
-- ✅ File upload configured
-- ✅ Validation in place
+- API endpoint responds correctly
+- Components compile successfully
+- Routing works properly
+- File upload configured
+- Validation in place
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 **Problem: "Can't connect to server"**
 ```powershell
@@ -171,32 +171,32 @@ npm run dev
 
 ---
 
-## 📚 Full Documentation
+## Full Documentation
 
 For complete details, see:
 
 1. **SUPPORT_TICKET_README.md**
-   - Complete system overview
-   - Installation instructions
-   - API documentation
-   - cURL examples
-   - Production deployment guide
+ - Complete system overview
+ - Installation instructions
+ - API documentation
+ - cURL examples
+ - Production deployment guide
 
 2. **SUPPORT_TICKET_TEST_GUIDE.md**
-   - 15 comprehensive test scenarios
-   - Step-by-step instructions
-   - Expected results
-   - Test checklist
+ - 15 comprehensive test scenarios
+ - Step-by-step instructions
+ - Expected results
+ - Test checklist
 
 3. **SUPPORT_TICKET_IMPLEMENTATION_SUMMARY.md**
-   - Technical specifications
-   - Design system
-   - Code statistics
-   - Future roadmap
+ - Technical specifications
+ - Design system
+ - Code statistics
+ - Future roadmap
 
 ---
 
-## 🎯 Quick API Reference
+## Quick API Reference
 
 **Base URL**: `http://localhost:5174/api`
 
@@ -213,22 +213,22 @@ For complete details, see:
 $boundary = [System.Guid]::NewGuid().ToString()
 $LF = "`r`n"
 $bodyLines = (
-    "--$boundary",
-    "Content-Disposition: form-data; name=`"userName`"$LF",
-    "Test User$LF",
-    "--$boundary",
-    "Content-Disposition: form-data; name=`"labId`"$LF",
-    "LAB001$LF",
-    "--$boundary",
-    "Content-Disposition: form-data; name=`"issueType`"$LF",
-    "Portal Error$LF",
-    "--$boundary",
-    "Content-Disposition: form-data; name=`"severity`"$LF",
-    "High$LF",
-    "--$boundary",
-    "Content-Disposition: form-data; name=`"description`"$LF",
-    "Test ticket created via API to verify functionality.$LF",
-    "--$boundary--$LF"
+ "--$boundary",
+ "Content-Disposition: form-data; name=`"userName`"$LF",
+ "Test User$LF",
+ "--$boundary",
+ "Content-Disposition: form-data; name=`"labId`"$LF",
+ "LAB001$LF",
+ "--$boundary",
+ "Content-Disposition: form-data; name=`"issueType`"$LF",
+ "Portal Error$LF",
+ "--$boundary",
+ "Content-Disposition: form-data; name=`"severity`"$LF",
+ "High$LF",
+ "--$boundary",
+ "Content-Disposition: form-data; name=`"description`"$LF",
+ "Test ticket created via API to verify functionality.$LF",
+ "--$boundary--$LF"
 ) -join ''
 
 Invoke-WebRequest -Uri http://localhost:5174/api/support/tickets -Method POST -ContentType "multipart/form-data; boundary=$boundary" -Body $bodyLines
@@ -236,31 +236,31 @@ Invoke-WebRequest -Uri http://localhost:5174/api/support/tickets -Method POST -C
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 ### Report Issue Page
-- 🔒 Auto-fills lab info from session
+- Auto-fills lab info from session
 - ⏰ Real-time date/time display
-- 📋 6 issue type categories
-- 🎨 Color-coded severity levels
-- 📝 Description with character count
-- 📎 File upload (drag & drop)
-- ✅ Instant validation feedback
-- 🎉 Success notification with ticket ID
+- 6 issue type categories
+- Color-coded severity levels
+- Description with character count
+- File upload (drag & drop)
+- Instant validation feedback
+- Success notification with ticket ID
 
 ### View Tickets Page
-- 🔍 Search by keyword
-- 🎛️ Filter by status
-- 🎯 Filter by severity
-- 📊 Results count display
-- 🎴 Expandable ticket cards
-- 📥 Download attachments
-- 💬 View admin responses
-- 📱 Fully responsive
+- Search by keyword
+-  Filter by status
+- Filter by severity
+- Results count display
+- Expandable ticket cards
+- Download attachments
+- View admin responses
+- Fully responsive
 
 ---
 
-## 🎓 Tips
+## Tips
 
 1. **For Testing**: Use realistic data to simulate real usage
 2. **For Admins**: Update ticket status via API as issues get resolved
@@ -269,7 +269,7 @@ Invoke-WebRequest -Uri http://localhost:5174/api/support/tickets -Method POST -C
 
 ---
 
-## 📞 Need Help?
+## Need Help?
 
 1. Check the FAQ section in documentation
 2. Review test guide for common scenarios
@@ -279,20 +279,20 @@ Invoke-WebRequest -Uri http://localhost:5174/api/support/tickets -Method POST -C
 
 ---
 
-## 🏁 Next Steps
+## Next Steps
 
 After testing:
-1. ✅ Complete manual test checklist (SUPPORT_TICKET_TEST_GUIDE.md)
-2. ✅ Verify all 15 test scenarios pass
-3. ✅ Test with real lab users
-4. ✅ Gather feedback for improvements
-5. ✅ Plan Phase 2 enhancements (admin dashboard, email notifications)
+1. Complete manual test checklist (SUPPORT_TICKET_TEST_GUIDE.md)
+2. Verify all 15 test scenarios pass
+3. Test with real lab users
+4. Gather feedback for improvements
+5. Plan Phase 2 enhancements (admin dashboard, email notifications)
 
 ---
 
-**Status**: ✅ PRODUCTION READY  
-**Ready to Use**: YES  
-**Documentation**: COMPLETE  
+**Status**: PRODUCTION READY 
+**Ready to Use**: YES 
+**Documentation**: COMPLETE 
 **Testing**: READY
 
-🎉 **Enjoy your new support ticket system!**
+ **Enjoy your new support ticket system!**
