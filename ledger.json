@@ -1,0 +1,1211 @@
+[
+  {
+    "batchId": "SURTN1201NE",
+    "stage": "farmer",
+    "data": {
+      "productName": "Neem",
+      "quantity": "20kg",
+      "location": "Tamil Nadu Farm"
+    },
+    "addedBy": "Suresh",
+    "timestamp": "2025-09-28T11:27:15.110Z"
+  },
+  {
+    "batchId": "SURTN1201NE",
+    "stage": "lab",
+    "data": {
+      "moisture": 8.5,
+      "pesticide": 0.2,
+      "qualityGrade": "A"
+    },
+    "addedBy": "Dr. Kumar",
+    "timestamp": "2025-09-28T11:27:15.270Z"
+  },
+  {
+    "batchId": "FARTN2809CO",
+    "stage": "farmer",
+    "data": {
+      "productName": "Coconut",
+      "quantity": "0.01Kg",
+      "location": "Mohanur, Namakkal, TN",
+      "harvestedDate": "2025-09-28",
+      "coordinates": {
+        "latitude": 78.298,
+        "longitude": 11.015
+      },
+      "farmerId": "FARM001"
+    },
+    "addedBy": "Gunaselan",
+    "timestamp": "2025-09-28T14:52:50.647Z"
+  },
+  {
+    "batchId": "FARTN2809CO",
+    "stage": "farmer",
+    "data": {
+      "productName": "Coconut",
+      "quantity": "0.01Kg",
+      "location": "Mohanur, Namakkal, TN",
+      "harvestedDate": "2025-09-28",
+      "coordinates": {
+        "latitude": 78.298,
+        "longitude": 11.015
+      },
+      "farmerId": "FARM001"
+    },
+    "addedBy": "Gunaselan",
+    "timestamp": "2025-09-28T14:52:51.458Z"
+  },
+  {
+    "batchId": "FARTN2809CO",
+    "stage": "farmer",
+    "data": {
+      "productName": "Coconut",
+      "quantity": "0.01Kg",
+      "location": "Mohanur, Namakkal, TN",
+      "harvestedDate": "2025-09-28",
+      "coordinates": {
+        "latitude": 78.298,
+        "longitude": 11.015
+      },
+      "farmerId": "FARM001"
+    },
+    "addedBy": "Gunaselan",
+    "timestamp": "2025-09-28T14:52:51.794Z"
+  },
+  {
+    "batchId": "FARTN2809CO",
+    "stage": "farmer",
+    "data": {
+      "productName": "Coconut",
+      "quantity": "5Kg",
+      "location": "Mohanur, Namakkal, TN",
+      "harvestedDate": "2025-09-27",
+      "coordinates": {
+        "latitude": 78.298,
+        "longitude": 11.015
+      },
+      "farmerId": "FARM001"
+    },
+    "addedBy": "Gunaselan",
+    "timestamp": "2025-09-28T15:23:35.924Z"
+  },
+  {
+    "batchId": "FARTN2909CO",
+    "stage": "farmer",
+    "data": {
+      "productName": "Coconut",
+      "quantity": "1Kg",
+      "location": "thottiyam, trichy, TN",
+      "harvestedDate": "2025-10-08",
+      "coordinates": {
+        "latitude": -18,
+        "longitude": 27
+      },
+      "farmerId": "FARM001"
+    },
+    "addedBy": "krishna",
+    "timestamp": "2025-09-29T06:03:07.465Z"
+  },
+  {
+    "batchId": "SURTN1201NE",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Butea frondosa, Bhringraj, Chickpea",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-014591B5"
+    },
+    "addedBy": "Manoj",
+    "timestamp": "2025-09-29T13:47:45.048Z"
+  },
+  {
+    "batchId": "FARTN2909TU",
+    "stage": "farmer",
+    "data": {
+      "productName": "Tulsi",
+      "quantity": "5Kg",
+      "location": "Mohanur, Namakkal, TN",
+      "harvestedDate": "2025-09-24",
+      "coordinates": {
+        "latitude": 78.298,
+        "longitude": 11.015
+      },
+      "farmerId": "FARM001"
+    },
+    "addedBy": "guna",
+    "timestamp": "2025-09-29T14:01:22.339Z"
+  },
+  {
+    "batchId": "FARTN2909CO",
+    "stage": "farmer",
+    "data": {
+      "productName": "Coconut",
+      "quantity": "5Ton",
+      "location": "Mohanur, Namakkal, TN",
+      "harvestedDate": "2025-09-29",
+      "coordinates": {
+        "latitude": null,
+        "longitude": 245452
+      },
+      "farmerId": "FARM001"
+    },
+    "addedBy": "Guna",
+    "timestamp": "2025-09-29T14:13:34.907Z"
+  },
+  {
+    "batchId": "FARTN2909CO",
+    "stage": "farmer",
+    "data": {
+      "productName": "Coconut",
+      "quantity": "5Kg",
+      "location": "Mohanur, Namakkal, TN",
+      "harvestedDate": "2025-09-29",
+      "coordinates": {
+        "latitude": null,
+        "longitude": 245452
+      },
+      "farmerId": "FARM001"
+    },
+    "addedBy": "Guna",
+    "timestamp": "2025-09-29T14:52:12.525Z"
+  },
+  {
+    "batchId": "FARTN2809CO",
+    "stage": "lab",
+    "data": {
+      "moisture": 7,
+      "pesticide": 2,
+      "quality": "A",
+      "pesticideResidues": "54",
+      "heavyMetals": {
+        "Pb": "87",
+        "As": "8",
+        "Cd": "76",
+        "Hg": "67"
+      },
+      "microbialLoad": "646",
+      "aflatoxins": "6465w3",
+      "moistureWaterActivity": "5643",
+      "macroMicroIdentity": "67",
+      "totalAsh": "67",
+      "extractiveValues": "78",
+      "foreignOrganicMatter": "76",
+      "tlcHptlc": "87",
+      "markerCompoundQuant": "56",
+      "residualSolvents": "67",
+      "pesticidePanelConfirmation": "23",
+      "dnaBarcoding": "12",
+      "testedBy": "guna",
+      "testedAtISO": "2025-09-29T14:52:32.930Z"
+    },
+    "addedBy": "manoj",
+    "timestamp": "2025-09-29T14:54:17.681Z"
+  },
+  {
+    "batchId": "FARTN2909CO",
+    "stage": "farmer",
+    "data": {
+      "productName": "Coconut",
+      "quantity": "5Kg",
+      "location": "Mohanur, Namakkal, TN",
+      "harvestedDate": "2025-09-16",
+      "coordinates": {
+        "latitude": 78.298,
+        "longitude": 11.015
+      },
+      "farmerId": "FARM001"
+    },
+    "addedBy": "Manoj",
+    "timestamp": "2025-09-29T14:55:02.495Z"
+  },
+  {
+    "batchId": "FARTN2909CO",
+    "stage": "lab",
+    "data": {
+      "moisture": 2,
+      "pesticide": 1,
+      "quality": "B",
+      "pesticideResidues": "34",
+      "heavyMetals": {
+        "Pb": "3",
+        "As": "23",
+        "Cd": "3",
+        "Hg": "3"
+      },
+      "microbialLoad": "3",
+      "aflatoxins": "1",
+      "moistureWaterActivity": "2",
+      "macroMicroIdentity": "34",
+      "totalAsh": "5",
+      "extractiveValues": "6",
+      "foreignOrganicMatter": "6",
+      "tlcHptlc": "8",
+      "markerCompoundQuant": "9",
+      "residualSolvents": "6",
+      "pesticidePanelConfirmation": "6",
+      "dnaBarcoding": "6",
+      "testedBy": "guna",
+      "testedAtISO": "2025-09-29T14:55:32.434Z"
+    },
+    "addedBy": "manoj",
+    "timestamp": "2025-09-29T14:56:36.429Z"
+  },
+  {
+    "batchId": "FARTN2909HA",
+    "stage": "farmer",
+    "data": {
+      "productName": "Haritaki",
+      "quantity": "5Kg",
+      "location": "Mohanur, Namakkal, TN",
+      "harvestedDate": "2025-09-26",
+      "coordinates": {
+        "latitude": 245,
+        "longitude": 254
+      },
+      "farmerId": "FARM001"
+    },
+    "addedBy": "Gunaselan",
+    "timestamp": "2025-09-29T15:40:57.540Z"
+  },
+  {
+    "batchId": "FARTN2909HA",
+    "stage": "lab",
+    "data": {
+      "moisture": 1,
+      "pesticide": 2,
+      "quality": "A",
+      "pesticideResidues": "ds",
+      "heavyMetals": {
+        "Pb": "23",
+        "As": "23",
+        "Cd": "2",
+        "Hg": "32"
+      },
+      "microbialLoad": "sd",
+      "aflatoxins": "ds",
+      "moistureWaterActivity": "sd",
+      "macroMicroIdentity": "23",
+      "totalAsh": "23",
+      "extractiveValues": "23",
+      "foreignOrganicMatter": "23",
+      "tlcHptlc": "23",
+      "markerCompoundQuant": "23",
+      "residualSolvents": "23",
+      "pesticidePanelConfirmation": "32",
+      "dnaBarcoding": "23",
+      "testedBy": "Guna",
+      "testedAtISO": "2025-09-29T15:41:12.652Z"
+    },
+    "addedBy": "Krishna",
+    "timestamp": "2025-09-29T15:42:06.447Z"
+  },
+  {
+    "batchId": "SURTN1201NE",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Butea frondosa, Bhringraj, Chickpea",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-3A65F68B"
+    },
+    "addedBy": "Guna",
+    "timestamp": "2025-09-29T15:42:40.860Z"
+  },
+  {
+    "batchId": "FARTN2909CO",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Butea frondosa, Bhringraj, Chickpea",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-EA938320"
+    },
+    "addedBy": "Manoj",
+    "timestamp": "2025-09-29T15:55:52.377Z"
+  },
+  {
+    "batchId": "FARTN2909HA",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Butea frondosa, Bhringraj, Chickpea",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-EA938320"
+    },
+    "addedBy": "Manoj",
+    "timestamp": "2025-09-29T15:55:52.385Z"
+  },
+  {
+    "batchId": "SURTN1201NE",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Butea frondosa, Bhringraj, Chickpea",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-7CD08914"
+    },
+    "addedBy": "Manoj",
+    "timestamp": "2025-09-29T16:03:45.749Z"
+  },
+  {
+    "batchId": "FARTN2809CO",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Butea frondosa, Bhringraj, Chickpea",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-7CD08914"
+    },
+    "addedBy": "Manoj",
+    "timestamp": "2025-09-29T16:03:45.755Z"
+  },
+  {
+    "batchId": "FARTN2809CO",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Butea frondosa, Bhringraj, Chickpea",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-7BC91279"
+    },
+    "addedBy": "Manoj",
+    "timestamp": "2025-09-29T16:09:50.900Z"
+  },
+  {
+    "batchId": "FARTN2909HA",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Butea frondosa, Bhringraj, Chickpea",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-7BC91279"
+    },
+    "addedBy": "Manoj",
+    "timestamp": "2025-09-29T16:09:50.907Z"
+  },
+  {
+    "batchId": "FARTN2809CO",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Tea Tree Oil, Aloe Vera",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-F2F988D9"
+    },
+    "addedBy": "Manoj",
+    "timestamp": "2025-09-29T16:28:12.378Z"
+  },
+  {
+    "batchId": "FARTN2909HA",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Tea Tree Oil, Aloe Vera",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-F2F988D9"
+    },
+    "addedBy": "Manoj",
+    "timestamp": "2025-09-29T16:28:12.384Z"
+  },
+  {
+    "batchId": "SURTN1201NE",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Butea frondosa, Bhringraj, Chickpea",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-E428CA62"
+    },
+    "addedBy": "Guna",
+    "timestamp": "2025-09-29T16:46:04.685Z"
+  },
+  {
+    "batchId": "FARTN2809CO",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Butea frondosa, Bhringraj, Chickpea",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-E428CA62"
+    },
+    "addedBy": "Guna",
+    "timestamp": "2025-09-29T16:46:04.691Z"
+  },
+  {
+    "batchId": "FARTN2909CO",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Butea frondosa, Bhringraj, Chickpea",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-E94D0A24"
+    },
+    "addedBy": "Guna",
+    "timestamp": "2025-09-29T16:53:37.647Z"
+  },
+  {
+    "batchId": "FARTN2909CO",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Butea frondosa, Bhringraj, Chickpea",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-3012DE0B"
+    },
+    "addedBy": "Guna",
+    "timestamp": "2025-09-29T17:01:21.165Z"
+  },
+  {
+    "batchId": "FARTN2909HA",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Tea Tree Oil, Aloe Vera",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-AFBEEA70"
+    },
+    "addedBy": "Guna",
+    "timestamp": "2025-09-29T17:02:32.394Z"
+  },
+  {
+    "batchId": "FARTN2909HA",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Butea frondosa, Bhringraj, Chickpea",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-457B5C1F"
+    },
+    "addedBy": "Guna",
+    "timestamp": "2025-09-29T17:07:19.857Z"
+  },
+  {
+    "batchId": "FARTN2909HA",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Aloe Vera, Chickpea",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-A64D997F"
+    },
+    "addedBy": "Guna",
+    "timestamp": "2025-09-29T17:10:30.263Z"
+  },
+  {
+    "batchId": "FARTN2909HA",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Aloe Vera, Chickpea",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-F42702F6"
+    },
+    "addedBy": "Manoj",
+    "timestamp": "2025-09-29T17:11:12.402Z"
+  },
+  {
+    "batchId": "FARTN2909CO",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Aloe Vera, Yarrow",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-858E63A6"
+    },
+    "addedBy": "Manoj",
+    "timestamp": "2025-09-29T17:15:56.002Z"
+  },
+  {
+    "batchId": "FARTN2909HA",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Oils",
+      "ingredients": "Olive Oil, Winter Cherry",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-E856E121"
+    },
+    "addedBy": "Manoj",
+    "timestamp": "2025-09-29T17:18:32.408Z"
+  },
+  {
+    "batchId": "FARTN2909HA",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Shampoos",
+      "ingredients": "Butea frondosa, Bhringraj, Chickpea",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-69211467"
+    },
+    "addedBy": "Manoj",
+    "timestamp": "2025-09-29T17:22:51.593Z"
+  },
+  {
+    "batchId": "FARTN2909TU",
+    "stage": "farmer",
+    "data": {
+      "productName": "Tulsi",
+      "quantity": "5Ton",
+      "location": "Namakkal, Namakkal, TN",
+      "harvestedDate": "2025-09-25",
+      "coordinates": {
+        "latitude": 10.7905,
+        "longitude": 78.7047
+      },
+      "farmerId": "FARM001"
+    },
+    "addedBy": "Guna",
+    "timestamp": "2025-09-29T17:41:58.209Z"
+  },
+  {
+    "batchId": "FARTN2909TU",
+    "stage": "farmer",
+    "data": {
+      "productName": "Tulsi",
+      "quantity": "2Ton",
+      "location": "Namakkal, Namakkal, TN",
+      "harvestedDate": "2025-09-25",
+      "coordinates": {
+        "latitude": 10.795,
+        "longitude": 78.7047
+      },
+      "farmerId": "FARM001"
+    },
+    "addedBy": "Guna",
+    "timestamp": "2025-09-29T17:43:29.061Z"
+  },
+  {
+    "batchId": "FARTN2909TU",
+    "stage": "lab",
+    "data": {
+      "moisture": 4,
+      "pesticide": 0.2,
+      "quality": "A",
+      "pesticideResidues": "Pass",
+      "heavyMetals": {
+        "Pb": "0.01",
+        "As": "0.0005",
+        "Cd": "0.002",
+        "Hg": "0.0005"
+      },
+      "microbialLoad": "within limits",
+      "aflatoxins": "0.5 ppb",
+      "moistureWaterActivity": "0.62",
+      "macroMicroIdentity": "Confirmed",
+      "totalAsh": "5.2",
+      "extractiveValues": "2",
+      "foreignOrganicMatter": "None",
+      "tlcHptlc": "Match",
+      "markerCompoundQuant": "2.5",
+      "residualSolvents": "Below limits",
+      "pesticidePanelConfirmation": "Pass",
+      "dnaBarcoding": "Match",
+      "testedBy": "Krishna",
+      "testedAtISO": "2025-09-29T17:49:41.840Z"
+    },
+    "addedBy": "Manoj",
+    "timestamp": "2025-09-29T17:54:07.871Z"
+  },
+  {
+    "batchId": "FARTN2909TU",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Paste",
+      "ingredients": "Neem, Pomegranate, Miswak",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-5CE73D9F"
+    },
+    "addedBy": "Meganath",
+    "timestamp": "2025-09-29T17:56:25.774Z"
+  },
+  {
+    "batchId": "FARTN2909TU",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Paste",
+      "ingredients": "Neem, Pomegranate, Miswak",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250929-DBA15373"
+    },
+    "addedBy": "Meganath",
+    "timestamp": "2025-09-29T17:57:16.383Z"
+  },
+  {
+    "batchId": "FARTN3009TU",
+    "stage": "farmer",
+    "data": {
+      "productName": "Tulsi",
+      "quantity": "2Ton",
+      "location": "Namakkal, Namakkal, TN",
+      "harvestedDate": "2025-09-25",
+      "coordinates": {
+        "latitude": 15421,
+        "longitude": null
+      },
+      "farmerId": "FARM001"
+    },
+    "addedBy": "guna",
+    "timestamp": "2025-09-29T18:38:49.004Z"
+  },
+  {
+    "batchId": "FARTN3009TU",
+    "stage": "lab",
+    "data": {
+      "moisture": 2,
+      "pesticide": 0.2,
+      "quality": "A",
+      "pesticideResidues": "sf",
+      "heavyMetals": {
+        "Pb": "d",
+        "As": "d",
+        "Cd": "d",
+        "Hg": "d"
+      },
+      "microbialLoad": "df",
+      "aflatoxins": "sda",
+      "moistureWaterActivity": "d",
+      "macroMicroIdentity": "d",
+      "totalAsh": "d",
+      "extractiveValues": "d",
+      "foreignOrganicMatter": "d",
+      "tlcHptlc": "df",
+      "markerCompoundQuant": "ff",
+      "residualSolvents": "dad",
+      "pesticidePanelConfirmation": "adf",
+      "dnaBarcoding": "das",
+      "testedBy": "Krishna",
+      "testedAtISO": "2025-09-29T18:38:58.172Z"
+    },
+    "addedBy": "Manoj",
+    "timestamp": "2025-09-29T18:39:45.218Z"
+  },
+  {
+    "batchId": "FARTN3009TU",
+    "stage": "manufacturer",
+    "data": {
+      "productType": "Paste",
+      "ingredients": "Neem, Pomegranate, Miswak",
+      "companyName": "Himalaya",
+      "manufacturedBatchId": "MFG-20250930-7E6EBFA9"
+    },
+    "addedBy": "Meganath",
+    "timestamp": "2025-09-29T18:40:11.642Z"
+  },
+  {
+    "batchId": "FARTN3009TU",
+    "stage": "farmer",
+    "data": {
+      "productName": "Tulsi",
+      "quantity": "2Ton",
+      "location": "Namakkal, Namakkal, TN",
+      "harvestedDate": "2025-09-25",
+      "coordinates": {
+        "latitude": 32,
+        "longitude": 324
+      },
+      "farmerId": "FARM001"
+    },
+    "addedBy": "Guna",
+    "timestamp": "2025-09-29T18:45:44.575Z"
+  },
+  {
+    "batchId": "FARTN3009TU",
+    "stage": "farmer",
+    "data": {
+      "productName": "Tulsi",
+      "quantity": "2Ton",
+      "location": "Namakkal, Namakkal, TN",
+      "harvestedDate": "2025-09-25",
+      "coordinates": {
+        "latitude": 235215,
+        "longitude": 2453
+      },
+      "farmerId": "FARM001"
+    },
+    "addedBy": "Guna",
+    "timestamp": "2025-09-29T18:46:58.017Z"
+  },
+  {
+    "batchId": "FARTN3009TU",
+    "stage": "farmer",
+    "data": {
+      "productName": "Tulsi",
+      "quantity": "2Ton",
+      "location": "Namakkal, Namakkal, TN",
+      "harvestedDate": "2025-09-25",
+      "coordinates": {
+        "latitude": 2353,
+        "longitude": null
+      },
+      "farmerId": "FARM001"
+    },
+    "addedBy": "guna",
+    "timestamp": "2025-09-29T18:48:24.884Z"
+  },
+  {
+    "batchId": "F-0TN0511WH",
+    "stage": "farmer",
+    "data": {
+      "productName": "Wheat",
+      "quantity": "05",
+      "unit": "Ton",
+      "harvestedDate": "2025-09-26",
+      "longitude": "11.0150",
+      "latitude": "78.2980",
+      "villageTown": "Mohanur",
+      "district": "Salem",
+      "state": "Tamil Nadu (TN)",
+      "addedBy": "Gunaselan",
+      "dateTime": "28/09/2025, 04:31 pm",
+      "photos": [
+        {},
+        {},
+        {}
+      ],
+      "timestamp": "2025-11-05T05:49:03.806Z"
+    },
+    "addedBy": "F-00123",
+    "timestamp": "2025-11-05T05:49:03.901Z"
+  },
+  {
+    "batchId": "F-0TN0511WH",
+    "stage": "lab",
+    "data": {
+      "moisture": 6,
+      "ashValue": 3,
+      "foreignMatter": 2,
+      "pH": 6,
+      "pesticide": 0.1,
+      "heavyMetals": "Pass",
+      "solventResidue": "Pass",
+      "phytochemical": "Fail",
+      "microbial": "Fail",
+      "fungalCount": 500,
+      "ecoli": "Present",
+      "aflatoxin": 4.2,
+      "dnaVerification": true,
+      "ftirFingerprint": "Fail",
+      "qualityGrade": "B",
+      "testedBy": "Guna",
+      "testDate": "2025-11-05",
+      "testTime": "11:19",
+      "remarks": "",
+      "pdfReport": "data:application/pdf;base64,JVBERi0xLjMKJbrfrOAKMyAwIG9iago8PC9UeXBlIC9QYWdlCi9QYXJlbnQgMSAwIFIKL1Jlc291cmNlcyAyIDAgUgovTWVkaWFCb3ggWzAgMCA1OTUuMjc5OTk5OTk5OTk5OTcyNyA4NDEuODg5OTk5OTk5OTk5OTg2NF0KL0NvbnRlbnRzIDQgMCBSCj4+CmVuZG9iago0IDAgb2JqCjw8Ci9MZW5ndGggNDIxNgo+PgpzdHJlYW0KMC41NjcwMDAwMDAwMDAwMDAxIHcKMCBHCjAuMjMgMC41MSAwLjk2IHJnCjAuIDg0MS44ODk5OTk5OTk5OTk5ODY0IDU5NS4yNzk5OTk5OTk5OTk5NzI3IC0xMTMuMzg1ODI2NzcxNjUzNTU1MSByZQpmCkJUCi9GMiAyNCBUZgoyNy41OTk5OTk5OTk5OTk5OTc5IFRMCjEuIGcKMTg2LjAzOTk5OTk5OTk5OTkzNTIgNzg1LjE5NzA4NjYxNDE3MzI1ODYgVGQKKExBQiBURVNUIFJFUE9SVCkgVGoKRVQKQlQKL0YxIDEyIFRmCjEzLjc5OTk5OTk5OTk5OTk5ODkgVEwKMS4gZwoyMDMuNDM5OTk5OTk5OTk5OTEyNSA3NTYuODUwNjI5OTIxMjU5ODM3OCBUZAooQXl1cnZlZGljIEhlcmIgUXVhbGl0eSBDZXJ0aWZpY2F0aW9uKSBUagpFVApCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQyLjUxOTY4NTAzOTM3MDA4MTQgNzAwLjE1NzcxNjUzNTQzMzExIFRkCihCYXRjaCBJbmZvcm1hdGlvbikgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDY3Ny40ODA1NTExODExMDIzMjggVGQKKEJhdGNoIElEOiBGLTBUTjA1MTFXSCkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDY2MC40NzI2NzcxNjUzNTQyOTgzIFRkCihQcm9kdWN0IE5hbWU6IFdoZWF0KSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjQyLjUxOTY4NTAzOTM3MDA4MTQgNjQzLjQ2NDgwMzE0OTYwNjI2ODYgVGQKKEZhcm1lcjogRi0wMDEyMykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDYyNi40NTY5MjkxMzM4NTgyMzg5IFRkCihDb2xsZWN0aW9uIERhdGU6IDIwMjUtMDktMjYpIFRqCkVUCjAuOTUgMC45NiAwLjk2IHJnCjQyLjUxOTY4NTAzOTM3MDA4MTQgNjA2LjYxNDQwOTQ0ODgxODgzMyA1MTAuMjQwNjI5OTIxMjU5NzY3MyAtMjIuNjc3MTY1MzU0MzMwNzExIHJlCmYKQlQKL0YyIDE0IFRmCjE2LjA5OTk5OTk5OTk5OTk5NzkgVEwKMC4gZwo0OC4xODg5NzYzNzc5NTI3NjI3IDU5Mi40NDExODExMDIzNjIxNzk0IFRkCihQaHlzaWNhbCBUZXN0cykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDU2NC4wOTQ3MjQ0MDk0NDg3NTg3IFRkCihNb2lzdHVyZSBDb250ZW50OiA2JSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDU0Ny4wODY4NTAzOTM3MDA3MjkgVGQKKEFzaCBWYWx1ZTogMyUpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA1MzAuMDc4OTc2Mzc3OTUyNjk5MyBUZAooRm9yZWlnbiBNYXR0ZXI6IDIlKSBUagpFVAowLjk1IDAuOTYgMC45NiByZwo0Mi41MTk2ODUwMzkzNzAwODE0IDUxMC4yMzY0NTY2OTI5MTMzNTAzIDUxMC4yNDA2Mjk5MjEyNTk3NjczIC0yMi42NzcxNjUzNTQzMzA3MTEgcmUKZgpCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQ4LjE4ODk3NjM3Nzk1Mjc2MjcgNDk2LjA2MzIyODM0NjQ1NjYzOTkgVGQKKENoZW1pY2FsIFRlc3RzKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNDY3LjcxNjc3MTY1MzU0MzI3NiBUZAoocEggTGV2ZWw6IDYpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA0NTAuNzA4ODk3NjM3Nzk1MjQ2MyBUZAooUGVzdGljaWRlIFJlc2lkdWU6IDAuMSBwcG0pIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA0MzMuNzAxMDIzNjIyMDQ3MTU5NyBUZAooSGVhdnkgTWV0YWxzIFwoUGIsIENkLCBBcywgSGdcKTogUGFzcykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDQxNi42OTMxNDk2MDYyOTkxMyBUZAooU29sdmVudCBSZXNpZHVlOiBQYXNzKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMzk5LjY4NTI3NTU5MDU1MTEwMDMgVGQKKFBoeXRvY2hlbWljYWwgU2NyZWVuaW5nOiBGYWlsKSBUagpFVAowLjk1IDAuOTYgMC45NiByZwo0Mi41MTk2ODUwMzkzNzAwODE0IDM3OS44NDI3NTU5MDU1MTE3NTEzIDUxMC4yNDA2Mjk5MjEyNTk3NjczIC0yMi42NzcxNjUzNTQzMzA3MTEgcmUKZgpCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQ4LjE4ODk3NjM3Nzk1Mjc2MjcgMzY1LjY2OTUyNzU1OTA1NTA0MDkgVGQKKEJpb2xvZ2ljYWwgVGVzdHMpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAzMzcuMzIzMDcwODY2MTQxNjc3IFRkCihNaWNyb2JpYWwgVGVzdDogRmFpbCkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDMyMC4zMTUxOTY4NTAzOTM1OTA1IFRkCihGdW5nYWwgQ291bnQ6IDUwMCBDRlUvZykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDMwMy4zMDczMjI4MzQ2NDU1NjA4IFRkCihFLiBjb2xpIC8gU2FsbW9uZWxsYTogUHJlc2VudCkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDI4Ni4yOTk0NDg4MTg4OTc1MzExIFRkCihBZmxhdG94aW4gVGVzdDogNC4yILVnL2tnKSBUagpFVAowLjk1IDAuOTYgMC45NiByZwo0Mi41MTk2ODUwMzkzNzAwODE0IDI2Ni40NTY5MjkxMzM4NTgxODIgNTEwLjI0MDYyOTkyMTI1OTc2NzMgLTIyLjY3NzE2NTM1NDMzMDcxMSByZQpmCkJUCi9GMiAxNCBUZgoxNi4wOTk5OTk5OTk5OTk5OTc5IFRMCjAuIGcKNDguMTg4OTc2Mzc3OTUyNzYyNyAyNTIuMjgzNzAwNzg3NDAxNDcxNiBUZAooQXV0aGVudGljYXRpb24pIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAyMjMuOTM3MjQ0MDk0NDg4MTY0NiBUZAooRE5BIC8gQmFyY29kZSBWZXJpZmljYXRpb246IFZlcmlmaWVkKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMjA2LjkyOTM3MDA3ODc0MDEzNDkgVGQKKEZUSVIgLyBIUFRMQyBGaW5nZXJwcmludDogRmFpbCkgVGoKRVQKMC4xMyAwLjc3IDAuMzcgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCAxODcuMDg2ODUwMzkzNzAwNzAwNiA1MTAuMjQwNjI5OTIxMjU5NzY3MyAtMzQuMDE1NzQ4MDMxNDk2MDY2NSByZQpmCkJUCi9GMiAxNiBUZgoxOC4zOTk5OTk5OTk5OTk5OTg2IFRMCjEuIGcKMjM0LjY3OTk5OTk5OTk5OTk3ODQgMTY0LjQwOTY4NTAzOTM2OTk0NjkgVGQKKFF1YWxpdHkgR3JhZGU6IEIpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNDIuNTE5Njg1MDM5MzcwMDgxNCAxMjEuODg5OTk5OTk5OTk5ODcyNyBUZAooVGVzdGVkIEJ5OiBHdW5hKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjQyLjUxOTY4NTAzOTM3MDA4MTQgMTA0Ljg4MjEyNTk4NDI1MTg0MyBUZAooVGVzdCBEYXRlOiAyMDI1LTExLTA1IDExOjE5KSBUagpFVAowLjkgMC45MSAwLjkyIHJnCjAuIDU2LjY5MjkxMzM4NTgyNjc3NzUgNTk1LjI3OTk5OTk5OTk5OTk3MjcgLTU2LjY5MjkxMzM4NTgyNjc3NzUgcmUKZgpCVAovRjEgOSBUZgoxMC4zNDk5OTk5OTk5OTk5OTk2IFRMCjAuMjk0IDAuMzMzIDAuMzg4IHJnCjE0Ny4yMDQ5OTk5OTk5OTk5NTU3IDI4LjM0NjQ1NjY5MjkxMzQyMDcgVGQKKNg93RcAIABCAGwAbwBjAGsAYwBoAGEAaQBuACAAVgBlAHIAaQBmAGkAZQBkACAALQAgAFQAaABpAHMAIAByAGUAcABvAHIAdAAgAGkAcwAgAGkAbQBtAHUAdABhAGIAbAB5ACAAcgBlAGMAbwByAGQAZQBkACAAbwBuACAAdABoAGUAIABiAGwAbwBjAGsAYwBoAGEAaQBuKSBUagpFVAplbmRzdHJlYW0KZW5kb2JqCjEgMCBvYmoKPDwvVHlwZSAvUGFnZXMKL0tpZHMgWzMgMCBSIF0KL0NvdW50IDEKPj4KZW5kb2JqCjUgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKNiAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EtT2JsaXF1ZQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iago4IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhLUJvbGRPYmxpcXVlCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjkgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9Db3VyaWVyCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjEwIDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvQ291cmllci1Cb2xkCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjExIDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvQ291cmllci1PYmxpcXVlCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjEyIDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvQ291cmllci1Cb2xkT2JsaXF1ZQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMyAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1RpbWVzLVJvbWFuCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjE0IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvVGltZXMtQm9sZAovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxNSAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1RpbWVzLUl0YWxpYwovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxNiAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1RpbWVzLUJvbGRJdGFsaWMKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTcgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9aYXBmRGluZ2JhdHMKL1N1YnR5cGUgL1R5cGUxCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTggMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9TeW1ib2wKL1N1YnR5cGUgL1R5cGUxCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMiAwIG9iago8PAovUHJvY1NldCBbL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSV0KL0ZvbnQgPDwKL0YxIDUgMCBSCi9GMiA2IDAgUgovRjMgNyAwIFIKL0Y0IDggMCBSCi9GNSA5IDAgUgovRjYgMTAgMCBSCi9GNyAxMSAwIFIKL0Y4IDEyIDAgUgovRjkgMTMgMCBSCi9GMTAgMTQgMCBSCi9GMTEgMTUgMCBSCi9GMTIgMTYgMCBSCi9GMTMgMTcgMCBSCi9GMTQgMTggMCBSCj4+Ci9YT2JqZWN0IDw8Cj4+Cj4+CmVuZG9iagoxOSAwIG9iago8PAovUHJvZHVjZXIgKGpzUERGIDMuMC4zKQovQ3JlYXRpb25EYXRlIChEOjIwMjUxMTA1MTEyMDQ3KzA1JzMwJykKPj4KZW5kb2JqCjIwIDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAxIDAgUgovT3BlbkFjdGlvbiBbMyAwIFIgL0ZpdEggbnVsbF0KL1BhZ2VMYXlvdXQgL09uZUNvbHVtbgo+PgplbmRvYmoKeHJlZgowIDIxCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwNDQyMCAwMDAwMCBuIAowMDAwMDA2MjM3IDAwMDAwIG4gCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDE1MiAwMDAwMCBuIAowMDAwMDA0NDc3IDAwMDAwIG4gCjAwMDAwMDQ2MDIgMDAwMDAgbiAKMDAwMDAwNDczMiAwMDAwMCBuIAowMDAwMDA0ODY1IDAwMDAwIG4gCjAwMDAwMDUwMDIgMDAwMDAgbiAKMDAwMDAwNTEyNSAwMDAwMCBuIAowMDAwMDA1MjU0IDAwMDAwIG4gCjAwMDAwMDUzODYgMDAwMDAgbiAKMDAwMDAwNTUyMiAwMDAwMCBuIAowMDAwMDA1NjUwIDAwMDAwIG4gCjAwMDAwMDU3NzcgMDAwMDAgbiAKMDAwMDAwNTkwNiAwMDAwMCBuIAowMDAwMDA2MDM5IDAwMDAwIG4gCjAwMDAwMDYxNDEgMDAwMDAgbiAKMDAwMDAwNjQ4NSAwMDAwMCBuIAowMDAwMDA2NTcxIDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgMjEKL1Jvb3QgMjAgMCBSCi9JbmZvIDE5IDAgUgovSUQgWyA8QUYzMzVFNjg4NkMzM0JDMDBGRUU1RDVDQURDMTQyRUQ+IDxBRjMzNUU2ODg2QzMzQkMwMEZFRTVENUNBREMxNDJFRD4gXQo+PgpzdGFydHhyZWYKNjY3NQolJUVPRg==",
+      "pdfFilename": "LAB_REPORT_F-0TN0511WH_1762321847966.pdf"
+    },
+    "addedBy": "Guna",
+    "timestamp": "2025-11-05T05:50:47.969Z"
+  },
+  {
+    "batchId": "F-0TN0511TU",
+    "stage": "farmer",
+    "data": {
+      "productName": "Tulsi",
+      "quantity": "10",
+      "unit": "Ton",
+      "harvestedDate": "2025-11-01",
+      "longitude": "11.0250",
+      "latitude": "78.3080",
+      "villageTown": "Mohanur",
+      "district": "Namakkal",
+      "state": "Tamil Nadu (TN)",
+      "addedBy": "Ravi Kumar",
+      "dateTime": "05/11/2025, 02:00 pm",
+      "photos": [],
+      "timestamp": "2025-11-05T08:37:41.451Z"
+    },
+    "addedBy": "F-00123",
+    "timestamp": "2025-11-05T08:37:41.476Z"
+  },
+  {
+    "batchId": "F-0TN0511TU",
+    "stage": "lab",
+    "data": {
+      "moisture": 5.4,
+      "ashValue": 2,
+      "foreignMatter": 2,
+      "pH": 7.5,
+      "pesticide": 0.1,
+      "heavyMetals": "Fail",
+      "solventResidue": "Pass",
+      "phytochemical": "Fail",
+      "microbial": "Fail",
+      "fungalCount": 999,
+      "ecoli": "Absent",
+      "aflatoxin": 4,
+      "dnaVerification": true,
+      "ftirFingerprint": "Pass",
+      "qualityGrade": "Rejected",
+      "originalGrade": "F",
+      "approvalStatus": "rejected",
+      "approvalDecision": "auto_rejected",
+      "testedBy": "LAB001",
+      "testDate": "2025-11-05",
+      "testTime": "14:08",
+      "remarks": "",
+      "pdfReport": "data:application/pdf;base64,JVBERi0xLjMKJbrfrOAKMyAwIG9iago8PC9UeXBlIC9QYWdlCi9QYXJlbnQgMSAwIFIKL1Jlc291cmNlcyAyIDAgUgovTWVkaWFCb3ggWzAgMCA1OTUuMjc5OTk5OTk5OTk5OTcyNyA4NDEuODg5OTk5OTk5OTk5OTg2NF0KL0NvbnRlbnRzIDQgMCBSCj4+CmVuZG9iago0IDAgb2JqCjw8Ci9MZW5ndGggNDIxOQo+PgpzdHJlYW0KMC41NjcwMDAwMDAwMDAwMDAxIHcKMCBHCjAuMjMgMC41MSAwLjk2IHJnCjAuIDg0MS44ODk5OTk5OTk5OTk5ODY0IDU5NS4yNzk5OTk5OTk5OTk5NzI3IC0xMTMuMzg1ODI2NzcxNjUzNTU1MSByZQpmCkJUCi9GMiAyNCBUZgoyNy41OTk5OTk5OTk5OTk5OTc5IFRMCjEuIGcKMTg2LjAzOTk5OTk5OTk5OTkzNTIgNzg1LjE5NzA4NjYxNDE3MzI1ODYgVGQKKExBQiBURVNUIFJFUE9SVCkgVGoKRVQKQlQKL0YxIDEyIFRmCjEzLjc5OTk5OTk5OTk5OTk5ODkgVEwKMS4gZwoyMDMuNDM5OTk5OTk5OTk5OTEyNSA3NTYuODUwNjI5OTIxMjU5ODM3OCBUZAooQXl1cnZlZGljIEhlcmIgUXVhbGl0eSBDZXJ0aWZpY2F0aW9uKSBUagpFVApCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQyLjUxOTY4NTAzOTM3MDA4MTQgNzAwLjE1NzcxNjUzNTQzMzExIFRkCihCYXRjaCBJbmZvcm1hdGlvbikgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDY3Ny40ODA1NTExODExMDIzMjggVGQKKEJhdGNoIElEOiBGLTBUTjA1MTFUVSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDY2MC40NzI2NzcxNjUzNTQyOTgzIFRkCihQcm9kdWN0IE5hbWU6IFR1bHNpKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjQyLjUxOTY4NTAzOTM3MDA4MTQgNjQzLjQ2NDgwMzE0OTYwNjI2ODYgVGQKKEZhcm1lcjogRi0wMDEyMykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDYyNi40NTY5MjkxMzM4NTgyMzg5IFRkCihDb2xsZWN0aW9uIERhdGU6IDIwMjUtMTEtMDEpIFRqCkVUCjAuOTUgMC45NiAwLjk2IHJnCjQyLjUxOTY4NTAzOTM3MDA4MTQgNjA2LjYxNDQwOTQ0ODgxODgzMyA1MTAuMjQwNjI5OTIxMjU5NzY3MyAtMjIuNjc3MTY1MzU0MzMwNzExIHJlCmYKQlQKL0YyIDE0IFRmCjE2LjA5OTk5OTk5OTk5OTk5NzkgVEwKMC4gZwo0OC4xODg5NzYzNzc5NTI3NjI3IDU5Mi40NDExODExMDIzNjIxNzk0IFRkCihQaHlzaWNhbCBUZXN0cykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDU2NC4wOTQ3MjQ0MDk0NDg3NTg3IFRkCihNb2lzdHVyZSBDb250ZW50OiA1LjQlKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNTQ3LjA4Njg1MDM5MzcwMDcyOSBUZAooQXNoIFZhbHVlOiAyJSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDUzMC4wNzg5NzYzNzc5NTI2OTkzIFRkCihGb3JlaWduIE1hdHRlcjogMiUpIFRqCkVUCjAuOTUgMC45NiAwLjk2IHJnCjQyLjUxOTY4NTAzOTM3MDA4MTQgNTEwLjIzNjQ1NjY5MjkxMzM1MDMgNTEwLjI0MDYyOTkyMTI1OTc2NzMgLTIyLjY3NzE2NTM1NDMzMDcxMSByZQpmCkJUCi9GMiAxNCBUZgoxNi4wOTk5OTk5OTk5OTk5OTc5IFRMCjAuIGcKNDguMTg4OTc2Mzc3OTUyNzYyNyA0OTYuMDYzMjI4MzQ2NDU2NjM5OSBUZAooQ2hlbWljYWwgVGVzdHMpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA0NjcuNzE2NzcxNjUzNTQzMjc2IFRkCihwSCBMZXZlbDogNy41KSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNDUwLjcwODg5NzYzNzc5NTI0NjMgVGQKKFBlc3RpY2lkZSBSZXNpZHVlOiAwLjEgcHBtKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNDMzLjcwMTAyMzYyMjA0NzE1OTcgVGQKKEhlYXZ5IE1ldGFscyBcKFBiLCBDZCwgQXMsIEhnXCk6IEZhaWwpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA0MTYuNjkzMTQ5NjA2Mjk5MTMgVGQKKFNvbHZlbnQgUmVzaWR1ZTogUGFzcykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDM5OS42ODUyNzU1OTA1NTExMDAzIFRkCihQaHl0b2NoZW1pY2FsIFNjcmVlbmluZzogRmFpbCkgVGoKRVQKMC45NSAwLjk2IDAuOTYgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCAzNzkuODQyNzU1OTA1NTExNzUxMyA1MTAuMjQwNjI5OTIxMjU5NzY3MyAtMjIuNjc3MTY1MzU0MzMwNzExIHJlCmYKQlQKL0YyIDE0IFRmCjE2LjA5OTk5OTk5OTk5OTk5NzkgVEwKMC4gZwo0OC4xODg5NzYzNzc5NTI3NjI3IDM2NS42Njk1Mjc1NTkwNTUwNDA5IFRkCihCaW9sb2dpY2FsIFRlc3RzKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMzM3LjMyMzA3MDg2NjE0MTY3NyBUZAooTWljcm9iaWFsIFRlc3Q6IEZhaWwpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAzMjAuMzE1MTk2ODUwMzkzNTkwNSBUZAooRnVuZ2FsIENvdW50OiA5OTkgQ0ZVL2cpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAzMDMuMzA3MzIyODM0NjQ1NTYwOCBUZAooRS4gY29saSAvIFNhbG1vbmVsbGE6IEFic2VudCkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDI4Ni4yOTk0NDg4MTg4OTc1MzExIFRkCihBZmxhdG94aW4gVGVzdDogNCC1Zy9rZykgVGoKRVQKMC45NSAwLjk2IDAuOTYgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCAyNjYuNDU2OTI5MTMzODU4MTgyIDUxMC4yNDA2Mjk5MjEyNTk3NjczIC0yMi42NzcxNjUzNTQzMzA3MTEgcmUKZgpCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQ4LjE4ODk3NjM3Nzk1Mjc2MjcgMjUyLjI4MzcwMDc4NzQwMTQ3MTYgVGQKKEF1dGhlbnRpY2F0aW9uKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMjIzLjkzNzI0NDA5NDQ4ODE2NDYgVGQKKEROQSAvIEJhcmNvZGUgVmVyaWZpY2F0aW9uOiBWZXJpZmllZCkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDIwNi45MjkzNzAwNzg3NDAxMzQ5IFRkCihGVElSIC8gSFBUTEMgRmluZ2VycHJpbnQ6IFBhc3MpIFRqCkVUCjAuMTMgMC43NyAwLjM3IHJnCjQyLjUxOTY4NTAzOTM3MDA4MTQgMTg3LjA4Njg1MDM5MzcwMDcwMDYgNTEwLjI0MDYyOTkyMTI1OTc2NzMgLTM0LjAxNTc0ODAzMTQ5NjA2NjUgcmUKZgpCVAovRjIgMTYgVGYKMTguMzk5OTk5OTk5OTk5OTk4NiBUTAoxLiBnCjIzNS41NTk5OTk5OTk5OTk5NDU0IDE2NC40MDk2ODUwMzkzNjk5NDY5IFRkCihRdWFsaXR5IEdyYWRlOiBGKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjQyLjUxOTY4NTAzOTM3MDA4MTQgMTIxLjg4OTk5OTk5OTk5OTg3MjcgVGQKKFRlc3RlZCBCeTogTEFCMDAxKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjQyLjUxOTY4NTAzOTM3MDA4MTQgMTA0Ljg4MjEyNTk4NDI1MTg0MyBUZAooVGVzdCBEYXRlOiAyMDI1LTExLTA1IDE0OjA4KSBUagpFVAowLjkgMC45MSAwLjkyIHJnCjAuIDU2LjY5MjkxMzM4NTgyNjc3NzUgNTk1LjI3OTk5OTk5OTk5OTk3MjcgLTU2LjY5MjkxMzM4NTgyNjc3NzUgcmUKZgpCVAovRjEgOSBUZgoxMC4zNDk5OTk5OTk5OTk5OTk2IFRMCjAuMjk0IDAuMzMzIDAuMzg4IHJnCjE0Ny4yMDQ5OTk5OTk5OTk5NTU3IDI4LjM0NjQ1NjY5MjkxMzQyMDcgVGQKKNg93RcAIABCAGwAbwBjAGsAYwBoAGEAaQBuACAAVgBlAHIAaQBmAGkAZQBkACAALQAgAFQAaABpAHMAIAByAGUAcABvAHIAdAAgAGkAcwAgAGkAbQBtAHUAdABhAGIAbAB5ACAAcgBlAGMAbwByAGQAZQBkACAAbwBuACAAdABoAGUAIABiAGwAbwBjAGsAYwBoAGEAaQBuKSBUagpFVAplbmRzdHJlYW0KZW5kb2JqCjEgMCBvYmoKPDwvVHlwZSAvUGFnZXMKL0tpZHMgWzMgMCBSIF0KL0NvdW50IDEKPj4KZW5kb2JqCjUgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKNiAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EtT2JsaXF1ZQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iago4IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhLUJvbGRPYmxpcXVlCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjkgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9Db3VyaWVyCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjEwIDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvQ291cmllci1Cb2xkCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjExIDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvQ291cmllci1PYmxpcXVlCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjEyIDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvQ291cmllci1Cb2xkT2JsaXF1ZQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMyAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1RpbWVzLVJvbWFuCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjE0IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvVGltZXMtQm9sZAovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxNSAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1RpbWVzLUl0YWxpYwovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxNiAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1RpbWVzLUJvbGRJdGFsaWMKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTcgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9aYXBmRGluZ2JhdHMKL1N1YnR5cGUgL1R5cGUxCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTggMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9TeW1ib2wKL1N1YnR5cGUgL1R5cGUxCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMiAwIG9iago8PAovUHJvY1NldCBbL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSV0KL0ZvbnQgPDwKL0YxIDUgMCBSCi9GMiA2IDAgUgovRjMgNyAwIFIKL0Y0IDggMCBSCi9GNSA5IDAgUgovRjYgMTAgMCBSCi9GNyAxMSAwIFIKL0Y4IDEyIDAgUgovRjkgMTMgMCBSCi9GMTAgMTQgMCBSCi9GMTEgMTUgMCBSCi9GMTIgMTYgMCBSCi9GMTMgMTcgMCBSCi9GMTQgMTggMCBSCj4+Ci9YT2JqZWN0IDw8Cj4+Cj4+CmVuZG9iagoxOSAwIG9iago8PAovUHJvZHVjZXIgKGpzUERGIDMuMC4zKQovQ3JlYXRpb25EYXRlIChEOjIwMjUxMTA1MTQwOTUzKzA1JzMwJykKPj4KZW5kb2JqCjIwIDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAxIDAgUgovT3BlbkFjdGlvbiBbMyAwIFIgL0ZpdEggbnVsbF0KL1BhZ2VMYXlvdXQgL09uZUNvbHVtbgo+PgplbmRvYmoKeHJlZgowIDIxCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwNDQyMyAwMDAwMCBuIAowMDAwMDA2MjQwIDAwMDAwIG4gCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDE1MiAwMDAwMCBuIAowMDAwMDA0NDgwIDAwMDAwIG4gCjAwMDAwMDQ2MDUgMDAwMDAgbiAKMDAwMDAwNDczNSAwMDAwMCBuIAowMDAwMDA0ODY4IDAwMDAwIG4gCjAwMDAwMDUwMDUgMDAwMDAgbiAKMDAwMDAwNTEyOCAwMDAwMCBuIAowMDAwMDA1MjU3IDAwMDAwIG4gCjAwMDAwMDUzODkgMDAwMDAgbiAKMDAwMDAwNTUyNSAwMDAwMCBuIAowMDAwMDA1NjUzIDAwMDAwIG4gCjAwMDAwMDU3ODAgMDAwMDAgbiAKMDAwMDAwNTkwOSAwMDAwMCBuIAowMDAwMDA2MDQyIDAwMDAwIG4gCjAwMDAwMDYxNDQgMDAwMDAgbiAKMDAwMDAwNjQ4OCAwMDAwMCBuIAowMDAwMDA2NTc0IDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgMjEKL1Jvb3QgMjAgMCBSCi9JbmZvIDE5IDAgUgovSUQgWyA8QkEwRkM1N0ZBODdCQ0RDRTk2Q0UwQjgyQTJENDU0NzU+IDxCQTBGQzU3RkE4N0JDRENFOTZDRTBCODJBMkQ0NTQ3NT4gXQo+PgpzdGFydHhyZWYKNjY3OAolJUVPRg==",
+      "pdfFilename": "LAB_REPORT_F-0TN0511TU_1762331993495.pdf"
+    },
+    "addedBy": "LAB001",
+    "timestamp": "2025-11-05T08:39:53.506Z"
+  },
+  {
+    "batchId": "F-0TN0511CO",
+    "stage": "farmer",
+    "data": {
+      "productName": "Cotton",
+      "quantity": "05",
+      "unit": "Ton",
+      "harvestedDate": "2025-09-26",
+      "longitude": "11.0150",
+      "latitude": "78.2980",
+      "villageTown": "mallur",
+      "district": "Salem",
+      "state": "Tamil Nadu (TN)",
+      "addedBy": "Gunaselan",
+      "dateTime": "28/09/2025, 04:31 pm",
+      "photos": [],
+      "timestamp": "2025-11-05T09:14:30.108Z"
+    },
+    "addedBy": "F-00123",
+    "timestamp": "2025-11-05T09:14:30.141Z"
+  },
+  {
+    "batchId": "F-0TN0511CO",
+    "stage": "lab",
+    "data": {
+      "moisture": 6,
+      "ashValue": 2,
+      "foreignMatter": 0.1,
+      "pH": 6,
+      "pesticide": 0,
+      "heavyMetals": "Pass",
+      "solventResidue": "Pass",
+      "phytochemical": "Pass",
+      "microbial": "Pass",
+      "fungalCount": 0,
+      "ecoli": "Present",
+      "aflatoxin": 2.9,
+      "dnaVerification": true,
+      "ftirFingerprint": "Pass",
+      "qualityGrade": "Rejected",
+      "originalGrade": "F",
+      "approvalStatus": "rejected",
+      "approvalDecision": "auto_rejected",
+      "testedBy": "LAB001",
+      "testDate": "2025-11-05",
+      "testTime": "14:45",
+      "remarks": "",
+      "pdfReport": "data:application/pdf;base64,JVBERi0xLjMKJbrfrOAKMyAwIG9iago8PC9UeXBlIC9QYWdlCi9QYXJlbnQgMSAwIFIKL1Jlc291cmNlcyAyIDAgUgovTWVkaWFCb3ggWzAgMCA1OTUuMjc5OTk5OTk5OTk5OTcyNyA4NDEuODg5OTk5OTk5OTk5OTg2NF0KL0NvbnRlbnRzIDQgMCBSCj4+CmVuZG9iago0IDAgb2JqCjw8Ci9MZW5ndGggNDIxNwo+PgpzdHJlYW0KMC41NjcwMDAwMDAwMDAwMDAxIHcKMCBHCjAuMjMgMC41MSAwLjk2IHJnCjAuIDg0MS44ODk5OTk5OTk5OTk5ODY0IDU5NS4yNzk5OTk5OTk5OTk5NzI3IC0xMTMuMzg1ODI2NzcxNjUzNTU1MSByZQpmCkJUCi9GMiAyNCBUZgoyNy41OTk5OTk5OTk5OTk5OTc5IFRMCjEuIGcKMTg2LjAzOTk5OTk5OTk5OTkzNTIgNzg1LjE5NzA4NjYxNDE3MzI1ODYgVGQKKExBQiBURVNUIFJFUE9SVCkgVGoKRVQKQlQKL0YxIDEyIFRmCjEzLjc5OTk5OTk5OTk5OTk5ODkgVEwKMS4gZwoyMDMuNDM5OTk5OTk5OTk5OTEyNSA3NTYuODUwNjI5OTIxMjU5ODM3OCBUZAooQXl1cnZlZGljIEhlcmIgUXVhbGl0eSBDZXJ0aWZpY2F0aW9uKSBUagpFVApCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQyLjUxOTY4NTAzOTM3MDA4MTQgNzAwLjE1NzcxNjUzNTQzMzExIFRkCihCYXRjaCBJbmZvcm1hdGlvbikgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDY3Ny40ODA1NTExODExMDIzMjggVGQKKEJhdGNoIElEOiBGLTBUTjA1MTFDTykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDY2MC40NzI2NzcxNjUzNTQyOTgzIFRkCihQcm9kdWN0IE5hbWU6IENvdHRvbikgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDY0My40NjQ4MDMxNDk2MDYyNjg2IFRkCihGYXJtZXI6IEYtMDAxMjMpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNDIuNTE5Njg1MDM5MzcwMDgxNCA2MjYuNDU2OTI5MTMzODU4MjM4OSBUZAooQ29sbGVjdGlvbiBEYXRlOiAyMDI1LTA5LTI2KSBUagpFVAowLjk1IDAuOTYgMC45NiByZwo0Mi41MTk2ODUwMzkzNzAwODE0IDYwNi42MTQ0MDk0NDg4MTg4MzMgNTEwLjI0MDYyOTkyMTI1OTc2NzMgLTIyLjY3NzE2NTM1NDMzMDcxMSByZQpmCkJUCi9GMiAxNCBUZgoxNi4wOTk5OTk5OTk5OTk5OTc5IFRMCjAuIGcKNDguMTg4OTc2Mzc3OTUyNzYyNyA1OTIuNDQxMTgxMTAyMzYyMTc5NCBUZAooUGh5c2ljYWwgVGVzdHMpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA1NjQuMDk0NzI0NDA5NDQ4NzU4NyBUZAooTW9pc3R1cmUgQ29udGVudDogNiUpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA1NDcuMDg2ODUwMzkzNzAwNzI5IFRkCihBc2ggVmFsdWU6IDIlKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNTMwLjA3ODk3NjM3Nzk1MjY5OTMgVGQKKEZvcmVpZ24gTWF0dGVyOiAwLjElKSBUagpFVAowLjk1IDAuOTYgMC45NiByZwo0Mi41MTk2ODUwMzkzNzAwODE0IDUxMC4yMzY0NTY2OTI5MTMzNTAzIDUxMC4yNDA2Mjk5MjEyNTk3NjczIC0yMi42NzcxNjUzNTQzMzA3MTEgcmUKZgpCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQ4LjE4ODk3NjM3Nzk1Mjc2MjcgNDk2LjA2MzIyODM0NjQ1NjYzOTkgVGQKKENoZW1pY2FsIFRlc3RzKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNDY3LjcxNjc3MTY1MzU0MzI3NiBUZAoocEggTGV2ZWw6IDYpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA0NTAuNzA4ODk3NjM3Nzk1MjQ2MyBUZAooUGVzdGljaWRlIFJlc2lkdWU6IDAgcHBtKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNDMzLjcwMTAyMzYyMjA0NzE1OTcgVGQKKEhlYXZ5IE1ldGFscyBcKFBiLCBDZCwgQXMsIEhnXCk6IFBhc3MpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA0MTYuNjkzMTQ5NjA2Mjk5MTMgVGQKKFNvbHZlbnQgUmVzaWR1ZTogUGFzcykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDM5OS42ODUyNzU1OTA1NTExMDAzIFRkCihQaHl0b2NoZW1pY2FsIFNjcmVlbmluZzogUGFzcykgVGoKRVQKMC45NSAwLjk2IDAuOTYgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCAzNzkuODQyNzU1OTA1NTExNzUxMyA1MTAuMjQwNjI5OTIxMjU5NzY3MyAtMjIuNjc3MTY1MzU0MzMwNzExIHJlCmYKQlQKL0YyIDE0IFRmCjE2LjA5OTk5OTk5OTk5OTk5NzkgVEwKMC4gZwo0OC4xODg5NzYzNzc5NTI3NjI3IDM2NS42Njk1Mjc1NTkwNTUwNDA5IFRkCihCaW9sb2dpY2FsIFRlc3RzKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMzM3LjMyMzA3MDg2NjE0MTY3NyBUZAooTWljcm9iaWFsIFRlc3Q6IFBhc3MpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAzMjAuMzE1MTk2ODUwMzkzNTkwNSBUZAooRnVuZ2FsIENvdW50OiAwIENGVS9nKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMzAzLjMwNzMyMjgzNDY0NTU2MDggVGQKKEUuIGNvbGkgLyBTYWxtb25lbGxhOiBQcmVzZW50KSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMjg2LjI5OTQ0ODgxODg5NzUzMTEgVGQKKEFmbGF0b3hpbiBUZXN0OiAyLjkgtWcva2cpIFRqCkVUCjAuOTUgMC45NiAwLjk2IHJnCjQyLjUxOTY4NTAzOTM3MDA4MTQgMjY2LjQ1NjkyOTEzMzg1ODE4MiA1MTAuMjQwNjI5OTIxMjU5NzY3MyAtMjIuNjc3MTY1MzU0MzMwNzExIHJlCmYKQlQKL0YyIDE0IFRmCjE2LjA5OTk5OTk5OTk5OTk5NzkgVEwKMC4gZwo0OC4xODg5NzYzNzc5NTI3NjI3IDI1Mi4yODM3MDA3ODc0MDE0NzE2IFRkCihBdXRoZW50aWNhdGlvbikgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDIyMy45MzcyNDQwOTQ0ODgxNjQ2IFRkCihETkEgLyBCYXJjb2RlIFZlcmlmaWNhdGlvbjogVmVyaWZpZWQpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAyMDYuOTI5MzcwMDc4NzQwMTM0OSBUZAooRlRJUiAvIEhQVExDIEZpbmdlcnByaW50OiBQYXNzKSBUagpFVAowLjEzIDAuNzcgMC4zNyByZwo0Mi41MTk2ODUwMzkzNzAwODE0IDE4Ny4wODY4NTAzOTM3MDA3MDA2IDUxMC4yNDA2Mjk5MjEyNTk3NjczIC0zNC4wMTU3NDgwMzE0OTYwNjY1IHJlCmYKQlQKL0YyIDE2IFRmCjE4LjM5OTk5OTk5OTk5OTk5ODYgVEwKMS4gZwoyMzUuNTU5OTk5OTk5OTk5OTQ1NCAxNjQuNDA5Njg1MDM5MzY5OTQ2OSBUZAooUXVhbGl0eSBHcmFkZTogRikgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDEyMS44ODk5OTk5OTk5OTk4NzI3IFRkCihUZXN0ZWQgQnk6IExBQjAwMSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDEwNC44ODIxMjU5ODQyNTE4NDMgVGQKKFRlc3QgRGF0ZTogMjAyNS0xMS0wNSAxNDo0NSkgVGoKRVQKMC45IDAuOTEgMC45MiByZwowLiA1Ni42OTI5MTMzODU4MjY3Nzc1IDU5NS4yNzk5OTk5OTk5OTk5NzI3IC01Ni42OTI5MTMzODU4MjY3Nzc1IHJlCmYKQlQKL0YxIDkgVGYKMTAuMzQ5OTk5OTk5OTk5OTk5NiBUTAowLjI5NCAwLjMzMyAwLjM4OCByZwoxNDcuMjA0OTk5OTk5OTk5OTU1NyAyOC4zNDY0NTY2OTI5MTM0MjA3IFRkCijYPd0XACAAQgBsAG8AYwBrAGMAaABhAGkAbgAgAFYAZQByAGkAZgBpAGUAZAAgAC0AIABUAGgAaQBzACAAcgBlAHAAbwByAHQAIABpAHMAIABpAG0AbQB1AHQAYQBiAGwAeQAgAHIAZQBjAG8AcgBkAGUAZAAgAG8AbgAgAHQAaABlACAAYgBsAG8AYwBrAGMAaABhAGkAbikgVGoKRVQKZW5kc3RyZWFtCmVuZG9iagoxIDAgb2JqCjw8L1R5cGUgL1BhZ2VzCi9LaWRzIFszIDAgUiBdCi9Db3VudCAxCj4+CmVuZG9iago1IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZAovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iago3IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhLU9ibGlxdWUKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKOCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkT2JsaXF1ZQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iago5IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvQ291cmllcgovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0NvdXJpZXItQm9sZAovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMSAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0NvdXJpZXItT2JsaXF1ZQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMiAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0NvdXJpZXItQm9sZE9ibGlxdWUKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTMgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9UaW1lcy1Sb21hbgovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxNCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1RpbWVzLUJvbGQKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTUgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9UaW1lcy1JdGFsaWMKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTYgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9UaW1lcy1Cb2xkSXRhbGljCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjE3IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvWmFwZkRpbmdiYXRzCi9TdWJ0eXBlIC9UeXBlMQovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjE4IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvU3ltYm9sCi9TdWJ0eXBlIC9UeXBlMQovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL1Byb2NTZXQgWy9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUldCi9Gb250IDw8Ci9GMSA1IDAgUgovRjIgNiAwIFIKL0YzIDcgMCBSCi9GNCA4IDAgUgovRjUgOSAwIFIKL0Y2IDEwIDAgUgovRjcgMTEgMCBSCi9GOCAxMiAwIFIKL0Y5IDEzIDAgUgovRjEwIDE0IDAgUgovRjExIDE1IDAgUgovRjEyIDE2IDAgUgovRjEzIDE3IDAgUgovRjE0IDE4IDAgUgo+PgovWE9iamVjdCA8PAo+Pgo+PgplbmRvYmoKMTkgMCBvYmoKPDwKL1Byb2R1Y2VyIChqc1BERiAzLjAuMykKL0NyZWF0aW9uRGF0ZSAoRDoyMDI1MTEwNTE0NDc1NSswNSczMCcpCj4+CmVuZG9iagoyMCAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMSAwIFIKL09wZW5BY3Rpb24gWzMgMCBSIC9GaXRIIG51bGxdCi9QYWdlTGF5b3V0IC9PbmVDb2x1bW4KPj4KZW5kb2JqCnhyZWYKMCAyMQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDQ0MjEgMDAwMDAgbiAKMDAwMDAwNjIzOCAwMDAwMCBuIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDAxNTIgMDAwMDAgbiAKMDAwMDAwNDQ3OCAwMDAwMCBuIAowMDAwMDA0NjAzIDAwMDAwIG4gCjAwMDAwMDQ3MzMgMDAwMDAgbiAKMDAwMDAwNDg2NiAwMDAwMCBuIAowMDAwMDA1MDAzIDAwMDAwIG4gCjAwMDAwMDUxMjYgMDAwMDAgbiAKMDAwMDAwNTI1NSAwMDAwMCBuIAowMDAwMDA1Mzg3IDAwMDAwIG4gCjAwMDAwMDU1MjMgMDAwMDAgbiAKMDAwMDAwNTY1MSAwMDAwMCBuIAowMDAwMDA1Nzc4IDAwMDAwIG4gCjAwMDAwMDU5MDcgMDAwMDAgbiAKMDAwMDAwNjA0MCAwMDAwMCBuIAowMDAwMDA2MTQyIDAwMDAwIG4gCjAwMDAwMDY0ODYgMDAwMDAgbiAKMDAwMDAwNjU3MiAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9TaXplIDIxCi9Sb290IDIwIDAgUgovSW5mbyAxOSAwIFIKL0lEIFsgPEFFNzc0NTE3OEZFQzdENUI3RTA2MkY5Q0U1NTZBNkQ5PiA8QUU3NzQ1MTc4RkVDN0Q1QjdFMDYyRjlDRTU1NkE2RDk+IF0KPj4Kc3RhcnR4cmVmCjY2NzYKJSVFT0Y=",
+      "pdfFilename": "LAB_REPORT_F-0TN0511CO_1762334275945.pdf"
+    },
+    "addedBy": "LAB001",
+    "timestamp": "2025-11-05T09:17:55.951Z"
+  },
+  {
+    "batchId": "F-0TN0511TU1",
+    "stage": "farmer",
+    "data": {
+      "productName": "Tulsi",
+      "quantity": "05",
+      "unit": "Ton",
+      "harvestedDate": "2025-09-26",
+      "longitude": "11.0150",
+      "latitude": "78.2980",
+      "villageTown": "Mohanur",
+      "district": "Namakkal",
+      "state": "Tamil Nadu (TN)",
+      "addedBy": "Gunaselan",
+      "dateTime": "28/09/2025, 04:31 pm",
+      "photos": [],
+      "timestamp": "2025-11-05T09:32:47.040Z"
+    },
+    "addedBy": "F-00123",
+    "timestamp": "2025-11-05T09:32:47.049Z"
+  },
+  {
+    "batchId": "F-0TN0511TU1",
+    "stage": "lab",
+    "data": {
+      "moisture": 8,
+      "ashValue": 3,
+      "foreignMatter": 1,
+      "pH": 6.5,
+      "pesticide": 0.05,
+      "heavyMetals": "Pass",
+      "solventResidue": "Pass",
+      "phytochemical": "Pass",
+      "microbial": "Pass",
+      "fungalCount": 500,
+      "ecoli": "Absent",
+      "aflatoxin": 2,
+      "dnaVerification": true,
+      "ftirFingerprint": "Pass",
+      "qualityGrade": "A",
+      "originalGrade": "A",
+      "approvalStatus": "approved",
+      "approvalDecision": "auto_approved",
+      "testedBy": "LAB001",
+      "testDate": "2025-11-05",
+      "testTime": "15:05",
+      "remarks": "",
+      "pdfReport": "data:application/pdf;base64,JVBERi0xLjMKJbrfrOAKMyAwIG9iago8PC9UeXBlIC9QYWdlCi9QYXJlbnQgMSAwIFIKL1Jlc291cmNlcyAyIDAgUgovTWVkaWFCb3ggWzAgMCA1OTUuMjc5OTk5OTk5OTk5OTcyNyA4NDEuODg5OTk5OTk5OTk5OTg2NF0KL0NvbnRlbnRzIDQgMCBSCj4+CmVuZG9iago0IDAgb2JqCjw8Ci9MZW5ndGggNDIxOQo+PgpzdHJlYW0KMC41NjcwMDAwMDAwMDAwMDAxIHcKMCBHCjAuMjMgMC41MSAwLjk2IHJnCjAuIDg0MS44ODk5OTk5OTk5OTk5ODY0IDU5NS4yNzk5OTk5OTk5OTk5NzI3IC0xMTMuMzg1ODI2NzcxNjUzNTU1MSByZQpmCkJUCi9GMiAyNCBUZgoyNy41OTk5OTk5OTk5OTk5OTc5IFRMCjEuIGcKMTg2LjAzOTk5OTk5OTk5OTkzNTIgNzg1LjE5NzA4NjYxNDE3MzI1ODYgVGQKKExBQiBURVNUIFJFUE9SVCkgVGoKRVQKQlQKL0YxIDEyIFRmCjEzLjc5OTk5OTk5OTk5OTk5ODkgVEwKMS4gZwoyMDMuNDM5OTk5OTk5OTk5OTEyNSA3NTYuODUwNjI5OTIxMjU5ODM3OCBUZAooQXl1cnZlZGljIEhlcmIgUXVhbGl0eSBDZXJ0aWZpY2F0aW9uKSBUagpFVApCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQyLjUxOTY4NTAzOTM3MDA4MTQgNzAwLjE1NzcxNjUzNTQzMzExIFRkCihCYXRjaCBJbmZvcm1hdGlvbikgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDY3Ny40ODA1NTExODExMDIzMjggVGQKKEJhdGNoIElEOiBGLTBUTjA1MTFUVTEpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNDIuNTE5Njg1MDM5MzcwMDgxNCA2NjAuNDcyNjc3MTY1MzU0Mjk4MyBUZAooUHJvZHVjdCBOYW1lOiBUdWxzaSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDY0My40NjQ4MDMxNDk2MDYyNjg2IFRkCihGYXJtZXI6IEYtMDAxMjMpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNDIuNTE5Njg1MDM5MzcwMDgxNCA2MjYuNDU2OTI5MTMzODU4MjM4OSBUZAooQ29sbGVjdGlvbiBEYXRlOiAyMDI1LTA5LTI2KSBUagpFVAowLjk1IDAuOTYgMC45NiByZwo0Mi41MTk2ODUwMzkzNzAwODE0IDYwNi42MTQ0MDk0NDg4MTg4MzMgNTEwLjI0MDYyOTkyMTI1OTc2NzMgLTIyLjY3NzE2NTM1NDMzMDcxMSByZQpmCkJUCi9GMiAxNCBUZgoxNi4wOTk5OTk5OTk5OTk5OTc5IFRMCjAuIGcKNDguMTg4OTc2Mzc3OTUyNzYyNyA1OTIuNDQxMTgxMTAyMzYyMTc5NCBUZAooUGh5c2ljYWwgVGVzdHMpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA1NjQuMDk0NzI0NDA5NDQ4NzU4NyBUZAooTW9pc3R1cmUgQ29udGVudDogOCUpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA1NDcuMDg2ODUwMzkzNzAwNzI5IFRkCihBc2ggVmFsdWU6IDMlKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNTMwLjA3ODk3NjM3Nzk1MjY5OTMgVGQKKEZvcmVpZ24gTWF0dGVyOiAxJSkgVGoKRVQKMC45NSAwLjk2IDAuOTYgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCA1MTAuMjM2NDU2NjkyOTEzMzUwMyA1MTAuMjQwNjI5OTIxMjU5NzY3MyAtMjIuNjc3MTY1MzU0MzMwNzExIHJlCmYKQlQKL0YyIDE0IFRmCjE2LjA5OTk5OTk5OTk5OTk5NzkgVEwKMC4gZwo0OC4xODg5NzYzNzc5NTI3NjI3IDQ5Ni4wNjMyMjgzNDY0NTY2Mzk5IFRkCihDaGVtaWNhbCBUZXN0cykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDQ2Ny43MTY3NzE2NTM1NDMyNzYgVGQKKHBIIExldmVsOiA2LjUpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA0NTAuNzA4ODk3NjM3Nzk1MjQ2MyBUZAooUGVzdGljaWRlIFJlc2lkdWU6IDAuMDUgcHBtKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNDMzLjcwMTAyMzYyMjA0NzE1OTcgVGQKKEhlYXZ5IE1ldGFscyBcKFBiLCBDZCwgQXMsIEhnXCk6IFBhc3MpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA0MTYuNjkzMTQ5NjA2Mjk5MTMgVGQKKFNvbHZlbnQgUmVzaWR1ZTogUGFzcykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDM5OS42ODUyNzU1OTA1NTExMDAzIFRkCihQaHl0b2NoZW1pY2FsIFNjcmVlbmluZzogUGFzcykgVGoKRVQKMC45NSAwLjk2IDAuOTYgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCAzNzkuODQyNzU1OTA1NTExNzUxMyA1MTAuMjQwNjI5OTIxMjU5NzY3MyAtMjIuNjc3MTY1MzU0MzMwNzExIHJlCmYKQlQKL0YyIDE0IFRmCjE2LjA5OTk5OTk5OTk5OTk5NzkgVEwKMC4gZwo0OC4xODg5NzYzNzc5NTI3NjI3IDM2NS42Njk1Mjc1NTkwNTUwNDA5IFRkCihCaW9sb2dpY2FsIFRlc3RzKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMzM3LjMyMzA3MDg2NjE0MTY3NyBUZAooTWljcm9iaWFsIFRlc3Q6IFBhc3MpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAzMjAuMzE1MTk2ODUwMzkzNTkwNSBUZAooRnVuZ2FsIENvdW50OiA1MDAgQ0ZVL2cpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAzMDMuMzA3MzIyODM0NjQ1NTYwOCBUZAooRS4gY29saSAvIFNhbG1vbmVsbGE6IEFic2VudCkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDI4Ni4yOTk0NDg4MTg4OTc1MzExIFRkCihBZmxhdG94aW4gVGVzdDogMiC1Zy9rZykgVGoKRVQKMC45NSAwLjk2IDAuOTYgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCAyNjYuNDU2OTI5MTMzODU4MTgyIDUxMC4yNDA2Mjk5MjEyNTk3NjczIC0yMi42NzcxNjUzNTQzMzA3MTEgcmUKZgpCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQ4LjE4ODk3NjM3Nzk1Mjc2MjcgMjUyLjI4MzcwMDc4NzQwMTQ3MTYgVGQKKEF1dGhlbnRpY2F0aW9uKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMjIzLjkzNzI0NDA5NDQ4ODE2NDYgVGQKKEROQSAvIEJhcmNvZGUgVmVyaWZpY2F0aW9uOiBWZXJpZmllZCkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDIwNi45MjkzNzAwNzg3NDAxMzQ5IFRkCihGVElSIC8gSFBUTEMgRmluZ2VycHJpbnQ6IFBhc3MpIFRqCkVUCjAuMTMgMC43NyAwLjM3IHJnCjQyLjUxOTY4NTAzOTM3MDA4MTQgMTg3LjA4Njg1MDM5MzcwMDcwMDYgNTEwLjI0MDYyOTkyMTI1OTc2NzMgLTM0LjAxNTc0ODAzMTQ5NjA2NjUgcmUKZgpCVAovRjIgMTYgVGYKMTguMzk5OTk5OTk5OTk5OTk4NiBUTAoxLiBnCjIzNC42Nzk5OTk5OTk5OTk5Nzg0IDE2NC40MDk2ODUwMzkzNjk5NDY5IFRkCihRdWFsaXR5IEdyYWRlOiBBKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjQyLjUxOTY4NTAzOTM3MDA4MTQgMTIxLjg4OTk5OTk5OTk5OTg3MjcgVGQKKFRlc3RlZCBCeTogTEFCMDAxKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjQyLjUxOTY4NTAzOTM3MDA4MTQgMTA0Ljg4MjEyNTk4NDI1MTg0MyBUZAooVGVzdCBEYXRlOiAyMDI1LTExLTA1IDE1OjA1KSBUagpFVAowLjkgMC45MSAwLjkyIHJnCjAuIDU2LjY5MjkxMzM4NTgyNjc3NzUgNTk1LjI3OTk5OTk5OTk5OTk3MjcgLTU2LjY5MjkxMzM4NTgyNjc3NzUgcmUKZgpCVAovRjEgOSBUZgoxMC4zNDk5OTk5OTk5OTk5OTk2IFRMCjAuMjk0IDAuMzMzIDAuMzg4IHJnCjE0Ny4yMDQ5OTk5OTk5OTk5NTU3IDI4LjM0NjQ1NjY5MjkxMzQyMDcgVGQKKNg93RcAIABCAGwAbwBjAGsAYwBoAGEAaQBuACAAVgBlAHIAaQBmAGkAZQBkACAALQAgAFQAaABpAHMAIAByAGUAcABvAHIAdAAgAGkAcwAgAGkAbQBtAHUAdABhAGIAbAB5ACAAcgBlAGMAbwByAGQAZQBkACAAbwBuACAAdABoAGUAIABiAGwAbwBjAGsAYwBoAGEAaQBuKSBUagpFVAplbmRzdHJlYW0KZW5kb2JqCjEgMCBvYmoKPDwvVHlwZSAvUGFnZXMKL0tpZHMgWzMgMCBSIF0KL0NvdW50IDEKPj4KZW5kb2JqCjUgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKNiAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EtT2JsaXF1ZQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iago4IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhLUJvbGRPYmxpcXVlCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjkgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9Db3VyaWVyCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjEwIDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvQ291cmllci1Cb2xkCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjExIDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvQ291cmllci1PYmxpcXVlCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjEyIDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvQ291cmllci1Cb2xkT2JsaXF1ZQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMyAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1RpbWVzLVJvbWFuCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjE0IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvVGltZXMtQm9sZAovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxNSAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1RpbWVzLUl0YWxpYwovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxNiAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1RpbWVzLUJvbGRJdGFsaWMKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTcgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9aYXBmRGluZ2JhdHMKL1N1YnR5cGUgL1R5cGUxCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTggMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9TeW1ib2wKL1N1YnR5cGUgL1R5cGUxCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMiAwIG9iago8PAovUHJvY1NldCBbL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSV0KL0ZvbnQgPDwKL0YxIDUgMCBSCi9GMiA2IDAgUgovRjMgNyAwIFIKL0Y0IDggMCBSCi9GNSA5IDAgUgovRjYgMTAgMCBSCi9GNyAxMSAwIFIKL0Y4IDEyIDAgUgovRjkgMTMgMCBSCi9GMTAgMTQgMCBSCi9GMTEgMTUgMCBSCi9GMTIgMTYgMCBSCi9GMTMgMTcgMCBSCi9GMTQgMTggMCBSCj4+Ci9YT2JqZWN0IDw8Cj4+Cj4+CmVuZG9iagoxOSAwIG9iago8PAovUHJvZHVjZXIgKGpzUERGIDMuMC4zKQovQ3JlYXRpb25EYXRlIChEOjIwMjUxMTA1MTUxMDE1KzA1JzMwJykKPj4KZW5kb2JqCjIwIDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAxIDAgUgovT3BlbkFjdGlvbiBbMyAwIFIgL0ZpdEggbnVsbF0KL1BhZ2VMYXlvdXQgL09uZUNvbHVtbgo+PgplbmRvYmoKeHJlZgowIDIxCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwNDQyMyAwMDAwMCBuIAowMDAwMDA2MjQwIDAwMDAwIG4gCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDE1MiAwMDAwMCBuIAowMDAwMDA0NDgwIDAwMDAwIG4gCjAwMDAwMDQ2MDUgMDAwMDAgbiAKMDAwMDAwNDczNSAwMDAwMCBuIAowMDAwMDA0ODY4IDAwMDAwIG4gCjAwMDAwMDUwMDUgMDAwMDAgbiAKMDAwMDAwNTEyOCAwMDAwMCBuIAowMDAwMDA1MjU3IDAwMDAwIG4gCjAwMDAwMDUzODkgMDAwMDAgbiAKMDAwMDAwNTUyNSAwMDAwMCBuIAowMDAwMDA1NjUzIDAwMDAwIG4gCjAwMDAwMDU3ODAgMDAwMDAgbiAKMDAwMDAwNTkwOSAwMDAwMCBuIAowMDAwMDA2MDQyIDAwMDAwIG4gCjAwMDAwMDYxNDQgMDAwMDAgbiAKMDAwMDAwNjQ4OCAwMDAwMCBuIAowMDAwMDA2NTc0IDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgMjEKL1Jvb3QgMjAgMCBSCi9JbmZvIDE5IDAgUgovSUQgWyA8REU0MkQwRThBMzQ0RjlCN0Y2QTMzNUNFODc1MUI3MTk+IDxERTQyRDBFOEEzNDRGOUI3RjZBMzM1Q0U4NzUxQjcxOT4gXQo+PgpzdGFydHhyZWYKNjY3OAolJUVPRg==",
+      "pdfFilename": "LAB_REPORT_F-0TN0511TU1_1762335615296.pdf"
+    },
+    "addedBy": "LAB001",
+    "timestamp": "2025-11-05T09:40:15.303Z"
+  },
+  {
+    "batchId": "F-0TN0511RI",
+    "stage": "farmer",
+    "data": {
+      "productName": "Rice",
+      "quantity": "10",
+      "unit": "Ton",
+      "harvestedDate": "2025-09-26",
+      "longitude": "11.0150",
+      "latitude": "78.2980",
+      "villageTown": "Mohanur",
+      "district": "Namakkal",
+      "state": "Tamil Nadu (TN)",
+      "addedBy": "Gunaselan",
+      "dateTime": "28/09/2025, 04:31 pm",
+      "photos": [],
+      "timestamp": "2025-11-05T10:31:31.026Z"
+    },
+    "addedBy": "F-00123",
+    "timestamp": "2025-11-05T10:31:31.069Z"
+  },
+  {
+    "batchId": "F-0TN0511TU2",
+    "stage": "farmer",
+    "data": {
+      "productName": "Tulsi",
+      "quantity": "7",
+      "unit": "Ton",
+      "harvestedDate": "2025-09-26",
+      "longitude": "11.0150",
+      "latitude": "78.2980",
+      "villageTown": "Mohanur",
+      "district": "Namakkal",
+      "state": "Tamil Nadu (TN)",
+      "addedBy": "Gunaselan",
+      "dateTime": "28/09/2025, 04:31 pm",
+      "photos": [],
+      "timestamp": "2025-11-05T10:36:19.439Z"
+    },
+    "addedBy": "F-00123",
+    "timestamp": "2025-11-05T10:36:19.488Z"
+  },
+  {
+    "batchId": "F-0TN0511RI",
+    "stage": "lab",
+    "data": {
+      "moisture": 11,
+      "ashValue": 4.5,
+      "foreignMatter": 1.8,
+      "pH": 7.2,
+      "pesticide": 0.08,
+      "heavyMetals": "Pass",
+      "solventResidue": "Pass",
+      "phytochemical": "Pass",
+      "microbial": "Pass",
+      "fungalCount": 900,
+      "ecoli": "Absent",
+      "aflatoxin": 4,
+      "dnaVerification": false,
+      "ftirFingerprint": "Pass",
+      "qualityGrade": "B",
+      "originalGrade": "B",
+      "approvalStatus": "approved",
+      "approvalDecision": "auto_approved",
+      "testedBy": "LAB001",
+      "testDate": "2025-11-05",
+      "testTime": "16:05",
+      "remarks": "",
+      "pdfReport": "data:application/pdf;base64,JVBERi0xLjMKJbrfrOAKMyAwIG9iago8PC9UeXBlIC9QYWdlCi9QYXJlbnQgMSAwIFIKL1Jlc291cmNlcyAyIDAgUgovTWVkaWFCb3ggWzAgMCA1OTUuMjc5OTk5OTk5OTk5OTcyNyA4NDEuODg5OTk5OTk5OTk5OTg2NF0KL0NvbnRlbnRzIDQgMCBSCj4+CmVuZG9iago0IDAgb2JqCjw8Ci9MZW5ndGggNDIyNgo+PgpzdHJlYW0KMC41NjcwMDAwMDAwMDAwMDAxIHcKMCBHCjAuMjMgMC41MSAwLjk2IHJnCjAuIDg0MS44ODk5OTk5OTk5OTk5ODY0IDU5NS4yNzk5OTk5OTk5OTk5NzI3IC0xMTMuMzg1ODI2NzcxNjUzNTU1MSByZQpmCkJUCi9GMiAyNCBUZgoyNy41OTk5OTk5OTk5OTk5OTc5IFRMCjEuIGcKMTg2LjAzOTk5OTk5OTk5OTkzNTIgNzg1LjE5NzA4NjYxNDE3MzI1ODYgVGQKKExBQiBURVNUIFJFUE9SVCkgVGoKRVQKQlQKL0YxIDEyIFRmCjEzLjc5OTk5OTk5OTk5OTk5ODkgVEwKMS4gZwoyMDMuNDM5OTk5OTk5OTk5OTEyNSA3NTYuODUwNjI5OTIxMjU5ODM3OCBUZAooQXl1cnZlZGljIEhlcmIgUXVhbGl0eSBDZXJ0aWZpY2F0aW9uKSBUagpFVApCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQyLjUxOTY4NTAzOTM3MDA4MTQgNzAwLjE1NzcxNjUzNTQzMzExIFRkCihCYXRjaCBJbmZvcm1hdGlvbikgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDY3Ny40ODA1NTExODExMDIzMjggVGQKKEJhdGNoIElEOiBGLTBUTjA1MTFSSSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDY2MC40NzI2NzcxNjUzNTQyOTgzIFRkCihQcm9kdWN0IE5hbWU6IFJpY2UpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNDIuNTE5Njg1MDM5MzcwMDgxNCA2NDMuNDY0ODAzMTQ5NjA2MjY4NiBUZAooRmFybWVyOiBGLTAwMTIzKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjQyLjUxOTY4NTAzOTM3MDA4MTQgNjI2LjQ1NjkyOTEzMzg1ODIzODkgVGQKKENvbGxlY3Rpb24gRGF0ZTogMjAyNS0wOS0yNikgVGoKRVQKMC45NSAwLjk2IDAuOTYgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCA2MDYuNjE0NDA5NDQ4ODE4ODMzIDUxMC4yNDA2Mjk5MjEyNTk3NjczIC0yMi42NzcxNjUzNTQzMzA3MTEgcmUKZgpCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQ4LjE4ODk3NjM3Nzk1Mjc2MjcgNTkyLjQ0MTE4MTEwMjM2MjE3OTQgVGQKKFBoeXNpY2FsIFRlc3RzKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNTY0LjA5NDcyNDQwOTQ0ODc1ODcgVGQKKE1vaXN0dXJlIENvbnRlbnQ6IDExJSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDU0Ny4wODY4NTAzOTM3MDA3MjkgVGQKKEFzaCBWYWx1ZTogNC41JSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDUzMC4wNzg5NzYzNzc5NTI2OTkzIFRkCihGb3JlaWduIE1hdHRlcjogMS44JSkgVGoKRVQKMC45NSAwLjk2IDAuOTYgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCA1MTAuMjM2NDU2NjkyOTEzMzUwMyA1MTAuMjQwNjI5OTIxMjU5NzY3MyAtMjIuNjc3MTY1MzU0MzMwNzExIHJlCmYKQlQKL0YyIDE0IFRmCjE2LjA5OTk5OTk5OTk5OTk5NzkgVEwKMC4gZwo0OC4xODg5NzYzNzc5NTI3NjI3IDQ5Ni4wNjMyMjgzNDY0NTY2Mzk5IFRkCihDaGVtaWNhbCBUZXN0cykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDQ2Ny43MTY3NzE2NTM1NDMyNzYgVGQKKHBIIExldmVsOiA3LjIpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA0NTAuNzA4ODk3NjM3Nzk1MjQ2MyBUZAooUGVzdGljaWRlIFJlc2lkdWU6IDAuMDggcHBtKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNDMzLjcwMTAyMzYyMjA0NzE1OTcgVGQKKEhlYXZ5IE1ldGFscyBcKFBiLCBDZCwgQXMsIEhnXCk6IFBhc3MpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA0MTYuNjkzMTQ5NjA2Mjk5MTMgVGQKKFNvbHZlbnQgUmVzaWR1ZTogUGFzcykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDM5OS42ODUyNzU1OTA1NTExMDAzIFRkCihQaHl0b2NoZW1pY2FsIFNjcmVlbmluZzogUGFzcykgVGoKRVQKMC45NSAwLjk2IDAuOTYgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCAzNzkuODQyNzU1OTA1NTExNzUxMyA1MTAuMjQwNjI5OTIxMjU5NzY3MyAtMjIuNjc3MTY1MzU0MzMwNzExIHJlCmYKQlQKL0YyIDE0IFRmCjE2LjA5OTk5OTk5OTk5OTk5NzkgVEwKMC4gZwo0OC4xODg5NzYzNzc5NTI3NjI3IDM2NS42Njk1Mjc1NTkwNTUwNDA5IFRkCihCaW9sb2dpY2FsIFRlc3RzKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMzM3LjMyMzA3MDg2NjE0MTY3NyBUZAooTWljcm9iaWFsIFRlc3Q6IFBhc3MpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAzMjAuMzE1MTk2ODUwMzkzNTkwNSBUZAooRnVuZ2FsIENvdW50OiA5MDAgQ0ZVL2cpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAzMDMuMzA3MzIyODM0NjQ1NTYwOCBUZAooRS4gY29saSAvIFNhbG1vbmVsbGE6IEFic2VudCkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDI4Ni4yOTk0NDg4MTg4OTc1MzExIFRkCihBZmxhdG94aW4gVGVzdDogNCC1Zy9rZykgVGoKRVQKMC45NSAwLjk2IDAuOTYgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCAyNjYuNDU2OTI5MTMzODU4MTgyIDUxMC4yNDA2Mjk5MjEyNTk3NjczIC0yMi42NzcxNjUzNTQzMzA3MTEgcmUKZgpCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQ4LjE4ODk3NjM3Nzk1Mjc2MjcgMjUyLjI4MzcwMDc4NzQwMTQ3MTYgVGQKKEF1dGhlbnRpY2F0aW9uKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMjIzLjkzNzI0NDA5NDQ4ODE2NDYgVGQKKEROQSAvIEJhcmNvZGUgVmVyaWZpY2F0aW9uOiBOb3QgVmVyaWZpZWQpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAyMDYuOTI5MzcwMDc4NzQwMTM0OSBUZAooRlRJUiAvIEhQVExDIEZpbmdlcnByaW50OiBQYXNzKSBUagpFVAowLjEzIDAuNzcgMC4zNyByZwo0Mi41MTk2ODUwMzkzNzAwODE0IDE4Ny4wODY4NTAzOTM3MDA3MDA2IDUxMC4yNDA2Mjk5MjEyNTk3NjczIC0zNC4wMTU3NDgwMzE0OTYwNjY1IHJlCmYKQlQKL0YyIDE2IFRmCjE4LjM5OTk5OTk5OTk5OTk5ODYgVEwKMS4gZwoyMzQuNjc5OTk5OTk5OTk5OTc4NCAxNjQuNDA5Njg1MDM5MzY5OTQ2OSBUZAooUXVhbGl0eSBHcmFkZTogQikgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDEyMS44ODk5OTk5OTk5OTk4NzI3IFRkCihUZXN0ZWQgQnk6IExBQjAwMSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDEwNC44ODIxMjU5ODQyNTE4NDMgVGQKKFRlc3QgRGF0ZTogMjAyNS0xMS0wNSAxNjowNSkgVGoKRVQKMC45IDAuOTEgMC45MiByZwowLiA1Ni42OTI5MTMzODU4MjY3Nzc1IDU5NS4yNzk5OTk5OTk5OTk5NzI3IC01Ni42OTI5MTMzODU4MjY3Nzc1IHJlCmYKQlQKL0YxIDkgVGYKMTAuMzQ5OTk5OTk5OTk5OTk5NiBUTAowLjI5NCAwLjMzMyAwLjM4OCByZwoxNDcuMjA0OTk5OTk5OTk5OTU1NyAyOC4zNDY0NTY2OTI5MTM0MjA3IFRkCijYPd0XACAAQgBsAG8AYwBrAGMAaABhAGkAbgAgAFYAZQByAGkAZgBpAGUAZAAgAC0AIABUAGgAaQBzACAAcgBlAHAAbwByAHQAIABpAHMAIABpAG0AbQB1AHQAYQBiAGwAeQAgAHIAZQBjAG8AcgBkAGUAZAAgAG8AbgAgAHQAaABlACAAYgBsAG8AYwBrAGMAaABhAGkAbikgVGoKRVQKZW5kc3RyZWFtCmVuZG9iagoxIDAgb2JqCjw8L1R5cGUgL1BhZ2VzCi9LaWRzIFszIDAgUiBdCi9Db3VudCAxCj4+CmVuZG9iago1IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZAovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iago3IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhLU9ibGlxdWUKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKOCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkT2JsaXF1ZQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iago5IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvQ291cmllcgovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0NvdXJpZXItQm9sZAovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMSAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0NvdXJpZXItT2JsaXF1ZQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMiAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0NvdXJpZXItQm9sZE9ibGlxdWUKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTMgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9UaW1lcy1Sb21hbgovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxNCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1RpbWVzLUJvbGQKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTUgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9UaW1lcy1JdGFsaWMKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTYgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9UaW1lcy1Cb2xkSXRhbGljCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjE3IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvWmFwZkRpbmdiYXRzCi9TdWJ0eXBlIC9UeXBlMQovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjE4IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvU3ltYm9sCi9TdWJ0eXBlIC9UeXBlMQovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL1Byb2NTZXQgWy9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUldCi9Gb250IDw8Ci9GMSA1IDAgUgovRjIgNiAwIFIKL0YzIDcgMCBSCi9GNCA4IDAgUgovRjUgOSAwIFIKL0Y2IDEwIDAgUgovRjcgMTEgMCBSCi9GOCAxMiAwIFIKL0Y5IDEzIDAgUgovRjEwIDE0IDAgUgovRjExIDE1IDAgUgovRjEyIDE2IDAgUgovRjEzIDE3IDAgUgovRjE0IDE4IDAgUgo+PgovWE9iamVjdCA8PAo+Pgo+PgplbmRvYmoKMTkgMCBvYmoKPDwKL1Byb2R1Y2VyIChqc1BERiAzLjAuMykKL0NyZWF0aW9uRGF0ZSAoRDoyMDI1MTEwNTE2MDkxOCswNSczMCcpCj4+CmVuZG9iagoyMCAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMSAwIFIKL09wZW5BY3Rpb24gWzMgMCBSIC9GaXRIIG51bGxdCi9QYWdlTGF5b3V0IC9PbmVDb2x1bW4KPj4KZW5kb2JqCnhyZWYKMCAyMQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDQ0MzAgMDAwMDAgbiAKMDAwMDAwNjI0NyAwMDAwMCBuIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDAxNTIgMDAwMDAgbiAKMDAwMDAwNDQ4NyAwMDAwMCBuIAowMDAwMDA0NjEyIDAwMDAwIG4gCjAwMDAwMDQ3NDIgMDAwMDAgbiAKMDAwMDAwNDg3NSAwMDAwMCBuIAowMDAwMDA1MDEyIDAwMDAwIG4gCjAwMDAwMDUxMzUgMDAwMDAgbiAKMDAwMDAwNTI2NCAwMDAwMCBuIAowMDAwMDA1Mzk2IDAwMDAwIG4gCjAwMDAwMDU1MzIgMDAwMDAgbiAKMDAwMDAwNTY2MCAwMDAwMCBuIAowMDAwMDA1Nzg3IDAwMDAwIG4gCjAwMDAwMDU5MTYgMDAwMDAgbiAKMDAwMDAwNjA0OSAwMDAwMCBuIAowMDAwMDA2MTUxIDAwMDAwIG4gCjAwMDAwMDY0OTUgMDAwMDAgbiAKMDAwMDAwNjU4MSAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9TaXplIDIxCi9Sb290IDIwIDAgUgovSW5mbyAxOSAwIFIKL0lEIFsgPENFOUU2N0ZGQzM4NDdCMDdBNTIzMzU2QTUxQTlEMDg2PiA8Q0U5RTY3RkZDMzg0N0IwN0E1MjMzNTZBNTFBOUQwODY+IF0KPj4Kc3RhcnR4cmVmCjY2ODUKJSVFT0Y=",
+      "pdfFilename": "LAB_REPORT_F-0TN0511RI_1762339158380.pdf"
+    },
+    "addedBy": "LAB001",
+    "timestamp": "2025-11-05T10:39:18.378Z"
+  },
+  {
+    "batchId": "F-0TN0511CO1",
+    "stage": "farmer",
+    "data": {
+      "productName": "Cotton",
+      "quantity": "12",
+      "unit": "Ton",
+      "harvestedDate": "2025-09-26",
+      "longitude": "11.0150",
+      "latitude": "78.2980",
+      "villageTown": "Mohanur",
+      "district": "Namakkal",
+      "state": "Tamil Nadu (TN)",
+      "addedBy": "Gunaselan",
+      "dateTime": "28/09/2025, 04:31 pm",
+      "photos": [],
+      "timestamp": "2025-11-05T10:39:43.679Z"
+    },
+    "addedBy": "F-00123",
+    "timestamp": "2025-11-05T10:39:43.723Z"
+  },
+  {
+    "batchId": "F-0TN0511CO1",
+    "stage": "lab",
+    "data": {
+      "moisture": 7,
+      "ashValue": 2.5,
+      "foreignMatter": 0.8,
+      "pH": 6.5,
+      "pesticide": 0.03,
+      "heavyMetals": "Pass",
+      "solventResidue": "Pass",
+      "phytochemical": "Pass",
+      "microbial": "Pass",
+      "fungalCount": 400,
+      "ecoli": "Absent",
+      "aflatoxin": 1.5,
+      "dnaVerification": false,
+      "ftirFingerprint": "Pass",
+      "qualityGrade": "A",
+      "originalGrade": "A",
+      "approvalStatus": "approved",
+      "approvalDecision": "auto_approved",
+      "testedBy": "LAB001",
+      "testDate": "2025-11-05",
+      "testTime": "16:18",
+      "remarks": "",
+      "pdfReport": "data:application/pdf;base64,JVBERi0xLjMKJbrfrOAKMyAwIG9iago8PC9UeXBlIC9QYWdlCi9QYXJlbnQgMSAwIFIKL1Jlc291cmNlcyAyIDAgUgovTWVkaWFCb3ggWzAgMCA1OTUuMjc5OTk5OTk5OTk5OTcyNyA4NDEuODg5OTk5OTk5OTk5OTg2NF0KL0NvbnRlbnRzIDQgMCBSCj4+CmVuZG9iago0IDAgb2JqCjw8Ci9MZW5ndGggNDIzMAo+PgpzdHJlYW0KMC41NjcwMDAwMDAwMDAwMDAxIHcKMCBHCjAuMjMgMC41MSAwLjk2IHJnCjAuIDg0MS44ODk5OTk5OTk5OTk5ODY0IDU5NS4yNzk5OTk5OTk5OTk5NzI3IC0xMTMuMzg1ODI2NzcxNjUzNTU1MSByZQpmCkJUCi9GMiAyNCBUZgoyNy41OTk5OTk5OTk5OTk5OTc5IFRMCjEuIGcKMTg2LjAzOTk5OTk5OTk5OTkzNTIgNzg1LjE5NzA4NjYxNDE3MzI1ODYgVGQKKExBQiBURVNUIFJFUE9SVCkgVGoKRVQKQlQKL0YxIDEyIFRmCjEzLjc5OTk5OTk5OTk5OTk5ODkgVEwKMS4gZwoyMDMuNDM5OTk5OTk5OTk5OTEyNSA3NTYuODUwNjI5OTIxMjU5ODM3OCBUZAooQXl1cnZlZGljIEhlcmIgUXVhbGl0eSBDZXJ0aWZpY2F0aW9uKSBUagpFVApCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQyLjUxOTY4NTAzOTM3MDA4MTQgNzAwLjE1NzcxNjUzNTQzMzExIFRkCihCYXRjaCBJbmZvcm1hdGlvbikgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDY3Ny40ODA1NTExODExMDIzMjggVGQKKEJhdGNoIElEOiBGLTBUTjA1MTFDTzEpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNDIuNTE5Njg1MDM5MzcwMDgxNCA2NjAuNDcyNjc3MTY1MzU0Mjk4MyBUZAooUHJvZHVjdCBOYW1lOiBDb3R0b24pIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNDIuNTE5Njg1MDM5MzcwMDgxNCA2NDMuNDY0ODAzMTQ5NjA2MjY4NiBUZAooRmFybWVyOiBGLTAwMTIzKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjQyLjUxOTY4NTAzOTM3MDA4MTQgNjI2LjQ1NjkyOTEzMzg1ODIzODkgVGQKKENvbGxlY3Rpb24gRGF0ZTogMjAyNS0wOS0yNikgVGoKRVQKMC45NSAwLjk2IDAuOTYgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCA2MDYuNjE0NDA5NDQ4ODE4ODMzIDUxMC4yNDA2Mjk5MjEyNTk3NjczIC0yMi42NzcxNjUzNTQzMzA3MTEgcmUKZgpCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQ4LjE4ODk3NjM3Nzk1Mjc2MjcgNTkyLjQ0MTE4MTEwMjM2MjE3OTQgVGQKKFBoeXNpY2FsIFRlc3RzKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNTY0LjA5NDcyNDQwOTQ0ODc1ODcgVGQKKE1vaXN0dXJlIENvbnRlbnQ6IDclKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNTQ3LjA4Njg1MDM5MzcwMDcyOSBUZAooQXNoIFZhbHVlOiAyLjUlKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNTMwLjA3ODk3NjM3Nzk1MjY5OTMgVGQKKEZvcmVpZ24gTWF0dGVyOiAwLjglKSBUagpFVAowLjk1IDAuOTYgMC45NiByZwo0Mi41MTk2ODUwMzkzNzAwODE0IDUxMC4yMzY0NTY2OTI5MTMzNTAzIDUxMC4yNDA2Mjk5MjEyNTk3NjczIC0yMi42NzcxNjUzNTQzMzA3MTEgcmUKZgpCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQ4LjE4ODk3NjM3Nzk1Mjc2MjcgNDk2LjA2MzIyODM0NjQ1NjYzOTkgVGQKKENoZW1pY2FsIFRlc3RzKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNDY3LjcxNjc3MTY1MzU0MzI3NiBUZAoocEggTGV2ZWw6IDYuNSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDQ1MC43MDg4OTc2Mzc3OTUyNDYzIFRkCihQZXN0aWNpZGUgUmVzaWR1ZTogMC4wMyBwcG0pIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA0MzMuNzAxMDIzNjIyMDQ3MTU5NyBUZAooSGVhdnkgTWV0YWxzIFwoUGIsIENkLCBBcywgSGdcKTogUGFzcykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDQxNi42OTMxNDk2MDYyOTkxMyBUZAooU29sdmVudCBSZXNpZHVlOiBQYXNzKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMzk5LjY4NTI3NTU5MDU1MTEwMDMgVGQKKFBoeXRvY2hlbWljYWwgU2NyZWVuaW5nOiBQYXNzKSBUagpFVAowLjk1IDAuOTYgMC45NiByZwo0Mi41MTk2ODUwMzkzNzAwODE0IDM3OS44NDI3NTU5MDU1MTE3NTEzIDUxMC4yNDA2Mjk5MjEyNTk3NjczIC0yMi42NzcxNjUzNTQzMzA3MTEgcmUKZgpCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQ4LjE4ODk3NjM3Nzk1Mjc2MjcgMzY1LjY2OTUyNzU1OTA1NTA0MDkgVGQKKEJpb2xvZ2ljYWwgVGVzdHMpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAzMzcuMzIzMDcwODY2MTQxNjc3IFRkCihNaWNyb2JpYWwgVGVzdDogUGFzcykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDMyMC4zMTUxOTY4NTAzOTM1OTA1IFRkCihGdW5nYWwgQ291bnQ6IDQwMCBDRlUvZykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDMwMy4zMDczMjI4MzQ2NDU1NjA4IFRkCihFLiBjb2xpIC8gU2FsbW9uZWxsYTogQWJzZW50KSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMjg2LjI5OTQ0ODgxODg5NzUzMTEgVGQKKEFmbGF0b3hpbiBUZXN0OiAxLjUgtWcva2cpIFRqCkVUCjAuOTUgMC45NiAwLjk2IHJnCjQyLjUxOTY4NTAzOTM3MDA4MTQgMjY2LjQ1NjkyOTEzMzg1ODE4MiA1MTAuMjQwNjI5OTIxMjU5NzY3MyAtMjIuNjc3MTY1MzU0MzMwNzExIHJlCmYKQlQKL0YyIDE0IFRmCjE2LjA5OTk5OTk5OTk5OTk5NzkgVEwKMC4gZwo0OC4xODg5NzYzNzc5NTI3NjI3IDI1Mi4yODM3MDA3ODc0MDE0NzE2IFRkCihBdXRoZW50aWNhdGlvbikgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDIyMy45MzcyNDQwOTQ0ODgxNjQ2IFRkCihETkEgLyBCYXJjb2RlIFZlcmlmaWNhdGlvbjogTm90IFZlcmlmaWVkKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMjA2LjkyOTM3MDA3ODc0MDEzNDkgVGQKKEZUSVIgLyBIUFRMQyBGaW5nZXJwcmludDogUGFzcykgVGoKRVQKMC4xMyAwLjc3IDAuMzcgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCAxODcuMDg2ODUwMzkzNzAwNzAwNiA1MTAuMjQwNjI5OTIxMjU5NzY3MyAtMzQuMDE1NzQ4MDMxNDk2MDY2NSByZQpmCkJUCi9GMiAxNiBUZgoxOC4zOTk5OTk5OTk5OTk5OTg2IFRMCjEuIGcKMjM0LjY3OTk5OTk5OTk5OTk3ODQgMTY0LjQwOTY4NTAzOTM2OTk0NjkgVGQKKFF1YWxpdHkgR3JhZGU6IEEpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNDIuNTE5Njg1MDM5MzcwMDgxNCAxMjEuODg5OTk5OTk5OTk5ODcyNyBUZAooVGVzdGVkIEJ5OiBMQUIwMDEpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNDIuNTE5Njg1MDM5MzcwMDgxNCAxMDQuODgyMTI1OTg0MjUxODQzIFRkCihUZXN0IERhdGU6IDIwMjUtMTEtMDUgMTY6MTgpIFRqCkVUCjAuOSAwLjkxIDAuOTIgcmcKMC4gNTYuNjkyOTEzMzg1ODI2Nzc3NSA1OTUuMjc5OTk5OTk5OTk5OTcyNyAtNTYuNjkyOTEzMzg1ODI2Nzc3NSByZQpmCkJUCi9GMSA5IFRmCjEwLjM0OTk5OTk5OTk5OTk5OTYgVEwKMC4yOTQgMC4zMzMgMC4zODggcmcKMTQ3LjIwNDk5OTk5OTk5OTk1NTcgMjguMzQ2NDU2NjkyOTEzNDIwNyBUZAoo2D3dFwAgAEIAbABvAGMAawBjAGgAYQBpAG4AIABWAGUAcgBpAGYAaQBlAGQAIAAtACAAVABoAGkAcwAgAHIAZQBwAG8AcgB0ACAAaQBzACAAaQBtAG0AdQB0AGEAYgBsAHkAIAByAGUAYwBvAHIAZABlAGQAIABvAG4AIAB0AGgAZQAgAGIAbABvAGMAawBjAGgAYQBpAG4pIFRqCkVUCmVuZHN0cmVhbQplbmRvYmoKMSAwIG9iago8PC9UeXBlIC9QYWdlcwovS2lkcyBbMyAwIFIgXQovQ291bnQgMQo+PgplbmRvYmoKNSAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0hlbHZldGljYQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iago2IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhLUJvbGQKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKNyAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0hlbHZldGljYS1PYmxpcXVlCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjggMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZE9ibGlxdWUKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKOSAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0NvdXJpZXIKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTAgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9Db3VyaWVyLUJvbGQKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTEgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9Db3VyaWVyLU9ibGlxdWUKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTIgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9Db3VyaWVyLUJvbGRPYmxpcXVlCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjEzIDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvVGltZXMtUm9tYW4KL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTQgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9UaW1lcy1Cb2xkCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjE1IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvVGltZXMtSXRhbGljCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjE2IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvVGltZXMtQm9sZEl0YWxpYwovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxNyAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1phcGZEaW5nYmF0cwovU3VidHlwZSAvVHlwZTEKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxOCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1N5bWJvbAovU3VidHlwZSAvVHlwZTEKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgNSAwIFIKL0YyIDYgMCBSCi9GMyA3IDAgUgovRjQgOCAwIFIKL0Y1IDkgMCBSCi9GNiAxMCAwIFIKL0Y3IDExIDAgUgovRjggMTIgMCBSCi9GOSAxMyAwIFIKL0YxMCAxNCAwIFIKL0YxMSAxNSAwIFIKL0YxMiAxNiAwIFIKL0YxMyAxNyAwIFIKL0YxNCAxOCAwIFIKPj4KL1hPYmplY3QgPDwKPj4KPj4KZW5kb2JqCjE5IDAgb2JqCjw8Ci9Qcm9kdWNlciAoanNQREYgMy4wLjMpCi9DcmVhdGlvbkRhdGUgKEQ6MjAyNTExMDUxNjIxMjYrMDUnMzAnKQo+PgplbmRvYmoKMjAgMCBvYmoKPDwKL1R5cGUgL0NhdGFsb2cKL1BhZ2VzIDEgMCBSCi9PcGVuQWN0aW9uIFszIDAgUiAvRml0SCBudWxsXQovUGFnZUxheW91dCAvT25lQ29sdW1uCj4+CmVuZG9iagp4cmVmCjAgMjEKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDA0NDM0IDAwMDAwIG4gCjAwMDAwMDYyNTEgMDAwMDAgbiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwMTUyIDAwMDAwIG4gCjAwMDAwMDQ0OTEgMDAwMDAgbiAKMDAwMDAwNDYxNiAwMDAwMCBuIAowMDAwMDA0NzQ2IDAwMDAwIG4gCjAwMDAwMDQ4NzkgMDAwMDAgbiAKMDAwMDAwNTAxNiAwMDAwMCBuIAowMDAwMDA1MTM5IDAwMDAwIG4gCjAwMDAwMDUyNjggMDAwMDAgbiAKMDAwMDAwNTQwMCAwMDAwMCBuIAowMDAwMDA1NTM2IDAwMDAwIG4gCjAwMDAwMDU2NjQgMDAwMDAgbiAKMDAwMDAwNTc5MSAwMDAwMCBuIAowMDAwMDA1OTIwIDAwMDAwIG4gCjAwMDAwMDYwNTMgMDAwMDAgbiAKMDAwMDAwNjE1NSAwMDAwMCBuIAowMDAwMDA2NDk5IDAwMDAwIG4gCjAwMDAwMDY1ODUgMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSAyMQovUm9vdCAyMCAwIFIKL0luZm8gMTkgMCBSCi9JRCBbIDwzOUY1MjlDM0FEMDlCRDJENjlCMjg4QjI1MkVFNUVGQT4gPDM5RjUyOUMzQUQwOUJEMkQ2OUIyODhCMjUyRUU1RUZBPiBdCj4+CnN0YXJ0eHJlZgo2Njg5CiUlRU9G",
+      "pdfFilename": "LAB_REPORT_F-0TN0511CO1_1762339886152.pdf"
+    },
+    "addedBy": "LAB001",
+    "timestamp": "2025-11-05T10:51:26.168Z"
+  },
+  {
+    "batchId": "F-0TN0511TU2",
+    "stage": "lab",
+    "data": {
+      "moisture": 8.5,
+      "ashValue": 3.2,
+      "foreignMatter": 1.5,
+      "pH": 6.5,
+      "pesticide": 0.05,
+      "heavyMetals": "Pass",
+      "solventResidue": "Pass",
+      "phytochemical": "Pass",
+      "microbial": "Pass",
+      "fungalCount": 500,
+      "ecoli": "Absent",
+      "aflatoxin": 2,
+      "dnaVerification": false,
+      "ftirFingerprint": "Pass",
+      "qualityGrade": "A",
+      "originalGrade": "A",
+      "approvalStatus": "approved",
+      "approvalDecision": "auto_approved",
+      "testedBy": "LAB001",
+      "testDate": "2025-11-05",
+      "testTime": "20:45",
+      "remarks": "",
+      "pdfReport": "data:application/pdf;base64,JVBERi0xLjMKJbrfrOAKMyAwIG9iago8PC9UeXBlIC9QYWdlCi9QYXJlbnQgMSAwIFIKL1Jlc291cmNlcyAyIDAgUgovTWVkaWFCb3ggWzAgMCA1OTUuMjc5OTk5OTk5OTk5OTcyNyA4NDEuODg5OTk5OTk5OTk5OTg2NF0KL0NvbnRlbnRzIDQgMCBSCj4+CmVuZG9iago0IDAgb2JqCjw8Ci9MZW5ndGggNDIyOQo+PgpzdHJlYW0KMC41NjcwMDAwMDAwMDAwMDAxIHcKMCBHCjAuMjMgMC41MSAwLjk2IHJnCjAuIDg0MS44ODk5OTk5OTk5OTk5ODY0IDU5NS4yNzk5OTk5OTk5OTk5NzI3IC0xMTMuMzg1ODI2NzcxNjUzNTU1MSByZQpmCkJUCi9GMiAyNCBUZgoyNy41OTk5OTk5OTk5OTk5OTc5IFRMCjEuIGcKMTg2LjAzOTk5OTk5OTk5OTkzNTIgNzg1LjE5NzA4NjYxNDE3MzI1ODYgVGQKKExBQiBURVNUIFJFUE9SVCkgVGoKRVQKQlQKL0YxIDEyIFRmCjEzLjc5OTk5OTk5OTk5OTk5ODkgVEwKMS4gZwoyMDMuNDM5OTk5OTk5OTk5OTEyNSA3NTYuODUwNjI5OTIxMjU5ODM3OCBUZAooQXl1cnZlZGljIEhlcmIgUXVhbGl0eSBDZXJ0aWZpY2F0aW9uKSBUagpFVApCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQyLjUxOTY4NTAzOTM3MDA4MTQgNzAwLjE1NzcxNjUzNTQzMzExIFRkCihCYXRjaCBJbmZvcm1hdGlvbikgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDY3Ny40ODA1NTExODExMDIzMjggVGQKKEJhdGNoIElEOiBGLTBUTjA1MTFUVTIpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNDIuNTE5Njg1MDM5MzcwMDgxNCA2NjAuNDcyNjc3MTY1MzU0Mjk4MyBUZAooUHJvZHVjdCBOYW1lOiBUdWxzaSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDY0My40NjQ4MDMxNDk2MDYyNjg2IFRkCihGYXJtZXI6IEYtMDAxMjMpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNDIuNTE5Njg1MDM5MzcwMDgxNCA2MjYuNDU2OTI5MTMzODU4MjM4OSBUZAooQ29sbGVjdGlvbiBEYXRlOiAyMDI1LTA5LTI2KSBUagpFVAowLjk1IDAuOTYgMC45NiByZwo0Mi41MTk2ODUwMzkzNzAwODE0IDYwNi42MTQ0MDk0NDg4MTg4MzMgNTEwLjI0MDYyOTkyMTI1OTc2NzMgLTIyLjY3NzE2NTM1NDMzMDcxMSByZQpmCkJUCi9GMiAxNCBUZgoxNi4wOTk5OTk5OTk5OTk5OTc5IFRMCjAuIGcKNDguMTg4OTc2Mzc3OTUyNzYyNyA1OTIuNDQxMTgxMTAyMzYyMTc5NCBUZAooUGh5c2ljYWwgVGVzdHMpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA1NjQuMDk0NzI0NDA5NDQ4NzU4NyBUZAooTW9pc3R1cmUgQ29udGVudDogOC41JSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDU0Ny4wODY4NTAzOTM3MDA3MjkgVGQKKEFzaCBWYWx1ZTogMy4yJSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDUzMC4wNzg5NzYzNzc5NTI2OTkzIFRkCihGb3JlaWduIE1hdHRlcjogMS41JSkgVGoKRVQKMC45NSAwLjk2IDAuOTYgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCA1MTAuMjM2NDU2NjkyOTEzMzUwMyA1MTAuMjQwNjI5OTIxMjU5NzY3MyAtMjIuNjc3MTY1MzU0MzMwNzExIHJlCmYKQlQKL0YyIDE0IFRmCjE2LjA5OTk5OTk5OTk5OTk5NzkgVEwKMC4gZwo0OC4xODg5NzYzNzc5NTI3NjI3IDQ5Ni4wNjMyMjgzNDY0NTY2Mzk5IFRkCihDaGVtaWNhbCBUZXN0cykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDQ2Ny43MTY3NzE2NTM1NDMyNzYgVGQKKHBIIExldmVsOiA2LjUpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA0NTAuNzA4ODk3NjM3Nzk1MjQ2MyBUZAooUGVzdGljaWRlIFJlc2lkdWU6IDAuMDUgcHBtKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNDMzLjcwMTAyMzYyMjA0NzE1OTcgVGQKKEhlYXZ5IE1ldGFscyBcKFBiLCBDZCwgQXMsIEhnXCk6IFBhc3MpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA0MTYuNjkzMTQ5NjA2Mjk5MTMgVGQKKFNvbHZlbnQgUmVzaWR1ZTogUGFzcykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDM5OS42ODUyNzU1OTA1NTExMDAzIFRkCihQaHl0b2NoZW1pY2FsIFNjcmVlbmluZzogUGFzcykgVGoKRVQKMC45NSAwLjk2IDAuOTYgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCAzNzkuODQyNzU1OTA1NTExNzUxMyA1MTAuMjQwNjI5OTIxMjU5NzY3MyAtMjIuNjc3MTY1MzU0MzMwNzExIHJlCmYKQlQKL0YyIDE0IFRmCjE2LjA5OTk5OTk5OTk5OTk5NzkgVEwKMC4gZwo0OC4xODg5NzYzNzc5NTI3NjI3IDM2NS42Njk1Mjc1NTkwNTUwNDA5IFRkCihCaW9sb2dpY2FsIFRlc3RzKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMzM3LjMyMzA3MDg2NjE0MTY3NyBUZAooTWljcm9iaWFsIFRlc3Q6IFBhc3MpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAzMjAuMzE1MTk2ODUwMzkzNTkwNSBUZAooRnVuZ2FsIENvdW50OiA1MDAgQ0ZVL2cpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAzMDMuMzA3MzIyODM0NjQ1NTYwOCBUZAooRS4gY29saSAvIFNhbG1vbmVsbGE6IEFic2VudCkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDI4Ni4yOTk0NDg4MTg4OTc1MzExIFRkCihBZmxhdG94aW4gVGVzdDogMiC1Zy9rZykgVGoKRVQKMC45NSAwLjk2IDAuOTYgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCAyNjYuNDU2OTI5MTMzODU4MTgyIDUxMC4yNDA2Mjk5MjEyNTk3NjczIC0yMi42NzcxNjUzNTQzMzA3MTEgcmUKZgpCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQ4LjE4ODk3NjM3Nzk1Mjc2MjcgMjUyLjI4MzcwMDc4NzQwMTQ3MTYgVGQKKEF1dGhlbnRpY2F0aW9uKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMjIzLjkzNzI0NDA5NDQ4ODE2NDYgVGQKKEROQSAvIEJhcmNvZGUgVmVyaWZpY2F0aW9uOiBOb3QgVmVyaWZpZWQpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAyMDYuOTI5MzcwMDc4NzQwMTM0OSBUZAooRlRJUiAvIEhQVExDIEZpbmdlcnByaW50OiBQYXNzKSBUagpFVAowLjEzIDAuNzcgMC4zNyByZwo0Mi41MTk2ODUwMzkzNzAwODE0IDE4Ny4wODY4NTAzOTM3MDA3MDA2IDUxMC4yNDA2Mjk5MjEyNTk3NjczIC0zNC4wMTU3NDgwMzE0OTYwNjY1IHJlCmYKQlQKL0YyIDE2IFRmCjE4LjM5OTk5OTk5OTk5OTk5ODYgVEwKMS4gZwoyMzQuNjc5OTk5OTk5OTk5OTc4NCAxNjQuNDA5Njg1MDM5MzY5OTQ2OSBUZAooUXVhbGl0eSBHcmFkZTogQSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDEyMS44ODk5OTk5OTk5OTk4NzI3IFRkCihUZXN0ZWQgQnk6IExBQjAwMSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDEwNC44ODIxMjU5ODQyNTE4NDMgVGQKKFRlc3QgRGF0ZTogMjAyNS0xMS0wNSAyMDo0NSkgVGoKRVQKMC45IDAuOTEgMC45MiByZwowLiA1Ni42OTI5MTMzODU4MjY3Nzc1IDU5NS4yNzk5OTk5OTk5OTk5NzI3IC01Ni42OTI5MTMzODU4MjY3Nzc1IHJlCmYKQlQKL0YxIDkgVGYKMTAuMzQ5OTk5OTk5OTk5OTk5NiBUTAowLjI5NCAwLjMzMyAwLjM4OCByZwoxNDcuMjA0OTk5OTk5OTk5OTU1NyAyOC4zNDY0NTY2OTI5MTM0MjA3IFRkCijYPd0XACAAQgBsAG8AYwBrAGMAaABhAGkAbgAgAFYAZQByAGkAZgBpAGUAZAAgAC0AIABUAGgAaQBzACAAcgBlAHAAbwByAHQAIABpAHMAIABpAG0AbQB1AHQAYQBiAGwAeQAgAHIAZQBjAG8AcgBkAGUAZAAgAG8AbgAgAHQAaABlACAAYgBsAG8AYwBrAGMAaABhAGkAbikgVGoKRVQKZW5kc3RyZWFtCmVuZG9iagoxIDAgb2JqCjw8L1R5cGUgL1BhZ2VzCi9LaWRzIFszIDAgUiBdCi9Db3VudCAxCj4+CmVuZG9iago1IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZAovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iago3IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhLU9ibGlxdWUKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKOCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkT2JsaXF1ZQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iago5IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvQ291cmllcgovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0NvdXJpZXItQm9sZAovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMSAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0NvdXJpZXItT2JsaXF1ZQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMiAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0NvdXJpZXItQm9sZE9ibGlxdWUKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTMgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9UaW1lcy1Sb21hbgovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxNCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1RpbWVzLUJvbGQKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTUgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9UaW1lcy1JdGFsaWMKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTYgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9UaW1lcy1Cb2xkSXRhbGljCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjE3IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvWmFwZkRpbmdiYXRzCi9TdWJ0eXBlIC9UeXBlMQovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjE4IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvU3ltYm9sCi9TdWJ0eXBlIC9UeXBlMQovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL1Byb2NTZXQgWy9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUldCi9Gb250IDw8Ci9GMSA1IDAgUgovRjIgNiAwIFIKL0YzIDcgMCBSCi9GNCA4IDAgUgovRjUgOSAwIFIKL0Y2IDEwIDAgUgovRjcgMTEgMCBSCi9GOCAxMiAwIFIKL0Y5IDEzIDAgUgovRjEwIDE0IDAgUgovRjExIDE1IDAgUgovRjEyIDE2IDAgUgovRjEzIDE3IDAgUgovRjE0IDE4IDAgUgo+PgovWE9iamVjdCA8PAo+Pgo+PgplbmRvYmoKMTkgMCBvYmoKPDwKL1Byb2R1Y2VyIChqc1BERiAzLjAuMykKL0NyZWF0aW9uRGF0ZSAoRDoyMDI1MTEwNTIwNDkwNiswNSczMCcpCj4+CmVuZG9iagoyMCAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMSAwIFIKL09wZW5BY3Rpb24gWzMgMCBSIC9GaXRIIG51bGxdCi9QYWdlTGF5b3V0IC9PbmVDb2x1bW4KPj4KZW5kb2JqCnhyZWYKMCAyMQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDQ0MzMgMDAwMDAgbiAKMDAwMDAwNjI1MCAwMDAwMCBuIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDAxNTIgMDAwMDAgbiAKMDAwMDAwNDQ5MCAwMDAwMCBuIAowMDAwMDA0NjE1IDAwMDAwIG4gCjAwMDAwMDQ3NDUgMDAwMDAgbiAKMDAwMDAwNDg3OCAwMDAwMCBuIAowMDAwMDA1MDE1IDAwMDAwIG4gCjAwMDAwMDUxMzggMDAwMDAgbiAKMDAwMDAwNTI2NyAwMDAwMCBuIAowMDAwMDA1Mzk5IDAwMDAwIG4gCjAwMDAwMDU1MzUgMDAwMDAgbiAKMDAwMDAwNTY2MyAwMDAwMCBuIAowMDAwMDA1NzkwIDAwMDAwIG4gCjAwMDAwMDU5MTkgMDAwMDAgbiAKMDAwMDAwNjA1MiAwMDAwMCBuIAowMDAwMDA2MTU0IDAwMDAwIG4gCjAwMDAwMDY0OTggMDAwMDAgbiAKMDAwMDAwNjU4NCAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9TaXplIDIxCi9Sb290IDIwIDAgUgovSW5mbyAxOSAwIFIKL0lEIFsgPDY0RDdBQ0I0RjQwMUM3MzBCM0EzRTFDOEE2QUJCREUyPiA8NjREN0FDQjRGNDAxQzczMEIzQTNFMUM4QTZBQkJERTI+IF0KPj4Kc3RhcnR4cmVmCjY2ODgKJSVFT0Y=",
+      "pdfFilename": "LAB_REPORT_F-0TN0511TU2_1762355946325.pdf"
+    },
+    "addedBy": "LAB001",
+    "timestamp": "2025-11-05T15:19:06.372Z"
+  },
+  {
+    "batchId": "F-0TN0511TU3",
+    "stage": "farmer",
+    "data": {
+      "productName": "Tulsi",
+      "quantity": "05",
+      "unit": "Ton",
+      "harvestedDate": "2025-09-26",
+      "longitude": "11.0150",
+      "latitude": "78.2980",
+      "villageTown": "Mohanur",
+      "district": "Namakkal",
+      "state": "Tamil Nadu (TN)",
+      "addedBy": "Gunaselan",
+      "dateTime": "28/09/2025, 04:31 pm",
+      "photos": [],
+      "timestamp": "2025-11-05T15:35:10.654Z"
+    },
+    "addedBy": "F-00123",
+    "timestamp": "2025-11-05T15:35:10.705Z"
+  },
+  {
+    "batchId": "F-0TN0511TU3",
+    "stage": "lab",
+    "data": {
+      "moisture": 8.2,
+      "ashValue": 3,
+      "foreignMatter": 1.2,
+      "pH": 6.8,
+      "pesticide": 0.08,
+      "heavyMetals": "Pass",
+      "solventResidue": "Pass",
+      "phytochemical": "Pass",
+      "microbial": "Pass",
+      "fungalCount": 600,
+      "ecoli": "Absent",
+      "aflatoxin": 3,
+      "dnaVerification": false,
+      "ftirFingerprint": "Pass",
+      "qualityGrade": "B",
+      "originalGrade": "B",
+      "approvalStatus": "approved",
+      "approvalDecision": "auto_approved",
+      "testedBy": "LAB001",
+      "testDate": "2025-11-05",
+      "testTime": "21:13",
+      "remarks": "",
+      "pdfReport": "data:application/pdf;base64,JVBERi0xLjMKJbrfrOAKMyAwIG9iago8PC9UeXBlIC9QYWdlCi9QYXJlbnQgMSAwIFIKL1Jlc291cmNlcyAyIDAgUgovTWVkaWFCb3ggWzAgMCA1OTUuMjc5OTk5OTk5OTk5OTcyNyA4NDEuODg5OTk5OTk5OTk5OTg2NF0KL0NvbnRlbnRzIDQgMCBSCj4+CmVuZG9iago0IDAgb2JqCjw8Ci9MZW5ndGggNDIyOQo+PgpzdHJlYW0KMC41NjcwMDAwMDAwMDAwMDAxIHcKMCBHCjAuMjMgMC41MSAwLjk2IHJnCjAuIDg0MS44ODk5OTk5OTk5OTk5ODY0IDU5NS4yNzk5OTk5OTk5OTk5NzI3IC0xMTMuMzg1ODI2NzcxNjUzNTU1MSByZQpmCkJUCi9GMiAyNCBUZgoyNy41OTk5OTk5OTk5OTk5OTc5IFRMCjEuIGcKMTg2LjAzOTk5OTk5OTk5OTkzNTIgNzg1LjE5NzA4NjYxNDE3MzI1ODYgVGQKKExBQiBURVNUIFJFUE9SVCkgVGoKRVQKQlQKL0YxIDEyIFRmCjEzLjc5OTk5OTk5OTk5OTk5ODkgVEwKMS4gZwoyMDMuNDM5OTk5OTk5OTk5OTEyNSA3NTYuODUwNjI5OTIxMjU5ODM3OCBUZAooQXl1cnZlZGljIEhlcmIgUXVhbGl0eSBDZXJ0aWZpY2F0aW9uKSBUagpFVApCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQyLjUxOTY4NTAzOTM3MDA4MTQgNzAwLjE1NzcxNjUzNTQzMzExIFRkCihCYXRjaCBJbmZvcm1hdGlvbikgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDY3Ny40ODA1NTExODExMDIzMjggVGQKKEJhdGNoIElEOiBGLTBUTjA1MTFUVTMpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNDIuNTE5Njg1MDM5MzcwMDgxNCA2NjAuNDcyNjc3MTY1MzU0Mjk4MyBUZAooUHJvZHVjdCBOYW1lOiBUdWxzaSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDY0My40NjQ4MDMxNDk2MDYyNjg2IFRkCihGYXJtZXI6IEYtMDAxMjMpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNDIuNTE5Njg1MDM5MzcwMDgxNCA2MjYuNDU2OTI5MTMzODU4MjM4OSBUZAooQ29sbGVjdGlvbiBEYXRlOiAyMDI1LTA5LTI2KSBUagpFVAowLjk1IDAuOTYgMC45NiByZwo0Mi41MTk2ODUwMzkzNzAwODE0IDYwNi42MTQ0MDk0NDg4MTg4MzMgNTEwLjI0MDYyOTkyMTI1OTc2NzMgLTIyLjY3NzE2NTM1NDMzMDcxMSByZQpmCkJUCi9GMiAxNCBUZgoxNi4wOTk5OTk5OTk5OTk5OTc5IFRMCjAuIGcKNDguMTg4OTc2Mzc3OTUyNzYyNyA1OTIuNDQxMTgxMTAyMzYyMTc5NCBUZAooUGh5c2ljYWwgVGVzdHMpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA1NjQuMDk0NzI0NDA5NDQ4NzU4NyBUZAooTW9pc3R1cmUgQ29udGVudDogOC4yJSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDU0Ny4wODY4NTAzOTM3MDA3MjkgVGQKKEFzaCBWYWx1ZTogMy4wJSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDUzMC4wNzg5NzYzNzc5NTI2OTkzIFRkCihGb3JlaWduIE1hdHRlcjogMS4yJSkgVGoKRVQKMC45NSAwLjk2IDAuOTYgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCA1MTAuMjM2NDU2NjkyOTEzMzUwMyA1MTAuMjQwNjI5OTIxMjU5NzY3MyAtMjIuNjc3MTY1MzU0MzMwNzExIHJlCmYKQlQKL0YyIDE0IFRmCjE2LjA5OTk5OTk5OTk5OTk5NzkgVEwKMC4gZwo0OC4xODg5NzYzNzc5NTI3NjI3IDQ5Ni4wNjMyMjgzNDY0NTY2Mzk5IFRkCihDaGVtaWNhbCBUZXN0cykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDQ2Ny43MTY3NzE2NTM1NDMyNzYgVGQKKHBIIExldmVsOiA2LjgpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA0NTAuNzA4ODk3NjM3Nzk1MjQ2MyBUZAooUGVzdGljaWRlIFJlc2lkdWU6IDAuMDggcHBtKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNDMzLjcwMTAyMzYyMjA0NzE1OTcgVGQKKEhlYXZ5IE1ldGFscyBcKFBiLCBDZCwgQXMsIEhnXCk6IFBhc3MpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSA0MTYuNjkzMTQ5NjA2Mjk5MTMgVGQKKFNvbHZlbnQgUmVzaWR1ZTogUGFzcykgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDM5OS42ODUyNzU1OTA1NTExMDAzIFRkCihQaHl0b2NoZW1pY2FsIFNjcmVlbmluZzogUGFzcykgVGoKRVQKMC45NSAwLjk2IDAuOTYgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCAzNzkuODQyNzU1OTA1NTExNzUxMyA1MTAuMjQwNjI5OTIxMjU5NzY3MyAtMjIuNjc3MTY1MzU0MzMwNzExIHJlCmYKQlQKL0YyIDE0IFRmCjE2LjA5OTk5OTk5OTk5OTk5NzkgVEwKMC4gZwo0OC4xODg5NzYzNzc5NTI3NjI3IDM2NS42Njk1Mjc1NTkwNTUwNDA5IFRkCihCaW9sb2dpY2FsIFRlc3RzKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMzM3LjMyMzA3MDg2NjE0MTY3NyBUZAooTWljcm9iaWFsIFRlc3Q6IFBhc3MpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAzMjAuMzE1MTk2ODUwMzkzNTkwNSBUZAooRnVuZ2FsIENvdW50OiA2MDAgQ0ZVL2cpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAzMDMuMzA3MzIyODM0NjQ1NTYwOCBUZAooRS4gY29saSAvIFNhbG1vbmVsbGE6IEFic2VudCkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo1Ni42OTI5MTMzODU4MjY3Nzc1IDI4Ni4yOTk0NDg4MTg4OTc1MzExIFRkCihBZmxhdG94aW4gVGVzdDogMyC1Zy9rZykgVGoKRVQKMC45NSAwLjk2IDAuOTYgcmcKNDIuNTE5Njg1MDM5MzcwMDgxNCAyNjYuNDU2OTI5MTMzODU4MTgyIDUxMC4yNDA2Mjk5MjEyNTk3NjczIC0yMi42NzcxNjUzNTQzMzA3MTEgcmUKZgpCVAovRjIgMTQgVGYKMTYuMDk5OTk5OTk5OTk5OTk3OSBUTAowLiBnCjQ4LjE4ODk3NjM3Nzk1Mjc2MjcgMjUyLjI4MzcwMDc4NzQwMTQ3MTYgVGQKKEF1dGhlbnRpY2F0aW9uKSBUagpFVApCVAovRjEgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLiBnCjU2LjY5MjkxMzM4NTgyNjc3NzUgMjIzLjkzNzI0NDA5NDQ4ODE2NDYgVGQKKEROQSAvIEJhcmNvZGUgVmVyaWZpY2F0aW9uOiBOb3QgVmVyaWZpZWQpIFRqCkVUCkJUCi9GMSAxMSBUZgoxMi42NDk5OTk5OTk5OTk5OTg2IFRMCjAuIGcKNTYuNjkyOTEzMzg1ODI2Nzc3NSAyMDYuOTI5MzcwMDc4NzQwMTM0OSBUZAooRlRJUiAvIEhQVExDIEZpbmdlcnByaW50OiBQYXNzKSBUagpFVAowLjEzIDAuNzcgMC4zNyByZwo0Mi41MTk2ODUwMzkzNzAwODE0IDE4Ny4wODY4NTAzOTM3MDA3MDA2IDUxMC4yNDA2Mjk5MjEyNTk3NjczIC0zNC4wMTU3NDgwMzE0OTYwNjY1IHJlCmYKQlQKL0YyIDE2IFRmCjE4LjM5OTk5OTk5OTk5OTk5ODYgVEwKMS4gZwoyMzQuNjc5OTk5OTk5OTk5OTc4NCAxNjQuNDA5Njg1MDM5MzY5OTQ2OSBUZAooUXVhbGl0eSBHcmFkZTogQikgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDEyMS44ODk5OTk5OTk5OTk4NzI3IFRkCihUZXN0ZWQgQnk6IExBQjAwMSkgVGoKRVQKQlQKL0YxIDExIFRmCjEyLjY0OTk5OTk5OTk5OTk5ODYgVEwKMC4gZwo0Mi41MTk2ODUwMzkzNzAwODE0IDEwNC44ODIxMjU5ODQyNTE4NDMgVGQKKFRlc3QgRGF0ZTogMjAyNS0xMS0wNSAyMToxMykgVGoKRVQKMC45IDAuOTEgMC45MiByZwowLiA1Ni42OTI5MTMzODU4MjY3Nzc1IDU5NS4yNzk5OTk5OTk5OTk5NzI3IC01Ni42OTI5MTMzODU4MjY3Nzc1IHJlCmYKQlQKL0YxIDkgVGYKMTAuMzQ5OTk5OTk5OTk5OTk5NiBUTAowLjI5NCAwLjMzMyAwLjM4OCByZwoxNDcuMjA0OTk5OTk5OTk5OTU1NyAyOC4zNDY0NTY2OTI5MTM0MjA3IFRkCijYPd0XACAAQgBsAG8AYwBrAGMAaABhAGkAbgAgAFYAZQByAGkAZgBpAGUAZAAgAC0AIABUAGgAaQBzACAAcgBlAHAAbwByAHQAIABpAHMAIABpAG0AbQB1AHQAYQBiAGwAeQAgAHIAZQBjAG8AcgBkAGUAZAAgAG8AbgAgAHQAaABlACAAYgBsAG8AYwBrAGMAaABhAGkAbikgVGoKRVQKZW5kc3RyZWFtCmVuZG9iagoxIDAgb2JqCjw8L1R5cGUgL1BhZ2VzCi9LaWRzIFszIDAgUiBdCi9Db3VudCAxCj4+CmVuZG9iago1IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZAovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iago3IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhLU9ibGlxdWUKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKOCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkT2JsaXF1ZQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iago5IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvQ291cmllcgovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0NvdXJpZXItQm9sZAovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMSAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0NvdXJpZXItT2JsaXF1ZQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMiAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0NvdXJpZXItQm9sZE9ibGlxdWUKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTMgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9UaW1lcy1Sb21hbgovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxNCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1RpbWVzLUJvbGQKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTUgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9UaW1lcy1JdGFsaWMKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTYgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9UaW1lcy1Cb2xkSXRhbGljCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjE3IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvWmFwZkRpbmdiYXRzCi9TdWJ0eXBlIC9UeXBlMQovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjE4IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvU3ltYm9sCi9TdWJ0eXBlIC9UeXBlMQovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL1Byb2NTZXQgWy9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUldCi9Gb250IDw8Ci9GMSA1IDAgUgovRjIgNiAwIFIKL0YzIDcgMCBSCi9GNCA4IDAgUgovRjUgOSAwIFIKL0Y2IDEwIDAgUgovRjcgMTEgMCBSCi9GOCAxMiAwIFIKL0Y5IDEzIDAgUgovRjEwIDE0IDAgUgovRjExIDE1IDAgUgovRjEyIDE2IDAgUgovRjEzIDE3IDAgUgovRjE0IDE4IDAgUgo+PgovWE9iamVjdCA8PAo+Pgo+PgplbmRvYmoKMTkgMCBvYmoKPDwKL1Byb2R1Y2VyIChqc1BERiAzLjAuMykKL0NyZWF0aW9uRGF0ZSAoRDoyMDI1MTEwNTIxMTUxMSswNSczMCcpCj4+CmVuZG9iagoyMCAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMSAwIFIKL09wZW5BY3Rpb24gWzMgMCBSIC9GaXRIIG51bGxdCi9QYWdlTGF5b3V0IC9PbmVDb2x1bW4KPj4KZW5kb2JqCnhyZWYKMCAyMQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDQ0MzMgMDAwMDAgbiAKMDAwMDAwNjI1MCAwMDAwMCBuIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDAxNTIgMDAwMDAgbiAKMDAwMDAwNDQ5MCAwMDAwMCBuIAowMDAwMDA0NjE1IDAwMDAwIG4gCjAwMDAwMDQ3NDUgMDAwMDAgbiAKMDAwMDAwNDg3OCAwMDAwMCBuIAowMDAwMDA1MDE1IDAwMDAwIG4gCjAwMDAwMDUxMzggMDAwMDAgbiAKMDAwMDAwNTI2NyAwMDAwMCBuIAowMDAwMDA1Mzk5IDAwMDAwIG4gCjAwMDAwMDU1MzUgMDAwMDAgbiAKMDAwMDAwNTY2MyAwMDAwMCBuIAowMDAwMDA1NzkwIDAwMDAwIG4gCjAwMDAwMDU5MTkgMDAwMDAgbiAKMDAwMDAwNjA1MiAwMDAwMCBuIAowMDAwMDA2MTU0IDAwMDAwIG4gCjAwMDAwMDY0OTggMDAwMDAgbiAKMDAwMDAwNjU4NCAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9TaXplIDIxCi9Sb290IDIwIDAgUgovSW5mbyAxOSAwIFIKL0lEIFsgPEU2NEU4NTA2MTc4N0RDMEEwN0MyRTQ0MEQ3RDkxRjM0PiA8RTY0RTg1MDYxNzg3REMwQTA3QzJFNDQwRDdEOTFGMzQ+IF0KPj4Kc3RhcnR4cmVmCjY2ODgKJSVFT0Y=",
+      "pdfFilename": "LAB_REPORT_F-0TN0511TU3_1762357511126.pdf"
+    },
+    "addedBy": "LAB001",
+    "timestamp": "2025-11-05T15:45:11.126Z"
+  },
+  {
+    "batchId": "F-0TN0511து",
+    "stage": "farmer",
+    "data": {
+      "productName": "துளசி",
+      "quantity": "05",
+      "unit": "டன்",
+      "harvestedDate": "2025-09-26",
+      "longitude": "11.0150",
+      "latitude": "78.2980",
+      "villageTown": "Mohanur",
+      "district": "Namakkal",
+      "state": "Tamil Nadu (TN)",
+      "addedBy": "Gunaselan",
+      "dateTime": "28/09/2025, 04:31 pm",
+      "photos": [],
+      "timestamp": "2025-11-05T16:00:58.813Z"
+    },
+    "addedBy": "F-00123",
+    "timestamp": "2025-11-05T16:00:58.832Z"
+  },
+  {
+    "batchId": "F-0TN0511து1",
+    "stage": "farmer",
+    "data": {
+      "productName": "துளசி",
+      "quantity": "05",
+      "unit": "டன்",
+      "harvestedDate": "2025-09-26",
+      "longitude": "11.0150",
+      "latitude": "78.2980",
+      "villageTown": "Mohanur",
+      "district": "Namakkal",
+      "state": "Tamil Nadu (TN)",
+      "addedBy": "Gunaselan",
+      "dateTime": "28/09/2025, 04:31 pm",
+      "photos": [],
+      "timestamp": "2025-11-05T16:02:52.714Z"
+    },
+    "addedBy": "F-00123",
+    "timestamp": "2025-11-05T16:02:52.709Z"
+  }
+]

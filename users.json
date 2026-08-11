@@ -1,0 +1,19 @@
+[
+  {
+    "userId": "FRM",
+    "role": "farmer",
+    "name": "Ravi Kumar",
+    "farmerId": "F-00123",
+    "passwordHash": "$2b$10$SMNnmEPIhylhKbut9ZoIlOo.K2Iq4YLuKPUjVvSXwpneyldstM9eC"
+  },
+  {
+    "userId": "LAB001",
+    "role": "lab",
+    "passwordHash": "$2b$10$Y0tkCkzXMf9.IVHuouhHDOv20k/e7aBAN9y/3nRxRgqovgYNccJfm"
+  },
+  {
+    "userId": "MFR001",
+    "role": "manufacturer",
+    "passwordHash": "$2b$10$/bvQH72hUtQMylI.U4ZOceqWXMe.lu3LGfXDIJTKlqaveBydEJZvy"
+  }
+]

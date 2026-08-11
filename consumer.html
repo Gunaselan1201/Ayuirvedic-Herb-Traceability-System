@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERB Consumer Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .timeline-line {
+            background: linear-gradient(to bottom, #10b981, #3b82f6, #8b5cf6);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="app" class="min-h-screen">
+        <!-- Timeline View (standalone) -->
+        <div id="timeline" class="hidden">
+            <div class="container mx-auto px-4 py-8">
+                <!-- Header -->
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-2">
+                        Product Timeline
+                    </h1>
+                    <p class="text-lg text-gray-600">
+                        Batch ID: <span id="timelineBatchId" class="font-mono font-semibold"></span>
+                    </p>
+                </div>
+
+                <!-- Manufactured Details (Summary) -->
+                <div id="manufacturedDetails" class="max-w-4xl mx-auto mb-8"></div>
+
+                <!-- Raw Products List -->
+                <div id="rawProductsContainer" class="max-w-4xl mx-auto mb-8"></div>
+
+                <!-- Timeline -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="relative">
+                        <!-- Timeline Line -->
+                        <div class="absolute left-8 top-0 bottom-0 w-0.5 timeline-line"></div>
+
+                        <!-- Timeline Items -->
+                        <div id="timelineItems"></div>
+                    </div>
+                </div>
+
+                <!-- Summary -->
+                <div class="max-w-4xl mx-auto mt-8">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Product Summary</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                            <div class="p-4 bg-green-50 rounded-lg">
+                                <div id="farmerStatus" class="text-2xl font-bold text-green-600">⏳</div>
+                                <div class="text-sm text-gray-600">Farm Stage</div>
+                            </div>
+                            <div class="p-4 bg-blue-50 rounded-lg">
+                                <div id="labStatus" class="text-2xl font-bold text-blue-600">⏳</div>
+                                <div class="text-sm text-gray-600">Lab Testing</div>
+                            </div>
+                            <div class="p-4 bg-purple-50 rounded-lg">
+                                <div id="manufacturerStatus" class="text-2xl font-bold text-purple-600">⏳</div>
+                                <div class="text-sm text-gray-600">Manufacturing</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading View -->
+        <div id="loading" class="hidden min-h-screen bg-gray-50 flex items-center justify-center">
+            <div class="text-center">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-green-500 mx-auto mb-4"></div>
+                <p class="text-gray-600">Loading product timeline...</p>
+            </div>
+        </div>
+
+        <!-- Error View -->
+        <div id="errorView" class="hidden min-h-screen bg-gray-50 flex items-center justify-center">
+            <div class="text-center max-w-md mx-auto p-6">
+                <div class="text-red-500 text-6xl mb-4">⚠️</div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Error</h2>
+                <p id="errorMessage" class="text-gray-600 mb-6"></p>
+                <p class="text-sm text-gray-500">If you scanned a QR code, please try scanning again.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentBatchId = '';
+
+        function showTimeline() {
+            document.getElementById('timeline').classList.remove('hidden');
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('errorView').classList.add('hidden');
+        }
+
+        function showLoading() {
+            document.getElementById('timeline').classList.add('hidden');
+            document.getElementById('loading').classList.remove('hidden');
+            document.getElementById('errorView').classList.add('hidden');
+        }
+
+        function showError(message) {
+            document.getElementById('timeline').classList.add('hidden');
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('errorView').classList.remove('hidden');
+            document.getElementById('errorMessage').textContent = message;
+        }
+
+        // Auto-load if batchId is present in query string
+        (function initFromQuery() {
+            const params = new URLSearchParams(window.location.search);
+            const batchId = params.get('batchId');
+            if (batchId) {
+                fetchTimeline(batchId);
+            } else {
+                showError('Missing Manufactured Batch ID. Please scan the QR code again.');
+            }
+        })();
+
+        async function fetchTimeline(batchParam) {
+            try {
+                showLoading();
+                // Load all events to resolve manufactured batch IDs to raw batches
+                const allRes = await fetch(`http://localhost:3001/events`);
+                if (!allRes.ok) throw new Error('Failed to fetch events');
+                const allEvents = await allRes.json();
+
+                // Try as manufactured batch id
+                const manuEvents = allEvents.filter(ev => ev.stage === 'manufacturer' && ev.data && ev.data.manufacturedBatchId === batchParam);
+                if (manuEvents.length > 0) {
+                    const rawIds = [...new Set(manuEvents.map(ev => ev.batchId))];
+                    const rawDetails = rawIds.map(rawId => {
+                        const farmer = allEvents.find(ev => ev.batchId === rawId && ev.stage === 'farmer') || null;
+                        const lab = allEvents.find(ev => ev.batchId === rawId && ev.stage === 'lab') || null;
+                        const manu = manuEvents.find(ev => ev.batchId === rawId) || null;
+                        return { rawId, farmer, lab, manu };
+                    });
+                    displayAggregatedTimeline(batchParam, rawDetails);
+                    return;
+                }
+                // Enforce manufactured batch ID only
+                showError('No records found for this Manufactured Batch ID');
+            } catch (error) {
+                console.error('Error fetching timeline:', error);
+                showError('Failed to fetch product timeline');
+            }
+        }
+
+        function displayAggregatedTimeline(batchParam, rawDetails) {
+            document.getElementById('timelineBatchId').textContent = batchParam;
+            
+            const timelineItems = document.getElementById('timelineItems');
+            timelineItems.innerHTML = '';
+
+            const stages = [
+                { key: 'farmer', title: 'Harvest History', icon: '🌱', color: 'from-green-400 to-green-600' },
+                { key: 'lab', title: 'Lab Test History', icon: '🧪', color: 'from-blue-400 to-blue-600' },
+                { key: 'manufacturer', title: 'Manufacturing', icon: '🏭', color: 'from-purple-400 to-purple-600' }
+            ];
+
+            const stageCompleteness = {
+                farmer: rawDetails.some(d => d.farmer),
+                lab: rawDetails.some(d => d.lab),
+                manufacturer: rawDetails.some(d => d.manu)
+            };
+
+            // Render Manufactured Details summary
+            const firstManu = rawDetails.find(d => d.manu)?.manu || null;
+            document.getElementById('manufacturedDetails').innerHTML = createManufacturedSummary(firstManu);
+
+            // Render Raw Products list
+            const rawProductsRows = rawDetails.map(d => {
+                const productName = d.farmer && d.farmer.data ? (d.farmer.data.productName || '-') : '-';
+                return `<tr class="border-t"><td class="px-4 py-2">${d.rawId}</td><td class="px-4 py-2">${productName}</td></tr>`;
+            }).join('');
+            document.getElementById('rawProductsContainer').innerHTML = `
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">Raw Products</h2>
+                <div class="overflow-hidden rounded-lg border border-gray-200">
+                  <table class="min-w-full text-left text-sm">
+                    <thead class="bg-gray-50 text-gray-700">
+                      <tr><th class=\"px-4 py-2\">Batch ID</th><th class=\"px-4 py-2\">Product Name</th></tr>
+                    </thead>
+                    <tbody>${rawProductsRows}</tbody>
+                  </table>
+                </div>`;
+
+            stages.forEach((stage) => {
+                const isCompleted = !!stageCompleteness[stage.key];
+                const stageElement = document.createElement('div');
+                stageElement.className = 'relative flex items-start mb-8';
+
+                let contentHtml = '';
+                if (stage.key === 'manufacturer') {
+                    const firstManu = rawDetails.find(d => d.manu)?.manu || null;
+                    contentHtml = createManufacturedContent(firstManu);
+                } else if (stage.key === 'farmer') {
+                    contentHtml = rawDetails.map(d => d.farmer ? createStageContent(d.farmer) : '').join('');
+                } else if (stage.key === 'lab') {
+                    contentHtml = rawDetails.map(d => d.lab ? createStageContent(d.lab) : '').join('');
+                }
+                
+                stageElement.innerHTML = `
+                    <div class="relative z-10 w-16 h-16 rounded-full bg-gradient-to-r ${stage.color} flex items-center justify-center text-white text-2xl shadow-lg">
+                        ${stage.icon}
+                    </div>
+                    <div class="ml-8 flex-1">
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-xl font-semibold text-gray-900">${stage.title}</h3>
+                                <span class="text-sm ${isCompleted ? 'text-green-600 bg-green-100' : 'text-gray-500 bg-gray-100'} px-3 py-1 rounded-full">
+                                    ${isCompleted ? '✓ Completed' : '⏳ Pending'}
+                                </span>
+                            </div>
+                            ${isCompleted ? contentHtml : '<div class="text-gray-500 italic">This stage has not been completed yet.</div>'}
+                        </div>
+                    </div>
+                `;
+                
+                timelineItems.appendChild(stageElement);
+            });
+
+            // Update summary
+            document.getElementById('farmerStatus').textContent = stageCompleteness.farmer ? '✓' : '⏳';
+            document.getElementById('labStatus').textContent = stageCompleteness.lab ? '✓' : '⏳';
+            document.getElementById('manufacturerStatus').textContent = stageCompleteness.manufacturer ? '✓' : '⏳';
+
+            showTimeline();
+        }
+
+        function createManufacturedContent(event) {
+            if (!event) return '<div class="text-gray-500 italic">No manufacturing details available.</div>';
+            const d = event.data || {};
+            const formatDate = (timestamp) => new Date(timestamp).toLocaleString();
+            return `
+                <div class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <span class="text-sm font-medium text-gray-500">Company Name:</span>
+                            <p class="text-gray-900">${d.companyName || '-'}</p>
+                        </div>
+                        <div>
+                            <span class="text-sm font-medium text-gray-500">Manufactured Batch ID:</span>
+                            <p class="text-gray-900">${d.manufacturedBatchId || '-'}</p>
+                        </div>
+                        <div>
+                            <span class="text-sm font-medium text-gray-500">Product Name:</span>
+                            <p class="text-gray-900">${d.productName || '-'}</p>
+                        </div>
+                        <div>
+                            <span class="text-sm font-medium text-gray-500">Product Type:</span>
+                            <p class="text-gray-900">${d.productType || '-'}</p>
+                        </div>
+                        <div class="md:col-span-2">
+                            <span class="text-sm font-medium text-gray-500">Ingredients:</span>
+                            <p class="text-gray-900">${d.ingredients || '-'}</p>
+                        </div>
+                        <div>
+                            <span class="text-sm font-medium text-gray-500">Added By:</span>
+                            <p class="text-gray-900">${event.addedBy || '-'}</p>
+                        </div>
+                        <div>
+                            <span class="text-sm font-medium text-gray-500">Date & Time:</span>
+                            <p class="text-gray-900">${formatDate(event.timestamp)}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function createManufacturedSummary(event) {
+            if (!event) {
+                return '<div class="bg-gray-50 p-4 rounded-lg text-gray-500">No manufacturing details available.</div>';
+            }
+            const d = event.data || {};
+            const formatDate = (timestamp) => new Date(timestamp).toLocaleString();
+            return `
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">Manufactured Details</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-gray-50 p-4 rounded-lg">
+                    <div><div class="text-xs uppercase text-gray-500">Company Name</div><div class="text-sm text-gray-900">${d.companyName || '-'}</div></div>
+                    <div><div class="text-xs uppercase text-gray-500">Manufactured Batch ID</div><div class="text-sm text-gray-900">${d.manufacturedBatchId || '-'}</div></div>
+                    <div><div class="text-xs uppercase text-gray-500">Product Name</div><div class="text-sm text-gray-900">${d.productName || '-'}</div></div>
+                    <div><div class="text-xs uppercase text-gray-500">Product Type</div><div class="text-sm text-gray-900">${d.productType || '-'}</div></div>
+                    <div class="md:col-span-2"><div class="text-xs uppercase text-gray-500">Ingredients</div><div class="text-sm text-gray-900 break-words">${d.ingredients || '-'}</div></div>
+                    <div><div class="text-xs uppercase text-gray-500">Added By</div><div class="text-sm text-gray-900">${event.addedBy || '-'}</div></div>
+                    <div><div class="text-xs uppercase text-gray-500">Date & Time</div><div class="text-sm text-gray-900">${formatDate(event.timestamp)}</div></div>
+                </div>`;
+        }
+
+        function createStageContent(event) {
+            const formatDate = (timestamp) => {
+                return new Date(timestamp).toLocaleString('en-GB', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: true
+                });
+            };
+
+            let content = `
+                <div class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <span class="text-sm font-medium text-gray-500">Added By:</span>
+                            <p class="text-gray-900">${event.addedBy}</p>
+                        </div>
+                        <div>
+                            <span class="text-sm font-medium text-gray-500">Date & Time:</span>
+                            <p class="text-gray-900">${formatDate(event.timestamp)}</p>
+                        </div>
+                    </div>
+            `;
+
+            if (event.stage === 'farmer' && event.data) {
+                content += `
+                    <div class="border-t pt-4">
+                        <h4 class="font-medium text-gray-900 mb-2">Harvest Details:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <span class="text-gray-500">Product:</span>
+                                <p class="font-medium">${event.data.productName || '-'}</p>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Quantity:</span>
+                                <p class="font-medium">${event.data.quantity || '-'}</p>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Harvested Date:</span>
+                                <p class="font-medium">${event.data.harvestedDate || '-'}</p>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Latitude:</span>
+                                <p class="font-medium">${(event.data.coordinates && event.data.coordinates.latitude != null) ? event.data.coordinates.latitude : '-'}</p>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Longitude:</span>
+                                <p class="font-medium">${(event.data.coordinates && event.data.coordinates.longitude != null) ? event.data.coordinates.longitude : '-'}</p>
+                            </div>
+                            <div class="md:col-span-2">
+                                <span class="text-gray-500">Location:</span>
+                                <p class="font-medium">${event.data.location || '-'}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            if (event.stage === 'lab' && event.data) {
+                content += `
+                    <div class="border-t pt-4">
+                        <h4 class="font-medium text-gray-900 mb-2">Lab Test Results:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                            <div>
+                                <span class="text-gray-500">Moisture %:</span>
+                                <p class="font-medium">${(event.data.moisture ?? '-')}
+                                </p>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Pesticide ppm:</span>
+                                <p class="font-medium">${(event.data.pesticide ?? '-')}</p>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Quality Grade:</span>
+                                <p class="font-medium text-green-600">${event.data.qualityGrade || event.data.quality || '-'}</p>
+                            </div>
+                            <div class="md:col-span-3">
+                                <span class="text-gray-500">Core Tests:</span>
+                                <p class="font-medium break-words">${[
+                                    event.data.pesticideResidues,
+                                    event.data.microbialLoad,
+                                    event.data.aflatoxins,
+                                    event.data.totalAsh,
+                                    event.data.extractiveValues,
+                                    event.data.foreignOrganicMatter
+                                ].filter(Boolean).join(', ') || '-'}</p>
+                            </div>
+                            <div class="md:col-span-3">
+                                <span class="text-gray-500">Ayurvedic Pharmacopoeial Quality Tests:</span>
+                                <p class="font-medium break-words">${[
+                                    event.data.tlcHptlc,
+                                    event.data.macroMicroIdentity,
+                                    event.data.markerCompoundQuant,
+                                    event.data.residualSolvents,
+                                    event.data.pesticidePanelConfirmation,
+                                    event.data.dnaBarcoding
+                                ].filter(Boolean).join(', ') || '-'}</p>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Export-Grade:</span>
+                                <p class="font-medium">${event.data.exportGrade || '-'}</p>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Tested By:</span>
+                                <p class="font-medium">${event.data.testedBy || '-'}</p>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Tested At (ISO):</span>
+                                <p class="font-medium">${event.data.testedAtISO ? new Date(event.data.testedAtISO).toLocaleString() : '-'}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            if (event.stage === 'manufacturer' && event.data) {
+                content += `
+                    <div class="border-t pt-4">
+                        <h4 class="font-medium text-gray-900 mb-2">Manufacturing Details:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <span class="text-gray-500">Product Type:</span>
+                                <p class="font-medium">${event.data.productType}</p>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Company:</span>
+                                <p class="font-medium">${event.data.companyName}</p>
+                            </div>
+                            <div class="md:col-span-2">
+                                <span class="text-gray-500">Ingredients:</span>
+                                <p class="font-medium">${event.data.ingredients}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            content += '</div>';
+            return content;
+        }
+    </script>
+</body>
+</html>

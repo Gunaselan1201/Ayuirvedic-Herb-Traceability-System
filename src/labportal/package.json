@@ -1,0 +1,33 @@
+{
+  "name": "manufacturer-portal",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3002",
+    "build": "vite build",
+    "preview": "vite preview --port 3002",
+    "typecheck": "tsc -b --pretty"
+  },
+  "dependencies": {
+    "framer-motion": "^12.23.24",
+    "jspdf": "^3.0.3",
+    "lucide-react": "^0.552.0",
+    "qrcode.react": "3.1.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.26.2",
+    "uuid": "9.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.7",
+    "@types/react-dom": "18.3.0",
+    "@types/uuid": "9.0.8",
+    "@vitejs/plugin-react": "4.3.1",
+    "autoprefixer": "10.4.20",
+    "postcss": "8.4.45",
+    "tailwindcss": "3.4.12",
+    "typescript": "5.6.2",
+    "vite": "5.4.6"
+  }
+}

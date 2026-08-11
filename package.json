@@ -1,0 +1,20 @@
+{
+  "name": "herb-ledger",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build:farmer": "cd src/farmerportal && npm install && npm run build",
+    "build:lab": "cd src/labportal && npm install && npm run build",
+    "build:manuf": "cd src/manufportal && npm install && npm run build",
+    "build:consumer": "cd src/consumerportal && npm install && npm run build",
+    "build:all": "npm run build:farmer && npm run build:lab && npm run build:manuf && npm run build:consumer",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "qrcode": "^1.5.3"
+  }
+}
