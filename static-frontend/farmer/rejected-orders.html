@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rejected Orders - Farmer Portal</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</head>
+<body data-page="rejectedOrders">
+  <div id="app-shell"></div>
+
+  <main class="min-h-screen" style="background:#fff;padding:1.5rem;">
+    <div class="max-w-7xl">
+      <button class="back-link gray" id="backBtn"></button>
+      <h1 class="page-title mb-6">Rejected Orders</h1>
+      <div id="ordersList"></div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('backBtn').innerHTML = icon('arrowLeft', 20) + ' Back';
+    document.getElementById('backBtn').addEventListener('click', function () { window.location.href = 'dashboard.html'; });
+
+    var orders = REJECTED_ORDERS;
+    var list = document.getElementById('ordersList');
+    if (orders.length === 0) {
+      list.innerHTML = '<div class="empty-illustration">' + icon('xCircle', 64) + '<p>No rejected orders</p></div>';
+    } else {
+      list.innerHTML = orders.map(function (o) {
+        return '<div class="rejected-order-card" data-id="' + o.id + '">' +
+          '<div class="row">' +
+          '<div class="content">' +
+          '<div class="iconbox">' + icon('alertOctagon', 24) + '</div>' +
+          '<div style="flex:1;">' +
+          '<h3>' + o.productName + '</h3>' +
+          '<div class="details-grid">' +
+          '<div><p class="k">Batch ID</p><p class="v">' + o.id + '</p></div>' +
+          '<div><p class="k">Quantity</p><p class="v">' + o.quantity + '</p></div>' +
+          '<div><p class="k">Manufacturer</p><p class="v">' + o.manufacturer + '</p></div>' +
+          '<div><p class="k">Rejected On</p><p class="v">' + new Date(o.rejectedOn).toLocaleDateString() + '</p></div>' +
+          '</div>' +
+          '<div class="reason-box"><p class="k">Reason</p><p class="v">' + o.reason + '</p></div>' +
+          '</div></div>' +
+          '<div class="actions">' +
+          '<button class="btn" style="background:#f97316;color:#fff;" data-appeal="' + o.id + '">' + icon('rotateCcw', 16) + ' Appeal</button>' +
+          '<button class="btn btn-blue" data-reconsider="' + o.id + '">' + icon('rotateCcw', 16) + ' Reconsider</button>' +
+          '</div></div></div>';
+      }).join('');
+      list.querySelectorAll('[data-appeal]').forEach(function (btn) {
+        btn.addEventListener('click', function () { showToast('Appeal requested for ' + btn.getAttribute('data-appeal') + '.'); });
+      });
+      list.querySelectorAll('[data-reconsider]').forEach(function (btn) {
+        btn.addEventListener('click', function () { showToast('Reconsideration requested for ' + btn.getAttribute('data-reconsider') + '.'); });
+      });
+    }
+  </script>
+</body>
+</html>

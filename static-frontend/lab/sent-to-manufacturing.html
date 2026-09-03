@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sent to Manufacturing - Lab Portal</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app-shell"></div>
+<main class="bg-purple-gray page">
+  <div class="page-inner">
+    <button class="back-link" id="backBtn" style="color:var(--purple-600);"></button>
+    <div class="page-title-row">
+      <div class="page-icon-square" style="background:var(--purple-600);" id="titleIcon"></div>
+      <div><h1>Sent to Manufacturing</h1><p class="page-header-sub" style="margin:0;">Approved batches forwarded to manufacturing units</p></div>
+    </div>
+
+    <div class="grid grid-4 mb-6" style="margin-top:1rem;">
+      <div class="stat-tile"><div class="stat-head" id="s1"></div><p class="stat-value" id="statTotal">0</p></div>
+      <div class="stat-tile"><div class="stat-head" id="s2"></div><p class="stat-value" style="color:var(--green-600);" id="statA">0</p></div>
+      <div class="stat-tile"><div class="stat-head" id="s3"></div><p class="stat-value" style="color:var(--lab-blue-600);" id="statB">0</p></div>
+      <div class="stat-tile"><div class="stat-head" id="s4"></div><p class="stat-value" style="color:var(--orange-600);" id="statC">0</p></div>
+    </div>
+
+    <div id="grid" class="grid grid-3"></div>
+  </div>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+  const auth = initLabShell('sent-to-manufacturing');
+  if (auth) {
+    document.getElementById('backBtn').innerHTML = icon('arrowleft') + '<span>Back to Dashboard</span>';
+    document.getElementById('backBtn').addEventListener('click', function () { window.location.href = 'dashboard.html'; });
+    document.getElementById('titleIcon').innerHTML = icon('factory');
+    document.getElementById('s1').innerHTML = icon('package') + '<span>Total Sent</span>';
+    document.getElementById('s2').innerHTML = icon('award') + '<span>Grade A</span>';
+    document.getElementById('s3').innerHTML = icon('award') + '<span>Grade B</span>';
+    document.getElementById('s4').innerHTML = icon('award') + '<span>Grade C</span>';
+
+    const sent = LAB_BATCHES.filter(function (b) { return b.status === 'TESTED' && b.manufacturer; });
+
+    document.getElementById('statTotal').textContent = sent.length;
+    document.getElementById('statA').textContent = sent.filter(function (b) { return b.grade === 'A'; }).length;
+    document.getElementById('statB').textContent = sent.filter(function (b) { return b.grade === 'B'; }).length;
+    document.getElementById('statC').textContent = sent.filter(function (b) { return b.grade === 'C'; }).length;
+
+    if (sent.length === 0) {
+      document.getElementById('grid').innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--gray-500);">' +
+        icon('factory', 'icon-lg') + '<p>No batches sent to manufacturing yet</p></div>';
+    } else {
+      document.getElementById('grid').innerHTML = sent.map(function (b) {
+        return '<div class="batch-item border-purple">' +
+          '<div class="batch-item-head">' +
+            '<div><h3>' + b.id + '</h3><p class="batch-product">' + b.productName + '</p></div>' +
+            '<span class="badge badge-purple">In Manufacturing</span>' +
+          '</div>' +
+          '<div class="grade-box ' + labGradeClass(b.grade) + '"><p>Quality Grade</p><p>' + b.grade + '</p></div>' +
+          '<div class="batch-row">' + icon('calendar') + '<span>Sent: ' + labFormatDate(b.manufacturer.sentDate) + '</span></div>' +
+          '<div class="batch-row">' + icon('package') + '<span>Quantity: ' + (b.quantity || 'N/A') + ' ' + (b.unit || '') + '</span></div>' +
+          '<div class="batch-row">' + icon('factory') + '<span class="font-medium">' + b.manufacturer.name + '</span></div>' +
+          '</div>';
+      }).join('');
+    }
+  }
+</script>
+</body>
+</html>

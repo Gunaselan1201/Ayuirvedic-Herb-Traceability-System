@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HERB Traceability - Portals</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  h1 { color: #fff; font-size: 2.2rem; margin-bottom: 8px; text-align: center; }
+  p.subtitle { color: #94a3b8; margin-bottom: 40px; text-align: center; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    width: 100%;
+  }
+  .card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.4); }
+  .icon {
+    width: 64px; height: 64px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px; color: #fff;
+  }
+  .farmer .icon { background: linear-gradient(135deg,#22c55e,#059669); }
+  .lab .icon { background: linear-gradient(135deg,#14b8a6,#0891b2); }
+  .manufacturer .icon { background: linear-gradient(135deg,#f59e0b,#ea580c); }
+  .consumer .icon { background: linear-gradient(135deg,#6366f1,#8b5cf6); }
+  .card h2 { color: #111827; font-size: 1.15rem; }
+  .card span { color: #6b7280; font-size: 0.85rem; text-align: center; }
+  footer { margin-top: 48px; color: #64748b; font-size: 0.8rem; text-align: center; }
+</style>
+</head>
+<body>
+  <h1>HERB Traceability System</h1>
+  <p class="subtitle">Static HTML/CSS/JS demo build — select a portal to enter</p>
+  <div class="grid">
+    <a class="card farmer" href="farmer/login.html">
+      <div class="icon">F</div>
+      <h2>Farmer Portal</h2>
+      <span>Record harvests &amp; generate batch IDs</span>
+    </a>
+    <a class="card lab" href="lab/login.html">
+      <div class="icon">L</div>
+      <h2>Lab Portal</h2>
+      <span>Test batches &amp; assign quality grades</span>
+    </a>
+    <a class="card manufacturer" href="manufacturer/login.html">
+      <div class="icon">M</div>
+      <h2>Manufacturer Portal</h2>
+      <span>Process tested batches &amp; generate QR codes</span>
+    </a>
+    <a class="card consumer" href="consumer/index.html">
+      <div class="icon">C</div>
+      <h2>Consumer Portal</h2>
+      <span>Track a product's full journey — no login</span>
+    </a>
+  </div>
+  <footer>Demo credentials are pre-filled on every login page — just click Sign In.</footer>
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Batch Testing - Lab Portal</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app-shell"></div>
+<main class="bg-blue-gray page">
+  <div class="container-narrow" style="padding:0;">
+    <div id="successBanner" class="success-banner hidden"></div>
+
+    <button class="back-link" id="backBtn"></button>
+
+    <div class="card-lg card-border-l border-blue mb-6" id="batchHeaderCard"></div>
+
+    <div id="notFoundBox" class="hidden">
+      <div class="login-error" style="border-radius:.5rem;display:flex;gap:.75rem;align-items:center;">
+        <span id="nfIcon"></span>
+        <div><h3 style="margin:0 0 .25rem 0;">Batch Not Found</h3><p style="margin:0;" id="nfMsg"></p></div>
+      </div>
+      <a href="dashboard.html" class="btn btn-solid-blue mt-4" id="nfBackBtn"></a>
+    </div>
+
+    <form id="testForm" class="hidden">
+      <!-- Physical Tests -->
+      <div class="form-section">
+        <div class="form-section-head" style="color:var(--lab-blue-600);">
+          <span id="hIconPhysical"></span><h2>Physical Tests</h2>
+        </div>
+        <div class="form-grid">
+          <div class="field" id="fMoisture">
+            <label>Moisture Content (%) *</label>
+            <input type="number" step="0.1" id="moistureContent" placeholder="5-12">
+            <p class="field-error hidden"></p>
+            <p class="hint">Expected: 5-12%</p>
+          </div>
+          <div class="field" id="fAsh">
+            <label>Ash Value (%) *</label>
+            <input type="number" step="0.1" id="ashValue" placeholder="1-5">
+            <p class="field-error hidden"></p>
+            <p class="hint">Expected: 1-5%</p>
+          </div>
+          <div class="field" id="fForeign">
+            <label>Foreign Matter (%) *</label>
+            <input type="number" step="0.1" id="foreignMatter" placeholder="<2">
+            <p class="field-error hidden"></p>
+            <p class="hint">Expected: &lt;2%</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chemical Tests -->
+      <div class="form-section">
+        <div class="form-section-head" style="color:var(--purple-600);">
+          <span id="hIconChemical"></span><h2>Chemical Tests</h2>
+        </div>
+        <div class="form-grid cols-2">
+          <div class="field" id="fPh">
+            <label>pH Level *</label>
+            <input type="number" step="0.1" id="phLevel" placeholder="5.5-7.5">
+            <p class="field-error hidden"></p>
+            <p class="hint">Expected: 5.5-7.5</p>
+          </div>
+          <div class="field" id="fPesticide">
+            <label>Pesticide Residue (ppm) *</label>
+            <input type="number" step="0.01" id="pesticideResidue" placeholder="<0.1">
+            <p class="field-error hidden"></p>
+            <p class="hint">Expected: &lt;0.1 ppm</p>
+          </div>
+          <div class="field">
+            <label>Heavy Metals (Pb, Cd, As, Hg) *</label>
+            <select id="heavyMetals"><option value="Pass">Pass</option><option value="Fail">Fail</option></select>
+          </div>
+          <div class="field">
+            <label>Solvent Residue *</label>
+            <select id="solventResidue"><option value="Pass">Pass</option><option value="Fail">Fail</option></select>
+          </div>
+          <div class="field span-2">
+            <label>Phytochemical Screening *</label>
+            <select id="phytochemicalScreening"><option value="Pass">Pass</option><option value="Fail">Fail</option></select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Biological Tests -->
+      <div class="form-section">
+        <div class="form-section-head" style="color:var(--green-600);">
+          <span id="hIconBio"></span><h2>Biological Tests</h2>
+        </div>
+        <div class="form-grid cols-2">
+          <div class="field">
+            <label>Microbial Test *</label>
+            <select id="microbialTest"><option value="Pass">Pass</option><option value="Fail">Fail</option></select>
+          </div>
+          <div class="field" id="fFungal">
+            <label>Fungal Count (CFU/g) *</label>
+            <input type="number" step="1" id="fungalCount" placeholder="<1000">
+            <p class="field-error hidden"></p>
+            <p class="hint">Expected: &lt;10&sup3; CFU/g</p>
+          </div>
+          <div class="field">
+            <label>E. coli / Salmonella *</label>
+            <select id="ecoliSalmonella"><option value="Absent">Absent</option><option value="Present">Present</option></select>
+          </div>
+          <div class="field" id="fAflatoxin">
+            <label>Aflatoxin Test (&micro;g/kg) *</label>
+            <input type="number" step="0.1" id="aflatoxinTest" placeholder="<5">
+            <p class="field-error hidden"></p>
+            <p class="hint">Expected: &lt;5 &micro;g/kg</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Authentication -->
+      <div class="form-section">
+        <div class="form-section-head" style="color:var(--red-600);">
+          <span id="hIconAuth"></span><h2>Authentication</h2>
+        </div>
+        <div class="form-grid cols-2">
+          <div class="field">
+            <label class="field-checkbox"><input type="checkbox" id="dnaVerification"><span>DNA / Barcode Verification</span></label>
+            <p class="hint" style="margin-left:2rem;">Check if verified</p>
+          </div>
+          <div class="field">
+            <label>FTIR / HPTLC Fingerprint *</label>
+            <select id="ftirFingerprint"><option value="Pass">Pass</option><option value="Fail">Fail</option></select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <div class="form-section">
+        <div class="form-section-head" style="color:var(--orange-600);">
+          <span id="hIconSummary"></span><h2>Summary &amp; Report Details</h2>
+        </div>
+        <div class="form-grid cols-2">
+          <div class="field">
+            <label>Quality Grade * <span style="margin-left:.5rem;font-size:.7rem;font-weight:400;color:var(--lab-blue-600);background:var(--lab-blue-50);padding:.15rem .5rem;border-radius:.25rem;">Auto-Calculated</span></label>
+            <div class="grade-display" id="gradeDisplay"></div>
+            <p class="hint">Grade is calculated automatically based on test parameters</p>
+          </div>
+          <div class="field">
+            <label>Tested By *</label>
+            <input type="text" id="testedBy" placeholder="Lab Technician Name">
+          </div>
+          <div class="field">
+            <label>Test Date *</label>
+            <input type="date" id="testDate">
+          </div>
+          <div class="field">
+            <label>Test Time *</label>
+            <input type="time" id="testTime">
+          </div>
+          <div class="field span-2">
+            <label>Remarks (Optional)</label>
+            <textarea id="remarks" rows="4" placeholder="Additional observations or notes..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div id="alreadyTestedBanner" class="already-tested-banner hidden">
+        <span id="atIcon"></span>
+        <div><h3 style="margin:0 0 .25rem 0;">Batch Already Tested</h3>
+        <p style="margin:0;">This batch has already been tested and results have been recorded. The data is immutable and cannot be modified.</p></div>
+      </div>
+
+      <div class="flex gap-4 mt-6">
+        <a href="dashboard.html" class="btn btn-outline" style="flex:1;">Cancel</a>
+        <button type="submit" id="submitBtn" class="btn btn-gradient-blue" style="flex:1;">
+          <span id="submitIcon"></span><span id="submitLabel">Submit Test Results &amp; Generate Report</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</main>
+
+<!-- Grade C approval dialog -->
+<div class="approval-dialog-overlay" id="approvalOverlay">
+  <div class="approval-dialog">
+    <div class="flex items-center gap-3">
+      <div style="width:48px;height:48px;border-radius:999px;background:var(--orange-100);display:flex;align-items:center;justify-content:center;" id="approvalIconWrap"></div>
+      <h3>Grade C - Decision Required</h3>
+    </div>
+    <p style="color:var(--gray-700);line-height:1.6;">This batch has received a <strong style="color:var(--orange-600);">Grade C (Acceptable with Conditions)</strong> rating. Please review the test results and decide whether to approve for manufacturing or reject the batch.</p>
+    <div class="approval-note"><strong>Note:</strong> Approved batches will be sent to manufacturing. Rejected batches will be marked as failed and cannot be processed further.</div>
+    <div class="flex gap-4">
+      <button class="btn btn-solid-green" style="flex:1;" id="approveBtn"></button>
+      <button class="btn btn-solid-red" style="flex:1;" id="rejectBtn"></button>
+    </div>
+    <button class="btn" style="width:100%;margin-top:1rem;background:none;color:var(--gray-600);" onclick="closeApprovalDialog()">Cancel and Review Results</button>
+  </div>
+</div>
+
+<div id="rejectToast" class="reject-toast hidden"></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+  const auth = initLabShell('test-new');
+  let approvalDecision = null;
+
+  if (auth) {
+    document.getElementById('backBtn').innerHTML = icon('arrowleft') + '<span>Back to Dashboard</span>';
+    document.getElementById('backBtn').addEventListener('click', function () { window.location.href = 'dashboard.html'; });
+    document.getElementById('hIconPhysical').innerHTML = icon('droplet');
+    document.getElementById('hIconChemical').innerHTML = icon('beaker');
+    document.getElementById('hIconBio').innerHTML = icon('bug');
+    document.getElementById('hIconAuth').innerHTML = icon('dna');
+    document.getElementById('hIconSummary').innerHTML = icon('filetext');
+    document.getElementById('submitIcon').innerHTML = icon('save');
+    document.getElementById('nfIcon').innerHTML = icon('alertcircle');
+    document.getElementById('nfBackBtn').innerHTML = icon('arrowleft') + '<span>Back to Dashboard</span>';
+    document.getElementById('atIcon').innerHTML = icon('alertcircle');
+    document.getElementById('approvalIconWrap').innerHTML = icon('alertcircle');
+    document.getElementById('approveBtn').innerHTML = icon('checkcircle') + '<span>Approve for Manufacturing</span>';
+    document.getElementById('rejectBtn').innerHTML = icon('xcircle') + '<span>Reject Batch</span>';
+
+    const batchId = getQueryParam('id');
+    const batch = LAB_BATCHES.find(function (b) { return b.id === batchId; });
+
+    if (!batch) {
+      document.getElementById('notFoundBox').classList.remove('hidden');
+      document.getElementById('nfMsg').textContent = 'Invalid batch ID (' + batchId + '). Please go back and select a pending batch.';
+    } else {
+      const isAlreadyTested = batch.status !== 'PENDING';
+
+      document.getElementById('batchHeaderCard').innerHTML =
+        '<div class="flex items-center gap-4 mb-4">' +
+          '<div style="padding:.75rem;background:var(--lab-blue-600);border-radius:.75rem;color:#fff;">' + icon('flask') + '</div>' +
+          '<div><h1 style="margin:0;font-size:1.7rem;font-weight:700;">Batch Testing - ' + batch.id + '</h1><p style="margin:0;color:var(--gray-600);">Complete all required test fields</p></div>' +
+        '</div>' +
+        '<div class="batch-info-grid">' +
+          '<div><p class="bi-label">Batch ID</p><p class="bi-value">' + batch.id + '</p></div>' +
+          '<div><p class="bi-label">Product</p><p class="bi-value">' + batch.productName + '</p></div>' +
+          '<div><p class="bi-label">Farmer</p><p class="bi-value">' + batch.farmerName + '</p></div>' +
+          '<div><p class="bi-label">Received Date</p><p class="bi-value">' + labFormatDate(batch.collectionDate) + '</p></div>' +
+        '</div>';
+
+      document.getElementById('testForm').classList.remove('hidden');
+      document.getElementById('testedBy').value = auth.labId || 'Lab Technician';
+      document.getElementById('testDate').value = new Date().toISOString().split('T')[0];
+      document.getElementById('testTime').value = new Date().toTimeString().split(' ')[0].substring(0, 5);
+
+      const fields = ['moistureContent', 'ashValue', 'foreignMatter', 'phLevel', 'pesticideResidue',
+        'heavyMetals', 'solventResidue', 'phytochemicalScreening', 'microbialTest', 'fungalCount',
+        'ecoliSalmonella', 'aflatoxinTest', 'dnaVerification', 'ftirFingerprint', 'testedBy', 'testDate', 'testTime', 'remarks'];
+
+      if (isAlreadyTested) {
+        fields.forEach(function (f) {
+          const el = document.getElementById(f);
+          if (el) el.disabled = true;
+        });
+        document.getElementById('alreadyTestedBanner').classList.remove('hidden');
+        document.getElementById('submitBtn').disabled = true;
+        document.getElementById('submitIcon').innerHTML = icon('alertcircle');
+        document.getElementById('submitLabel').textContent = 'Batch Already Tested - Read Only';
+        // Prefill with existing (mock) result data - values are chosen so the
+        // recalculated grade below matches the batch's stored grade/status.
+        const isRejectedBatch = batch.status === 'REJECTED';
+        document.getElementById('moistureContent').value = isRejectedBatch ? 14.2 : 8.5;
+        document.getElementById('ashValue').value = isRejectedBatch ? 6.1 : 3.2;
+        document.getElementById('foreignMatter').value = isRejectedBatch ? 3.4 : 1.1;
+        document.getElementById('phLevel').value = isRejectedBatch ? 4.8 : 6.4;
+        document.getElementById('pesticideResidue').value = isRejectedBatch ? 0.18 : 0.03;
+        document.getElementById('fungalCount').value = isRejectedBatch ? 1600 : 450;
+        document.getElementById('aflatoxinTest').value = isRejectedBatch ? 6.5 : 1.2;
+        if (isRejectedBatch) document.getElementById('heavyMetals').value = 'Fail';
+        document.getElementById('remarks').value = batch.reason || 'Sample meets standard quality parameters.';
+      }
+
+      function calculateGrade() {
+        const moisture = parseFloat(document.getElementById('moistureContent').value);
+        const ash = parseFloat(document.getElementById('ashValue').value);
+        const foreign = parseFloat(document.getElementById('foreignMatter').value);
+        const ph = parseFloat(document.getElementById('phLevel').value);
+        const pesticide = parseFloat(document.getElementById('pesticideResidue').value);
+        const fungal = parseFloat(document.getElementById('fungalCount').value);
+        const aflatoxin = parseFloat(document.getElementById('aflatoxinTest').value);
+        const heavyMetals = document.getElementById('heavyMetals').value;
+        const ecoli = document.getElementById('ecoliSalmonella').value;
+        const microbial = document.getElementById('microbialTest').value;
+        const solvent = document.getElementById('solventResidue').value;
+        const phyto = document.getElementById('phytochemicalScreening').value;
+        const ftir = document.getElementById('ftirFingerprint').value;
+
+        let criticalFailures = 0;
+        if (heavyMetals === 'Fail') criticalFailures++;
+        if (ecoli === 'Present') criticalFailures++;
+        if (aflatoxin > 5) criticalFailures++;
+        if (pesticide > 0.1) criticalFailures++;
+        if (criticalFailures > 0) return 'F';
+
+        let points = 0;
+        if (moisture >= 5 && moisture <= 12) points++;
+        if (ash >= 1 && ash <= 5) points++;
+        if (foreign <= 2) points++;
+        if (ph >= 5.5 && ph <= 7.5) points++;
+        if (pesticide <= 0.05) points++;
+        if (fungal < 1000) points++;
+        if (aflatoxin < 2) points++;
+        if (microbial === 'Pass') points++;
+        if (solvent === 'Pass') points++;
+        if (phyto === 'Pass') points++;
+        if (ftir === 'Pass') points++;
+
+        if (points >= 10) return 'A';
+        if (points >= 7) return 'B';
+        if (points >= 5) return 'C';
+        return 'F';
+      }
+
+      function allNumericFilled() {
+        return ['moistureContent', 'ashValue', 'foreignMatter', 'phLevel', 'pesticideResidue', 'fungalCount', 'aflatoxinTest']
+          .every(function (id) { return document.getElementById(id).value !== ''; });
+      }
+
+      function renderGrade() {
+        const box = document.getElementById('gradeDisplay');
+        const rejectToast = document.getElementById('rejectToast');
+        if (isAlreadyTested) {
+          // Trust the batch's stored grade rather than recalculating from
+          // the illustrative read-only field values.
+          const grade = batch.grade || 'N/A';
+          const labels = { A: 'Grade A - Excellent ⭐', B: 'Grade B - Good 👍', C: 'Grade C - Acceptable ⚠️', F: 'Grade F - Poor ❌' };
+          box.className = 'grade-display ' + labGradeClass(grade);
+          box.innerHTML = '<span>' + (labels[grade] || 'Grade ' + grade) + '</span><span style="font-size:1.4rem;">' + grade + '</span>';
+          rejectToast.classList.add('hidden');
+          return grade;
+        }
+        if (!allNumericFilled()) {
+          box.className = 'grade-display';
+          box.innerHTML = '<span>Enter test results to calculate grade...</span>';
+          rejectToast.classList.add('hidden');
+          return null;
+        }
+        const grade = calculateGrade();
+        const labels = { A: 'Grade A - Excellent ⭐', B: 'Grade B - Good 👍', C: 'Grade C - Acceptable ⚠️', F: 'Grade F - Poor ❌' };
+        box.className = 'grade-display ' + labGradeClass(grade);
+        box.innerHTML = '<span>' + labels[grade] + '</span><span style="font-size:1.4rem;">' + grade + '</span>';
+
+        if (grade === 'F' && !isAlreadyTested) {
+          rejectToast.classList.remove('hidden');
+          rejectToast.innerHTML = icon('alertcircle') +
+            '<div><h4>Automatic Rejection</h4><p>This batch has received Grade F (Poor) due to critical test failures. It will be automatically rejected and sent to the Rejected/Failed section.</p></div>';
+        } else {
+          rejectToast.classList.add('hidden');
+        }
+        return grade;
+      }
+
+      if (!isAlreadyTested) {
+        ['moistureContent', 'ashValue', 'foreignMatter', 'phLevel', 'pesticideResidue', 'fungalCount', 'aflatoxinTest',
+          'heavyMetals', 'ecoliSalmonella', 'microbialTest', 'solventResidue', 'phytochemicalScreening', 'ftirFingerprint']
+          .forEach(function (id) {
+            document.getElementById(id).addEventListener('input', renderGrade);
+            document.getElementById(id).addEventListener('change', renderGrade);
+          });
+      } else {
+        renderGrade();
+      }
+
+      const validationRules = {
+        moistureContent: { min: 0, max: 100 }, ashValue: { min: 0, max: 100 },
+        foreignMatter: { min: 0, max: 100 }, phLevel: { min: 0, max: 14 },
+        pesticideResidue: { min: 0 }, fungalCount: { min: 0 }, aflatoxinTest: { min: 0 }
+      };
+
+      function clearError(fieldWrapId) {
+        const wrap = document.getElementById(fieldWrapId);
+        wrap.classList.remove('has-error');
+        const err = wrap.querySelector('.field-error');
+        err.classList.add('hidden');
+        err.textContent = '';
+      }
+
+      function setError(fieldWrapId, msg) {
+        const wrap = document.getElementById(fieldWrapId);
+        wrap.classList.add('has-error');
+        const err = wrap.querySelector('.field-error');
+        err.textContent = msg;
+        err.classList.remove('hidden');
+      }
+
+      function validate() {
+        let valid = true;
+        ['fMoisture', 'fAsh', 'fForeign', 'fPh', 'fPesticide', 'fFungal', 'fAflatoxin'].forEach(function (id) { clearError(id); });
+
+        const checks = [
+          ['moistureContent', 'fMoisture'], ['ashValue', 'fAsh'], ['foreignMatter', 'fForeign'],
+          ['phLevel', 'fPh'], ['pesticideResidue', 'fPesticide'], ['fungalCount', 'fFungal'], ['aflatoxinTest', 'fAflatoxin']
+        ];
+        checks.forEach(function (pair) {
+          const val = document.getElementById(pair[0]).value;
+          if (val === '' || isNaN(parseFloat(val))) {
+            setError(pair[1], 'Required');
+            valid = false;
+          }
+        });
+        return valid;
+      }
+
+      function doSubmit() {
+        document.getElementById('submitBtn').disabled = true;
+        document.getElementById('submitIcon').innerHTML = '<div class="spinner spinner-sm" style="border-color:#fff;border-top-color:transparent;"></div>';
+        document.getElementById('submitLabel').textContent = 'Submitting...';
+
+        setTimeout(function () {
+          const grade = renderGrade();
+          let finalGrade = grade;
+          if (grade === 'F') finalGrade = 'Rejected';
+          else if (grade === 'C' && approvalDecision === 'reject') finalGrade = 'Rejected';
+
+          batch.status = finalGrade === 'Rejected' ? 'REJECTED' : 'TESTED';
+          batch.grade = grade;
+          batch.testedDate = new Date().toISOString();
+          batch.approvalStatus = finalGrade === 'Rejected' ? 'rejected' : (grade === 'C' ? 'conditionally_approved' : 'approved');
+
+          document.getElementById('successBanner').classList.remove('hidden');
+          document.getElementById('successBanner').innerHTML = icon('checkcircle') +
+            '<div><h3>Test Results Submitted Successfully!</h3><p>Report generated and recorded (demo only, no backend).</p></div>';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+
+          setTimeout(function () { window.location.href = 'dashboard.html'; }, 1800);
+        }, 500);
+      }
+
+      document.getElementById('testForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (isAlreadyTested) return;
+        if (!validate()) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
+        }
+        const grade = renderGrade();
+        if (grade === 'C' && !approvalDecision) {
+          document.getElementById('approvalOverlay').classList.add('open');
+          return;
+        }
+        doSubmit();
+      });
+
+      document.getElementById('approveBtn').addEventListener('click', function () {
+        approvalDecision = 'approve';
+        document.getElementById('approvalOverlay').classList.remove('open');
+        doSubmit();
+      });
+      document.getElementById('rejectBtn').addEventListener('click', function () {
+        approvalDecision = 'reject';
+        document.getElementById('approvalOverlay').classList.remove('open');
+        doSubmit();
+      });
+    }
+  }
+
+  function closeApprovalDialog() {
+    approvalDecision = null;
+    document.getElementById('approvalOverlay').classList.remove('open');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sent for Testing - Farmer Portal</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</head>
+<body data-page="sentForTesting">
+  <div id="app-shell"></div>
+
+  <main class="min-h-screen" style="background:linear-gradient(to bottom right,#eff6ff,#f3f4f6);padding:1.5rem;">
+    <button class="back-link blue" id="backBtn"></button>
+    <div class="icon-title-row">
+      <div class="iconbox solid-blue"></div>
+      <div><h1 class="page-title" style="margin-bottom:0.25rem;">Sent for Testing</h1><p class="page-sub">Batches currently in laboratory testing</p></div>
+    </div>
+
+    <div class="stat-row" style="grid-template-columns:repeat(4,1fr);" id="statsRow"></div>
+
+    <div class="batch-grid" id="batchGrid"></div>
+  </main>
+
+  <script>
+    document.getElementById('backBtn').innerHTML = icon('arrowLeft', 20) + ' Back to Dashboard';
+    document.getElementById('backBtn').addEventListener('click', function () { window.location.href = 'dashboard.html'; });
+    document.querySelector('.iconbox.solid-blue').innerHTML = icon('flask', 24);
+
+    var batches = SENT_FOR_TESTING;
+    document.getElementById('statsRow').innerHTML = [
+      { label: 'Total Batches', value: batches.length, i: 'package', color: '#6b7280' },
+      { label: 'In Transit', value: 0, i: 'truck', color: '#eab308' },
+      { label: 'Testing', value: 0, i: 'flask', color: '#a855f7' },
+      { label: 'Awaiting', value: batches.length, i: 'clock', color: '#f97316' }
+    ].map(function (s) {
+      return '<div class="card" style="padding:1rem;"><div class="flex items-center gap-2 mb-1" style="color:' + s.color + ';">' +
+        icon(s.i, 16) + '<span style="font-size:0.875rem;color:#6b7280;">' + s.label + '</span></div>' +
+        '<p style="font-size:1.5rem;font-weight:700;color:' + (s.value ? s.color : '#1f2937') + ';margin:0;">' + s.value + '</p></div>';
+    }).join('');
+
+    var grid = document.getElementById('batchGrid');
+    if (batches.length === 0) {
+      grid.innerHTML = '<div class="empty-state">No batches sent for testing yet</div>';
+    } else {
+      grid.innerHTML = batches.map(function (b) {
+        return '<div class="batch-card blue" data-id="' + b.id + '">' +
+          '<div class="batch-card-top"><div><h3>' + b.id + '</h3><p>' + b.productName + '</p></div>' +
+          '<span class="badge blue">Sent for Testing</span></div>' +
+          '<div class="batch-row">' + icon('calendar', 16) + '<span>Sent: ' + b.dateSent + '</span></div>' +
+          '<div class="batch-row">' + icon('package', 16) + '<span>Quantity: ' + b.quantity + '</span></div>' +
+          '<div class="batch-row">' + icon('mapPin', 16) + '<span>' + b.location + '</span></div>' +
+          '<div class="batch-card-footer"><button class="btn" style="background:none;color:#2563eb;padding:0;font-weight:500;font-size:0.875rem;">View Details ' + icon('trendingUp', 16) + '</button></div>' +
+          '</div>';
+      }).join('');
+      grid.querySelectorAll('.batch-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+          window.location.href = 'sent-for-testing-detail.html?id=' + encodeURIComponent(card.getAttribute('data-id'));
+        });
+      });
+    }
+  </script>
+</body>
+</html>

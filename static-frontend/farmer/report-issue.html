@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report an Issue - Farmer Portal</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</head>
+<body data-page="reportIssue">
+  <div id="app-shell"></div>
+
+  <main class="min-h-screen" style="background:linear-gradient(to bottom right,#f0fdf4,#eff6ff,#faf5ff);">
+    <div id="toastRoot2" style="position:fixed;top:5rem;right:1rem;z-index:60;"></div>
+    <div class="max-w-7xl" style="padding:2rem 1.5rem;">
+      <div class="wizard-card">
+        <button class="back-link gray" id="backBtn"></button>
+        <div class="flex items-center justify-between">
+          <div><h1 style="font-size:1.875rem;font-weight:700;color:#111827;margin:0;">Report an Issue</h1>
+          <p style="color:#4b5563;margin-top:0.5rem;">Help us improve by reporting any problems you encounter</p></div>
+          <span style="color:#16a34a;opacity:0.2;"></span>
+        </div>
+      </div>
+
+      <div class="wizard-steps" id="stepIndicator"></div>
+      <div class="wizard-body">
+        <div id="stepBody"></div>
+        <div class="wizard-nav">
+          <button class="btn btn-outline" id="prevBtn"></button>
+          <button class="btn btn-green-solid" id="nextBtn">Next</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('backBtn').innerHTML = icon('arrowLeft', 20) + ' Back to Dashboard';
+    document.getElementById('backBtn').addEventListener('click', function () { window.location.href = 'dashboard.html'; });
+    document.querySelector('.wizard-card .flex > span').innerHTML = icon('alertCircle', 64);
+
+    var farmer = getFarmerData();
+    var currentStep = 1;
+    var totalSteps = 4;
+    var formData = { category: '', batchId: '', issueTitle: '', description: '', addedBy: farmer.farmerName };
+    var selectedFile = null;
+
+    var CATEGORIES = ['QR Code Problem', 'Portal Bug', 'Data Missing', 'Lab Testing Issue', 'Manufacturing Issue', 'Other'];
+    var STEPS = [
+      { id: 1, label: 'Category', i: 'alertTriangle' },
+      { id: 2, label: 'Details', i: 'fileText' },
+      { id: 3, label: 'Attachments', i: 'upload' },
+      { id: 4, label: 'Review', i: 'checkCircle' }
+    ];
+
+    function renderStepIndicator() {
+      document.getElementById('stepIndicator').innerHTML = STEPS.map(function (s) {
+        var cls = s.id === currentStep ? 'current' : (s.id < currentStep ? 'done' : '');
+        return '<button class="wizard-step-btn ' + cls + '" data-step="' + s.id + '"' + (s.id > currentStep ? ' disabled' : '') + '>' + icon(s.i, 16) + s.label + '</button>';
+      }).join('');
+      document.querySelectorAll('[data-step]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var id = Number(btn.getAttribute('data-step'));
+          if (id < currentStep) { currentStep = id; renderAll(); }
+        });
+      });
+    }
+
+    function renderStepBody() {
+      var el = document.getElementById('stepBody');
+      if (currentStep === 1) {
+        el.innerHTML = '<div class="text-center mb-6"><h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin:0 0 0.5rem;">Select Issue Category</h2><p style="color:#4b5563;">Choose the category that best describes your issue</p></div>' +
+          '<div class="wizard-cat-grid">' + CATEGORIES.map(function (c) {
+            return '<button type="button" class="wizard-cat-btn' + (formData.category === c ? ' selected' : '') + '" data-cat="' + c + '"><span>' + c + '</span>' + (formData.category === c ? '<span style="margin-top:0.5rem;color:#16a34a;">' + icon('checkCircle', 20) + '</span>' : '') + '</button>';
+          }).join('') + '</div>';
+        el.querySelectorAll('[data-cat]').forEach(function (btn) {
+          btn.addEventListener('click', function () { formData.category = btn.getAttribute('data-cat'); renderStepBody(); });
+        });
+      } else if (currentStep === 2) {
+        el.innerHTML = '<div class="mb-6"><h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin:0 0 0.5rem;">Describe Your Issue</h2><p style="color:#4b5563;">Provide a clear title and detailed description</p></div>' +
+          '<div class="field mb-4"><label>Issue Title *</label><input type="text" id="issueTitleInput" maxlength="120" placeholder="Brief summary of the issue (max 120 characters)" value="' + formData.issueTitle + '"></div>' +
+          '<div class="field"><label>Description *</label><textarea id="issueDescInput" rows="6" placeholder="Describe the issue in detail (minimum 30 characters)" style="width:100%;padding:0.75rem 1rem;border:2px solid #d1d5db;border-radius:0.75rem;font-family:inherit;">' + formData.description + '</textarea></div>';
+        document.getElementById('issueTitleInput').addEventListener('input', function (e) { formData.issueTitle = e.target.value; });
+        document.getElementById('issueDescInput').addEventListener('input', function (e) { formData.description = e.target.value; });
+      } else if (currentStep === 3) {
+        el.innerHTML = '<div class="mb-6"><h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin:0 0 0.5rem;">Additional Information</h2><p style="color:#4b5563;">Add batch ID and attach files if needed</p></div>' +
+          '<div class="field mb-4"><label>Batch ID (Optional)</label><input type="text" id="batchIdInput" placeholder="Enter batch ID if applicable" value="' + formData.batchId + '"></div>' +
+          '<div class="field"><label>Attach File (Optional)</label><div class="upload-drop" id="fileDrop">' +
+          (selectedFile ? ('<p style="margin:0;color:#374151;">' + selectedFile.name + '</p>') :
+            (icon('upload', 40) + '<p style="color:#4b5563;margin:0 0 0.25rem;">Click to upload file</p><p style="font-size:0.875rem;color:#6b7280;margin:0;">PNG, JPG, PDF (max 5MB)</p>')) +
+          '</div><input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.pdf" class="hidden"></div>';
+        document.getElementById('batchIdInput').addEventListener('input', function (e) { formData.batchId = e.target.value; });
+        document.getElementById('fileDrop').addEventListener('click', function () { document.getElementById('fileInput').click(); });
+        document.getElementById('fileInput').addEventListener('change', function (e) {
+          var f = e.target.files[0];
+          if (f) { selectedFile = f; renderStepBody(); }
+        });
+      } else if (currentStep === 4) {
+        el.innerHTML = '<div class="mb-6"><h2 style="font-size:1.5rem;font-weight:700;color:#111827;margin:0 0 0.5rem;">Review &amp; Submit</h2><p style="color:#4b5563;">Please review your issue details before submitting</p></div>' +
+          '<div class="wizard-review-box">' +
+          '<div class="wizard-review-row"><span class="num" style="background:#16a34a;">' + icon('alertTriangle', 20) + '</span><div><p class="k">Category</p><p class="v">' + formData.category + '</p></div></div>' +
+          (formData.batchId ? '<div class="wizard-review-row"><span class="num" style="background:#2563eb;">' + icon('package', 20) + '</span><div><p class="k">Batch ID</p><p class="v">' + formData.batchId + '</p></div></div>' : '') +
+          '<div class="wizard-review-row"><span class="num" style="background:#9333ea;">' + icon('fileText', 20) + '</span><div><p class="k">Issue Title</p><p class="v">' + formData.issueTitle + '</p></div></div>' +
+          '<div class="wizard-review-row"><span class="num" style="background:#ea580c;">' + icon('messageSquare', 20) + '</span><div><p class="k">Description</p><p class="v" style="font-weight:400;">' + formData.description + '</p></div></div>' +
+          (selectedFile ? '<div class="wizard-review-row"><span class="num" style="background:#0d9488;">' + icon('upload', 20) + '</span><div><p class="k">Attachment</p><p class="v">' + selectedFile.name + '</p></div></div>' : '') +
+          '</div>' +
+          '<div class="wizard-note">' + icon('checkCircle', 24) + '<p style="margin:0;font-size:0.875rem;color:#1f2937;"><strong style="color:#15803d;">Note:</strong> Once submitted, your issue will be assigned a unique ticket ID.</p></div>';
+      }
+    }
+
+    function validateStep(step) {
+      if (step === 1 && !formData.category) { showToast2('Please select a category', true); return false; }
+      if (step === 2) {
+        if (!formData.issueTitle.trim()) { showToast2('Issue title is required', true); return false; }
+        if (formData.description.trim().length < 30) { showToast2('Description must be at least 30 characters', true); return false; }
+      }
+      return true;
+    }
+
+    function showToast2(msg, isError) {
+      var root = document.getElementById('toastRoot2');
+      root.innerHTML = '<div class="toast' + (isError ? ' error' : '') + '">' + icon(isError ? 'xCircle' : 'checkCircle', 24) + '<p>' + msg + '</p></div>';
+      setTimeout(function () { root.innerHTML = ''; }, 4000);
+    }
+
+    function renderNav() {
+      document.getElementById('prevBtn').disabled = currentStep === 1;
+      document.getElementById('prevBtn').innerHTML = icon('arrowLeft', 18) + ' Previous';
+      document.getElementById('nextBtn').innerHTML = currentStep === totalSteps ?
+        (icon('checkCircle', 18) + ' Submit Issue') : ('Next ' + icon('arrowRight', 18));
+    }
+
+    function renderAll() { renderStepIndicator(); renderStepBody(); renderNav(); }
+
+    document.getElementById('prevBtn').addEventListener('click', function () {
+      if (currentStep > 1) { currentStep -= 1; renderAll(); }
+    });
+    document.getElementById('nextBtn').addEventListener('click', function () {
+      if (currentStep < totalSteps) {
+        if (!validateStep(currentStep)) return;
+        currentStep += 1;
+        renderAll();
+      } else {
+        // Final submit (demo - no real backend)
+        var ticket = 'TCK-' + Math.floor(1000 + Math.random() * 9000);
+        showToast2('Issue reported successfully. Ticket ID: ' + ticket);
+        formData = { category: '', batchId: '', issueTitle: '', description: '', addedBy: farmer.farmerName };
+        selectedFile = null;
+        currentStep = 1;
+        renderAll();
+      }
+    });
+
+    renderAll();
+  </script>
+</body>
+</html>

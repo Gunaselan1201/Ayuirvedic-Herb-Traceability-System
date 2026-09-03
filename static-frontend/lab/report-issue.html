@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report an Issue - Lab Portal</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app-shell"></div>
+<main class="bg-blue-cyan-purple page">
+  <div class="page-inner">
+    <div class="card-lg mb-6">
+      <button class="back-link" id="backBtn"></button>
+      <div class="flex justify-between items-center">
+        <div>
+          <h1 style="margin:0;font-size:1.9rem;font-weight:700;">Report an Issue</h1>
+          <p style="margin:.5rem 0 0 0;color:var(--gray-600);">Help us improve by reporting any problems you encounter</p>
+        </div>
+        <span style="opacity:.2;" id="headerIcon"></span>
+      </div>
+    </div>
+
+    <div class="card" style="border-radius:1rem 1rem 0 0;padding:0;overflow:hidden;box-shadow:var(--shadow-lg);">
+      <div class="step-indicator" id="stepIndicator"></div>
+    </div>
+    <div class="card" style="border-radius:0 0 1rem 1rem;box-shadow:var(--shadow-lg);padding:2rem;">
+      <div id="stepContent"></div>
+
+      <div class="flex justify-between mt-6" style="padding-top:1.5rem;border-top:2px solid var(--gray-200);">
+        <button class="btn btn-gray" id="prevBtn"></button>
+        <button class="btn btn-gradient-blue" id="nextBtn"></button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="riToast" class="toast-fixed hidden" style="top:5rem;right:1rem;bottom:auto;border-left:4px solid var(--lab-blue-600);background:#fff;color:var(--gray-900);"></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+  const auth = initLabShell('help-support');
+  if (auth) {
+    document.getElementById('backBtn').innerHTML = icon('arrowleft') + '<span>Back</span>';
+    document.getElementById('backBtn').addEventListener('click', function () { window.location.href = 'dashboard.html'; });
+    document.getElementById('headerIcon').innerHTML = icon('alertcircle');
+    document.getElementById('headerIcon').style.width = '64px';
+    document.getElementById('headerIcon').style.height = '64px';
+    document.getElementById('headerIcon').style.color = 'var(--lab-blue-600)';
+
+    const CATEGORIES = ['Portal Error', 'Data Entry Problem', 'Blockchain Sync Failure', 'Test Result Update Issue', 'Report Download Issue', 'Other'];
+    const STEPS = [
+      { id: 1, label: 'Category', icon: 'alerttriangle' },
+      { id: 2, label: 'Details', icon: 'filetext' },
+      { id: 3, label: 'Attachments', icon: 'upload' },
+      { id: 4, label: 'Review', icon: 'checkcircle' }
+    ];
+    let currentStep = 1;
+    const formData = { category: '', batchId: '', issueTitle: '', description: '' };
+    let selectedFileName = null;
+
+    function renderStepIndicator() {
+      document.getElementById('stepIndicator').innerHTML = STEPS.map(function (s) {
+        let cls = 'step-btn';
+        if (s.id === currentStep) cls += ' current';
+        else if (s.id < currentStep) cls += ' done';
+        return '<button class="' + cls + '" ' + (s.id > currentStep ? 'disabled' : 'onclick="goToStep(' + s.id + ')"') + '>' + icon(s.icon) + '<span>' + s.label + '</span></button>';
+      }).join('');
+    }
+
+    function goToStep(n) {
+      if (n < currentStep) { currentStep = n; renderAll(); }
+    }
+    window.goToStep = goToStep;
+
+    function renderStepContent() {
+      const el = document.getElementById('stepContent');
+      if (currentStep === 1) {
+        el.innerHTML =
+          '<div class="text-center mb-6"><h2 style="margin:0 0 .5rem 0;">Select Issue Category</h2><p style="color:var(--gray-600);">Choose the category that best describes your issue</p></div>' +
+          '<div class="category-grid">' + CATEGORIES.map(function (c) {
+            return '<button type="button" class="category-btn' + (formData.category === c ? ' selected' : '') + '" onclick="selectCategory(\'' + c + '\')">' + c + (formData.category === c ? '<br>' + icon('checkcircle') : '') + '</button>';
+          }).join('') + '</div>';
+      } else if (currentStep === 2) {
+        el.innerHTML =
+          '<div class="mb-6"><h2 style="margin:0 0 .5rem 0;">Describe Your Issue</h2><p style="color:var(--gray-600);">Provide a clear title and detailed description</p></div>' +
+          '<div class="field mb-4"><label>' + icon('filetext') + ' Issue Title *</label>' +
+          '<input type="text" id="issueTitle" maxlength="120" placeholder="Brief summary of the issue (max 120 characters)" value="' + formData.issueTitle + '"></div>' +
+          '<div class="field"><label>' + icon('message') + ' Description *</label>' +
+          '<textarea id="issueDescription" rows="6" placeholder="Describe the issue in detail (minimum 30 characters)">' + formData.description + '</textarea>' +
+          '<p class="hint">Minimum 30 characters</p></div>';
+      } else if (currentStep === 3) {
+        el.innerHTML =
+          '<div class="mb-6"><h2 style="margin:0 0 .5rem 0;">Additional Information</h2><p style="color:var(--gray-600);">Add batch ID and attach files if needed</p></div>' +
+          '<div class="field mb-4"><label>' + icon('testtube') + ' Batch ID (Optional)</label>' +
+          '<input type="text" id="issueBatchId" placeholder="Enter batch ID if applicable" value="' + formData.batchId + '"></div>' +
+          '<label style="display:flex;align-items:center;gap:.5rem;font-size:.85rem;font-weight:600;color:var(--gray-800);margin-bottom:.5rem;">' + icon('upload') + ' Attach File (Optional)</label>' +
+          '<div class="upload-drop">' + icon('upload', 'icon-lg') +
+          '<p style="margin:0 0 .25rem 0;color:var(--gray-600);">' + (selectedFileName || 'Click to upload file (demo only, not actually stored)') + '</p>' +
+          '<p style="margin:0;font-size:.85rem;color:var(--gray-500);">PNG, JPG, PDF (max 5MB)</p>' +
+          '<input type="file" id="issueFile" accept=".png,.jpg,.jpeg,.pdf" style="margin-top:1rem;"></div>';
+      } else if (currentStep === 4) {
+        el.innerHTML =
+          '<div class="mb-6"><h2 style="margin:0 0 .5rem 0;">Review &amp; Submit</h2><p style="color:var(--gray-600);">Please review your issue details before submitting</p></div>' +
+          '<div class="review-box">' +
+            '<div class="review-row"><div class="review-icon" style="background:var(--lab-blue-600);">' + icon('alerttriangle') + '</div><div><p class="review-label">Category</p><p class="review-value">' + formData.category + '</p></div></div>' +
+            (formData.batchId ? '<div class="review-row"><div class="review-icon" style="background:var(--lab-cyan-600);">' + icon('testtube') + '</div><div><p class="review-label">Batch ID</p><p class="review-value">' + formData.batchId + '</p></div></div>' : '') +
+            '<div class="review-row"><div class="review-icon" style="background:var(--purple-600);">' + icon('filetext') + '</div><div><p class="review-label">Issue Title</p><p class="review-value">' + formData.issueTitle + '</p></div></div>' +
+            '<div class="review-row"><div class="review-icon" style="background:var(--orange-600);">' + icon('message') + '</div><div><p class="review-label">Description</p><p>' + formData.description + '</p></div></div>' +
+          '</div>' +
+          '<div style="background:linear-gradient(to right, var(--lab-blue-50), #ecfeff);border:2px solid #93c5fd;border-radius:.75rem;padding:1rem;margin-top:1.5rem;display:flex;gap:.75rem;">' + icon('checkcircle') +
+          '<p style="margin:0;font-size:.85rem;color:var(--gray-800);"><strong style="color:#1d4ed8;">Note:</strong> Once submitted, your issue will be assigned a unique ticket ID. You can track it in "View Tickets".</p></div>';
+      }
+    }
+
+    function selectCategory(c) { formData.category = c; renderStepContent(); }
+    window.selectCategory = selectCategory;
+
+    function renderNavButtons() {
+      const prev = document.getElementById('prevBtn');
+      const next = document.getElementById('nextBtn');
+      prev.innerHTML = icon('arrowleft') + '<span>Previous</span>';
+      prev.disabled = currentStep === 1;
+      if (currentStep < 4) {
+        next.innerHTML = '<span>Next</span>' + icon('arrowright');
+        next.onclick = handleNext;
+      } else {
+        next.innerHTML = icon('checkcircle') + '<span>Submit Issue</span>';
+        next.onclick = handleSubmit;
+      }
+    }
+
+    function collectStepData() {
+      if (currentStep === 2) {
+        formData.issueTitle = (document.getElementById('issueTitle') || {}).value || formData.issueTitle;
+        formData.description = (document.getElementById('issueDescription') || {}).value || formData.description;
+      }
+      if (currentStep === 3) {
+        formData.batchId = (document.getElementById('issueBatchId') || {}).value || formData.batchId;
+        const fileInput = document.getElementById('issueFile');
+        if (fileInput && fileInput.files && fileInput.files[0]) selectedFileName = fileInput.files[0].name;
+      }
+    }
+
+    function validateStep(step) {
+      if (step === 1 && !formData.category) { alert('Please select a category'); return false; }
+      if (step === 2) {
+        if (!formData.issueTitle.trim()) { alert('Issue title is required'); return false; }
+        if (formData.description.trim().length < 30) { alert('Description must be at least 30 characters'); return false; }
+      }
+      return true;
+    }
+
+    function handleNext() {
+      collectStepData();
+      if (!validateStep(currentStep)) return;
+      currentStep = Math.min(currentStep + 1, 4);
+      renderAll();
+    }
+
+    function handleSubmit() {
+      const btn = document.getElementById('nextBtn');
+      btn.disabled = true;
+      btn.innerHTML = '<div class="spinner spinner-sm" style="border-color:#fff;border-top-color:transparent;"></div><span>Submitting...</span>';
+      setTimeout(function () {
+        const ticketId = 'TCK-' + new Date().toISOString().slice(0, 10).replace(/-/g, '') + '-' + String(Math.floor(Math.random() * 900) + 100);
+        LAB_TICKETS.unshift({
+          ticketId: ticketId, labId: auth.labId, userName: 'Lab Technician',
+          issueType: formData.category, description: formData.issueTitle + '\n\n' + formData.description,
+          severity: 'Medium', attachment: null, status: 'Pending',
+          timestamp: new Date().toISOString(), createdAt: new Date().toISOString()
+        });
+        showRiToast('Issue reported successfully. Ticket ID: ' + ticketId);
+        formData.category = ''; formData.batchId = ''; formData.issueTitle = ''; formData.description = '';
+        selectedFileName = null;
+        currentStep = 1;
+        renderAll();
+        btn.disabled = false;
+      }, 700);
+    }
+
+    function renderAll() {
+      renderStepIndicator();
+      renderStepContent();
+      renderNavButtons();
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', function () {
+      currentStep = Math.max(currentStep - 1, 1);
+      renderAll();
+    });
+
+    renderAll();
+  }
+
+  function showRiToast(msg) {
+    const toast = document.getElementById('riToast');
+    toast.innerHTML = icon('checkcircle') + '<span>' + msg + '</span>';
+    toast.classList.remove('hidden');
+    setTimeout(function () { toast.classList.add('hidden'); }, 5000);
+  }
+</script>
+</body>
+</html>

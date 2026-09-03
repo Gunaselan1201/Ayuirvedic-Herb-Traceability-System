@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tested Batches - Lab Portal</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app-shell"></div>
+<main class="bg-blue-gray page">
+  <div class="page-inner">
+    <div class="page-title-row">
+      <div class="page-icon-square" style="background:var(--lab-blue-600);" id="titleIcon"></div>
+      <div><h1>Tested Batches</h1><p class="page-header-sub" style="margin:0;">All batches that have completed lab testing</p></div>
+    </div>
+
+    <div class="grid grid-4 mb-6" style="margin-top:1rem;">
+      <div class="stat-tile"><div class="stat-head" id="s1"></div><p class="stat-value" id="statTotal">0</p></div>
+      <div class="stat-tile"><div class="stat-head" id="s2"></div><p class="stat-value" style="color:var(--green-600);" id="statApproved">0</p></div>
+      <div class="stat-tile"><div class="stat-head" id="s3"></div><p class="stat-value" style="color:var(--red-600);" id="statRejected">0</p></div>
+      <div class="stat-tile"><div class="stat-head" id="s4"></div><p class="stat-value" style="color:var(--lab-blue-600);" id="statRate">0%</p></div>
+    </div>
+
+    <div id="grid" class="grid grid-3"></div>
+  </div>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+  const auth = initLabShell('tested');
+  if (auth) {
+    document.getElementById('titleIcon').innerHTML = icon('flask');
+    document.getElementById('s1').innerHTML = icon('package') + '<span>Total Tested</span>';
+    document.getElementById('s2').innerHTML = icon('checkcircle') + '<span>Approved</span>';
+    document.getElementById('s3').innerHTML = icon('xcircle') + '<span>Rejected</span>';
+    document.getElementById('s4').innerHTML = icon('clock') + '<span>Success Rate</span>';
+
+    const tested = LAB_BATCHES.filter(function (b) { return b.status === 'TESTED' || b.status === 'REJECTED'; });
+    const approved = tested.filter(function (b) { return b.status === 'TESTED'; });
+    const rejected = tested.filter(function (b) { return b.status === 'REJECTED'; });
+
+    document.getElementById('statTotal').textContent = tested.length;
+    document.getElementById('statApproved').textContent = approved.length;
+    document.getElementById('statRejected').textContent = rejected.length;
+    document.getElementById('statRate').textContent = tested.length > 0 ? Math.round((approved.length / tested.length) * 100) + '%' : '0%';
+
+    if (tested.length === 0) {
+      document.getElementById('grid').innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--gray-500);">No tested batches yet</div>';
+    } else {
+      document.getElementById('grid').innerHTML = tested.map(function (b) {
+        const statusLabel = b.status === 'REJECTED' ? 'Rejected' : 'Approved';
+        const statusBadge = b.status === 'REJECTED' ? 'badge-red' : 'badge-green';
+        return '<div class="batch-item border-blue">' +
+          '<div class="batch-item-head">' +
+            '<div><h3>' + b.id + '</h3><p class="batch-product">' + b.productName + '</p></div>' +
+            '<span class="badge ' + statusBadge + '">' + statusLabel + '</span>' +
+          '</div>' +
+          '<div class="grade-box ' + labGradeClass(b.grade) + '"><p>Quality Grade</p><p>' + (b.grade || 'N/A') + '</p></div>' +
+          '<div class="batch-row">' + icon('calendar') + '<span>Tested: ' + labFormatDate(b.testedDate) + '</span></div>' +
+          '<div class="batch-row">' + icon('package') + '<span>Quantity: ' + (b.quantity || 'N/A') + ' ' + (b.unit || '') + '</span></div>' +
+          '<div class="batch-row"><span class="font-medium">Farmer: ' + b.farmerName + '</span></div>' +
+          '</div>';
+      }).join('');
+    }
+  }
+</script>
+</body>
+</html>

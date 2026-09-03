@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Active Orders - Farmer Portal</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</head>
+<body data-page="activeOrders">
+  <div id="app-shell"></div>
+
+  <main class="min-h-screen" style="background:#fff;padding:1.5rem;">
+    <div class="max-w-7xl">
+      <button class="back-link gray" id="backBtn"></button>
+      <h1 class="page-title mb-6">Active Orders</h1>
+      <div id="ordersGrid" class="hub-grid" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr));"></div>
+    </div>
+  </main>
+
+  <div class="modal-backdrop hidden" id="rejectModalBackdrop">
+    <div class="modal-box sm">
+      <div class="modal-body">
+        <h2 style="font-size:1.5rem;font-weight:700;color:#1f2937;margin:0 0 1rem;">Reject Order</h2>
+        <div class="field mb-6">
+          <label>Rejection Reason</label>
+          <select id="rejectReasonSelect">
+            <option value="">Select a reason</option>
+            <option value="Poor Quality">Poor Quality</option>
+            <option value="Quantity Mismatch">Quantity Mismatch</option>
+            <option value="Duplicate Entry">Duplicate Entry</option>
+            <option value="Manual Reject">Manual Reject</option>
+          </select>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-outline" style="flex:1;" id="rejectCancelBtn">Cancel</button>
+          <button class="btn btn-red" style="flex:1;" id="rejectConfirmBtn" disabled>Confirm Rejection</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('backBtn').innerHTML = icon('arrowLeft', 20) + ' Back';
+    document.getElementById('backBtn').addEventListener('click', function () { window.location.href = 'dashboard.html'; });
+
+    var orders = ACTIVE_ORDERS.slice();
+    var pendingId = null;
+
+    function statusIcon(status) {
+      if (status === 'Pending') return icon('clock', 20);
+      if (status === 'Accepted') return icon('checkCircle', 20);
+      if (status === 'In Process') return icon('truck', 20);
+      return icon('alertCircle', 20);
+    }
+    function statusClass(status) {
+      if (status === 'Pending') return 'pending';
+      if (status === 'Accepted') return 'accepted';
+      if (status === 'In Process') return 'inprocess';
+      return '';
+    }
+
+    function render() {
+      var grid = document.getElementById('ordersGrid');
+      if (orders.length === 0) {
+        grid.innerHTML = '<div class="empty-illustration" style="grid-column:1/-1;">' + icon('alertCircle', 64) + '<p>No active orders at the moment</p></div>';
+        return;
+      }
+      grid.innerHTML = orders.map(function (o) {
+        return '<div class="order-card ' + statusClass(o.status) + '" data-id="' + o.id + '">' +
+          '<div class="order-card-top"><div><h3>' + o.productName + '</h3><p>' + o.id + '</p></div>' +
+          '<div class="status-tag">' + statusIcon(o.status) + '<span>' + o.status + '</span></div></div>' +
+          '<div class="batch-row between"><span>Quantity:</span><span style="font-weight:600;color:#1f2937;">' + o.quantity + '</span></div>' +
+          '<div class="batch-row between"><span>Manufacturer:</span><span style="font-weight:600;color:#1f2937;">' + o.manufacturer + '</span></div>' +
+          '<div class="batch-row between"><span>Order Date:</span><span style="font-weight:600;color:#1f2937;">' + new Date(o.orderDate).toLocaleDateString() + '</span></div>' +
+          (o.status === 'Pending' ? '<div class="order-actions"><button class="btn btn-green-solid" data-accept="' + o.id + '">' + icon('checkCircle', 16) + ' Accept Order</button><button class="btn btn-red" data-reject="' + o.id + '">' + icon('x', 16) + ' Reject Order</button></div>' : '') +
+          '</div>';
+      }).join('');
+
+      grid.querySelectorAll('[data-accept]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var id = btn.getAttribute('data-accept');
+          orders = orders.map(function (o) { return o.id === id ? Object.assign({}, o, { status: 'Accepted' }) : o; });
+          render();
+          showToast('Order ' + id + ' accepted.');
+        });
+      });
+      grid.querySelectorAll('[data-reject]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          pendingId = btn.getAttribute('data-reject');
+          document.getElementById('rejectReasonSelect').value = '';
+          document.getElementById('rejectConfirmBtn').disabled = true;
+          document.getElementById('rejectModalBackdrop').classList.remove('hidden');
+        });
+      });
+    }
+    render();
+
+    document.getElementById('rejectReasonSelect').addEventListener('change', function (e) {
+      document.getElementById('rejectConfirmBtn').disabled = !e.target.value;
+    });
+    document.getElementById('rejectCancelBtn').addEventListener('click', function () {
+      document.getElementById('rejectModalBackdrop').classList.add('hidden');
+    });
+    document.getElementById('rejectConfirmBtn').addEventListener('click', function () {
+      orders = orders.filter(function (o) { return o.id !== pendingId; });
+      document.getElementById('rejectModalBackdrop').classList.add('hidden');
+      render();
+      showToast('Order ' + pendingId + ' rejected.');
+    });
+  </script>
+</body>
+</html>

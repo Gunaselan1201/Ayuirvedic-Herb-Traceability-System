@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Completed Orders</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-green-page min-h-screen">
+  <div id="app-shell"></div>
+
+  <main class="page-wrap">
+    <div style="margin-bottom:24px;">
+      <a class="btn-back" href="dashboard.html" id="backLink"></a>
+      <div class="page-header-row">
+        <div class="page-header-icon icon-lg grad-green" id="headerIconBox"></div>
+        <div>
+          <h1 class="page-title">Completed Orders</h1>
+          <p class="page-sub">Successfully manufactured products</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-4" id="statCards" style="margin-bottom:24px;"></div>
+
+    <div id="ordersArea"></div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    (function () {
+      var session = MFR_APP.init();
+      if (!session) return;
+
+      document.getElementById('backLink').innerHTML = MFR_APP.svg('arrowLeft') + '<span>Back</span>';
+      document.getElementById('headerIconBox').innerHTML = MFR_APP.svg('checkCircle');
+
+      var result = MFR_DATA.getCompletedOrders();
+      var stats = result.stats;
+      var orders = result.list;
+
+      document.getElementById('statCards').innerHTML =
+        '<div class="stat-card simple border-green"><div><p class="stat-label">Total Completed</p><p class="stat-value">' + stats.total + '</p></div>' + MFR_APP.svg('checkCircle') + '</div>' +
+        '<div class="stat-card simple border-green"><div><p class="stat-label">Grade A</p><p class="stat-value" style="color:var(--green-700);">' + stats.gradeA + '</p></div>' + MFR_APP.svg('award') + '</div>' +
+        '<div class="stat-card simple border-blue"><div><p class="stat-label">Grade B</p><p class="stat-value" style="color:var(--blue-700);">' + stats.gradeB + '</p></div>' + MFR_APP.svg('award') + '</div>' +
+        '<div class="stat-card simple border-amber"><div><p class="stat-label">Grade C</p><p class="stat-value" style="color:var(--amber-700);">' + stats.gradeC + '</p></div>' + MFR_APP.svg('award') + '</div>';
+
+      var area = document.getElementById('ordersArea');
+
+      if (orders.length === 0) {
+        area.innerHTML = '<div class="state-box">' + MFR_APP.svg('checkCircle') + '<h2>No Completed Orders</h2><p>Manufactured products will appear here</p></div>';
+        return;
+      }
+
+      area.innerHTML = '<div class="grid grid-3">' + orders.map(function (o) {
+        return (
+          '<div class="order-card border-green">' +
+            '<div class="order-card-top">' +
+              '<div><h3>' + MFR_APP.escapeHtml(o.id) + '</h3><p>' + MFR_APP.escapeHtml(o.productName) + '</p></div>' +
+              '<span class="grade-badge ' + o.gradeClass + '">Grade ' + o.grade + '</span>' +
+            '</div>' +
+            '<div class="order-meta">' +
+              '<div class="order-meta-row">' + MFR_APP.svg('package') + '<span>' + MFR_APP.escapeHtml(o.quantity) + '</span></div>' +
+              '<div class="order-meta-row">' + MFR_APP.svg('user') + '<span>' + MFR_APP.escapeHtml(o.farmerName) + '</span></div>' +
+              '<div class="order-meta-row">' + MFR_APP.svg('calendar') + '<span>Completed: ' + o.completedDate + '</span></div>' +
+            '</div>' +
+            '<div class="order-card-footer" style="color:var(--green-700);">' + MFR_APP.svg('checkCircle') + '<span style="font-size:12px;font-weight:500;">Manufacturing Complete</span></div>' +
+          '</div>'
+        );
+      }).join('') + '</div>';
+    })();
+  </script>
+</body>
+</html>

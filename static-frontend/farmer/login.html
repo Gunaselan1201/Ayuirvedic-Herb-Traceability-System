@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farmer Portal - Login</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</head>
+<body data-page="login">
+  <div class="login-page">
+    <div class="login-lang">
+      <span id="langIcon"></span>
+      <select id="langSelect">
+        <option value="en">English</option>
+        <option value="ta">தமிழ்</option>
+        <option value="hi">हिन्दी</option>
+        <option value="te">తెలుగు</option>
+        <option value="kn">ಕನ್ನಡ</option>
+        <option value="ml">മലയാളം</option>
+        <option value="mr">मराठी</option>
+        <option value="gu">ગુજરાતી</option>
+        <option value="bn">বাংলা</option>
+        <option value="pa">ਪੰਜਾਬੀ</option>
+      </select>
+    </div>
+
+    <div class="login-wrap">
+      <div class="text-center">
+        <div class="login-logo">
+          <div class="login-logo-head"></div>
+          <div class="login-logo-body"></div>
+        </div>
+        <div class="login-header">
+          <h1>FARMER PORTAL</h1>
+          <p>Sign in to continue</p>
+        </div>
+      </div>
+
+      <div class="login-card">
+        <form id="loginForm">
+          <div class="login-field">
+            <label for="userId">User ID</label>
+            <div class="login-input-wrap">
+              <span id="userIcon"></span>
+              <input type="text" id="userId" name="userId" placeholder="Enter User ID" value="FRM" required>
+            </div>
+          </div>
+          <div class="login-field">
+            <label for="password">Password</label>
+            <div class="login-input-wrap">
+              <span id="lockIcon"></span>
+              <input type="password" id="password" name="password" placeholder="Enter Password" value="pass123" required>
+            </div>
+          </div>
+          <div id="loginError" class="login-error hidden"></div>
+          <button type="submit" class="login-submit" id="loginBtn">
+            <span id="loginBtnIcon"></span>
+            <span id="loginBtnText">Login</span>
+          </button>
+        </form>
+      </div>
+
+      <p class="login-footer">&copy; 2025 Farmer Portal. All rights reserved.</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('langIcon').innerHTML = icon('globe', 20);
+    document.getElementById('userIcon').innerHTML = icon('user', 20);
+    document.getElementById('lockIcon').innerHTML = icon('lock', 20);
+    document.getElementById('loginBtnIcon').innerHTML = icon('login', 20);
+
+    var savedLang = localStorage.getItem('farmerPortalLanguage') || 'en';
+    document.getElementById('langSelect').value = savedLang;
+    document.getElementById('langSelect').addEventListener('change', function (e) {
+      localStorage.setItem('farmerPortalLanguage', e.target.value);
+    });
+
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var userId = document.getElementById('userId').value.trim();
+      var password = document.getElementById('password').value;
+      var errorBox = document.getElementById('loginError');
+      var btn = document.getElementById('loginBtn');
+      var btnText = document.getElementById('loginBtnText');
+
+      errorBox.classList.add('hidden');
+      btn.disabled = true;
+      btnText.textContent = 'Logging in...';
+
+      // Demo auth - matches the project's documented demo credentials.
+      setTimeout(function () {
+        if (userId === 'FRM' && password === 'pass123') {
+          localStorage.setItem('farmerAuth', JSON.stringify({ farmerId: 'FRM', farmerName: 'Ravi Kumar' }));
+          window.location.href = 'dashboard.html';
+        } else {
+          errorBox.textContent = 'Invalid User ID or Password';
+          errorBox.classList.remove('hidden');
+          btn.disabled = false;
+          btnText.textContent = 'Login';
+        }
+      }, 400);
+    });
+  </script>
+</body>
+</html>

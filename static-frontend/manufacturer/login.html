@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manufacturer Portal - Login</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-login-page">
+  <div class="login-wrap">
+    <div class="login-card">
+      <div class="login-box">
+        <div class="login-header">
+          <div class="login-icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:48px;height:48px;">
+              <path d="M2 20h20"/><path d="M4 20V10l5 3v-3l5 3v-3l5 3v7"/><path d="M4 20V7l3-2v5"/>
+            </svg>
+          </div>
+          <h1>Manufacturer Portal</h1>
+          <p>Production Management System</p>
+        </div>
+
+        <div class="login-form">
+          <form id="loginForm" novalidate>
+            <div class="form-group">
+              <label for="manufacturerId">Manufacturer ID</label>
+              <div class="input-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+                <input type="text" id="manufacturerId" value="MFR001" placeholder="Enter your ID" autocomplete="username">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="input-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                <input type="password" id="password" value="mfr789" placeholder="Enter password" autocomplete="current-password">
+              </div>
+            </div>
+
+            <div class="error-box" id="errorBox"></div>
+
+            <button type="submit" class="btn-gradient" style="width:100%;">Sign In to Portal</button>
+          </form>
+
+          <div class="demo-hint">Demo credentials are pre-filled — just click Sign In.</div>
+
+          <div class="login-help">
+            <p>Need help? Contact your system administrator</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="login-footer">
+        <p>Herbal Supply Chain Management System</p>
+        <p class="fine">&copy; 2024 - Secure Production Platform</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var errorBox = document.getElementById('errorBox');
+      errorBox.classList.remove('show');
+      errorBox.textContent = '';
+
+      var manufacturerId = document.getElementById('manufacturerId').value.trim();
+      var password = document.getElementById('password').value.trim();
+
+      if (!manufacturerId) {
+        errorBox.textContent = 'Please enter your Manufacturer ID';
+        errorBox.classList.add('show');
+        return;
+      }
+      if (!password) {
+        errorBox.textContent = 'Please enter your password';
+        errorBox.classList.add('show');
+        return;
+      }
+
+      // Demo auth: accept the seeded demo credentials (MFR001 / mfr789),
+      // matching the backend-verified login of the real portal.
+      if (manufacturerId !== 'MFR001' || password !== 'mfr789') {
+        errorBox.textContent = 'Invalid credentials';
+        errorBox.classList.add('show');
+        return;
+      }
+
+      localStorage.setItem('manufacturerAuth', JSON.stringify({ manufacturerId: manufacturerId }));
+      window.location.href = 'dashboard.html';
+    });
+  </script>
+</body>
+</html>

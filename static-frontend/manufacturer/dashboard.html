@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manufacturer Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-amber-page min-h-screen">
+  <div id="app-shell"></div>
+
+  <main class="page-wrap">
+    <div style="margin-bottom:24px;">
+      <div class="page-header-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:32px;height:32px;">
+          <path d="M2 20h20"/><path d="M4 20V10l5 3v-3l5 3v-3l5 3v7"/><path d="M4 20V7l3-2v5"/>
+        </svg>
+        <h1 class="page-title">Manufacturer Dashboard</h1>
+      </div>
+      <p class="page-sub" id="dashSub"></p>
+    </div>
+
+    <div class="grid grid-4" id="statCards" style="margin-bottom:32px;"></div>
+
+    <div class="panel-card">
+      <h2>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5V8Z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></svg>
+        Production Overview
+      </h2>
+      <div class="grid grid-4" id="tabButtons"></div>
+
+      <div class="quick-stats" id="quickStats"></div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    (function () {
+      var session = MFR_APP.init();
+      if (!session) return;
+
+      var stats = MFR_DATA.getDashboardStats();
+
+      document.getElementById('dashSub').innerHTML =
+        'ID: <strong>' + MFR_APP.escapeHtml(session.manufacturerId) + '</strong> &bull; ' +
+        new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+      var tabs = [
+        { label: 'Approved by Lab', count: stats.approvedByLab, icon: 'award', grad: 'grad-blue', color: 'color:var(--blue-600);', border: 'border-blue', bg: 'background:var(--blue-50);', href: 'approved-by-lab.html' },
+        { label: 'Active Batches', count: stats.activeBatches, icon: 'clock', grad: 'grad-amber', color: 'color:var(--amber-600);', border: 'border-amber', bg: 'background:var(--amber-50);', href: 'active-batches.html' },
+        { label: 'Products Manufactured', count: stats.manufactured, icon: 'package', grad: 'grad-green', color: 'color:var(--green-600);', border: 'border-green', bg: 'background:var(--green-50);', href: 'products-manufactured.html' },
+        { label: 'Dispatched Orders', count: stats.dispatched, icon: 'truck', grad: 'grad-purple', color: 'color:var(--purple-600);', border: 'border-purple', bg: 'background:var(--purple-50);', href: 'dispatched-orders.html' }
+      ];
+
+      var statCardsEl = document.getElementById('statCards');
+      statCardsEl.innerHTML = tabs.map(function (t) {
+        return (
+          '<a class="stat-card ' + t.border + '" style="' + t.bg + 'text-decoration:none;" href="' + t.href + '">' +
+            '<div class="stat-card-top">' +
+              '<div class="stat-card-icon ' + t.grad + '">' + MFR_APP.svg(t.icon) + '</div>' +
+              '<span class="stat-card-count" style="' + t.color + '">' + t.count + '</span>' +
+            '</div>' +
+            '<h3>' + t.label + '</h3>' +
+            '<p class="hint">Click to view details &rarr;</p>' +
+          '</a>'
+        );
+      }).join('');
+
+      var tabButtonsEl = document.getElementById('tabButtons');
+      tabButtonsEl.innerHTML = tabs.map(function (t) {
+        return (
+          '<a class="tab-btn ' + t.border + '" style="text-decoration:none;" href="' + t.href + '">' +
+            '<div class="tab-btn-top">' +
+              '<div class="tab-btn-icon" style="' + t.bg + '">' + MFR_APP.svg(t.icon, '') + '</div>' +
+              '<span class="tab-btn-count" style="' + t.color + '">' + t.count + '</span>' +
+            '</div>' +
+            '<h3>' + t.label + '</h3>' +
+            '<p class="view-all">View all &rarr;</p>' +
+          '</a>'
+        );
+      }).join('');
+
+      var totalPipeline = stats.approvedByLab + stats.activeBatches + stats.manufactured + stats.dispatched;
+      var completionRate = totalPipeline > 0 ? Math.round((stats.dispatched / totalPipeline) * 100) : 0;
+
+      document.getElementById('quickStats').innerHTML =
+        '<div><p class="qs-label">Total Pipeline</p><p class="qs-value" style="color:var(--gray-800);">' + totalPipeline + '</p></div>' +
+        '<div><p class="qs-label">In Progress</p><p class="qs-value" style="color:var(--amber-600);">' + stats.activeBatches + '</p></div>' +
+        '<div><p class="qs-label">Ready to Ship</p><p class="qs-value" style="color:var(--green-600);">' + stats.manufactured + '</p></div>' +
+        '<div><p class="qs-label">Completion Rate</p><p class="qs-value" style="color:var(--purple-600);">' + completionRate + '%</p></div>';
+    })();
+  </script>
+</body>
+</html>
